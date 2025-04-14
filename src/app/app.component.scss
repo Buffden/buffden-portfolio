@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+:root {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; // To account for fixed header
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1600px;
+
+  > * {
+    width: 100%;
+  }
+}
+
+app-hero,
+app-about,
+app-experience,
+app-projects,
+app-contact {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 20px;
+  scroll-margin-top: 100px; // To account for fixed header when scrolling to sections
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 0;
+  }
+}

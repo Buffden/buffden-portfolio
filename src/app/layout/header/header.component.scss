@@ -1,0 +1,121 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  padding: 0px 50px;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+
+  @media (max-width: 1080px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 25px;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: var(--lightest-slate);
+  font-family: var(--font-mono);
+  counter-reset: item 0;
+  z-index: 12;
+  height: 100px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: var(--green);
+    width: 42px;
+    height: 42px;
+    position: relative;
+    z-index: 1;
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: var(--green-tint);
+      }
+    }
+
+    svg {
+      fill: none;
+      transition: var(--transition);
+      user-select: none;
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  ol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      margin: 0 5px;
+      position: relative;
+      counter-increment: item 1;
+      font-size: var(--fz-xs);
+
+      a {
+        padding: 10px;
+        color: var(--lightest-slate);
+
+        &:hover,
+        &:focus {
+          color: var(--green);
+        }
+
+        span {
+          margin-right: 5px;
+          color: var(--green);
+          font-size: var(--fz-xxs);
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .resume-button {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    font-size: var(--fz-xs);
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    margin-left: 15px;
+
+    &:hover,
+    &:focus {
+      background-color: var(--green-tint);
+      outline: none;
+    }
+  }
+}

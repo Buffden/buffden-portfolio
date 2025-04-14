@@ -1,0 +1,106 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($navy, 0.7);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 50px 10px;
+  width: min(75vw, 400px);
+  background-color: $light-navy;
+  box-shadow: -10px 0px 30px -15px rgba($navy-shadow, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100vw);
+  visibility: hidden;
+  z-index: 10;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &.active {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  ol {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin: 0 auto 20px;
+      font-size: clamp(14px, 4vw, 18px);
+      counter-increment: item 1;
+
+      .nav-link {
+        display: inline-block;
+        text-decoration: none;
+        color: $lightest-slate;
+        position: relative;
+        width: 100%;
+        padding: 3px 20px 20px;
+        transition: $transition;
+
+        &:hover {
+          color: $green;
+        }
+
+        .nav-number {
+          display: block;
+          color: $green;
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+
+        .nav-text {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.resume-button-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-button {
+  @include button-styles;
+  padding: 18px 50px;
+  font-size: 14px;
+  margin: 10% auto 0;
+}

@@ -1,0 +1,39 @@
+<!-- Mobile Menu Overlay -->
+<div 
+  class="mobile-menu-overlay" 
+  [class.active]="isOpen"
+  (click)="closeMenu.emit()">
+</div>
+
+<!-- Mobile Menu Content -->
+<aside 
+  class="mobile-menu" 
+  [class.active]="isOpen"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Mobile navigation menu">
+  
+  <nav class="nav-links">
+    <ol>
+      <li *ngFor="let item of navItems; let i = index">
+        <a 
+          [href]="item.link"
+          (click)="onNavClick($event, item.link)"
+          class="nav-link">
+          <span class="nav-number">0{{i + 1}}.</span>
+          <span class="nav-text">{{item.name}}</span>
+        </a>
+      </li>
+    </ol>
+  </nav>
+
+  <div class="resume-button-container">
+    <a 
+      href="https://docs.google.com/document/d/1cJ7W9DSc-dN7q8x5KywO324tP5XwX9bC6xI4QJfKeME/edit?usp=sharing" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="resume-button">
+      Resume
+    </a>
+  </div>
+</aside>

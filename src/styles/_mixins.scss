@@ -1,0 +1,67 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin button-styles {
+  color: $green;
+  background-color: transparent;
+  border: 1px solid $green;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-family: $font-mono;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: $transition;
+  
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $green-tint;
+    outline: none;
+  }
+}
+
+@mixin section-padding {
+  padding: 100px 0;
+  
+  @media (max-width: $tablet) {
+    padding: 80px 0;
+  }
+}
+
+@mixin link-hover {
+  position: relative;
+  
+  &:hover,
+  &:focus {
+    color: $green;
+    outline: 0;
+    
+    &:after {
+      width: 100%;
+    }
+  }
+  
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    position: relative;
+    bottom: 0.25em;
+    background-color: $green;
+    transition: $transition;
+    opacity: 0.5;
+  }
+} 

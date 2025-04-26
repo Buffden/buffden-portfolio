@@ -1,29 +1,27 @@
 <div class="social-sidebar">
-  <ul class="social-list">
-    <li>
-      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <i class="fab fa-github"></i>
+  <div class="social-list">
+    <li *ngFor="let link of socialLinks">
+      <a 
+        [href]="link.url" 
+        [attr.aria-label]="link.ariaLabel"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          role="img" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          class="feather"
+        >
+          <ng-container [innerHTML]="link.icon"></ng-container>
+        </svg>
       </a>
     </li>
-    <li>
-      <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://codepen.io/yourusername" target="_blank" rel="noopener noreferrer" aria-label="CodePen">
-        <i class="fab fa-codepen"></i>
-      </a>
-    </li>
-  </ul>
-</div>
+  </div>
+  <div class="line"></div>
+</div> 

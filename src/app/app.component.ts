@@ -7,6 +7,7 @@ import { ExperienceComponent } from './sections/experience/experience.component'
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { MobileMenuComponent } from './layout/mobile-menu/mobile-menu.component';
+import { SocialSidebarComponent } from './layout/social-sidebar/social-sidebar.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { MobileMenuComponent } from './layout/mobile-menu/mobile-menu.component'
     RouterOutlet,
     HeaderComponent,
     MobileMenuComponent,
+    SocialSidebarComponent,
     HeroComponent,
     AboutComponent,
     ExperienceComponent,

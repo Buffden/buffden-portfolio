@@ -37,6 +37,8 @@
   --fz-xl: 20px;
   --fz-xxl: 22px;
   --fz-heading: 32px;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 * {
@@ -52,7 +54,7 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--navy);
-  color: var(--lightest-slate);
+  color: var(--slate);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;

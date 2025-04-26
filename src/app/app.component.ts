@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
-import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { HeroComponent } from './sections/hero/hero.component';
 import { AboutComponent } from './sections/about/about.component';
 import { ExperienceComponent } from './sections/experience/experience.component';
@@ -15,7 +14,6 @@ import { MobileMenuComponent } from './layout/mobile-menu/mobile-menu.component'
   imports: [
     RouterOutlet,
     HeaderComponent,
-    SidebarComponent,
     MobileMenuComponent,
     HeroComponent,
     AboutComponent,

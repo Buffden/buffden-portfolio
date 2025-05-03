@@ -1,6 +1,45 @@
 <section id="experience" class="experience">
   <div class="container">
-    <h2 class="section-heading"><span class="number">02.</span> Experience</h2>
-    <!-- Experience content will go here -->
+    <h2 class="section-heading"><span class="number">02.</span> Where I've Worked</h2>
+    
+    <div class="experience-content">
+      <div class="tab-list" role="tablist" aria-label="Job tabs">
+        <div class="highlight" [style.transform]="'translateY(' + activeTabIndex * 42 + 'px)'"></div>
+        <button
+          *ngFor="let exp of experiences; let i = index"
+          role="tab"
+          [id]="'tab-' + i"
+          [attr.aria-selected]="i === activeTabIndex"
+          [attr.aria-controls]="'panel-' + i"
+          [class.active]="i === activeTabIndex"
+          (click)="setActiveTab(i)"
+        >
+          <span>{{ exp.position }}</span>
+        </button>
+      </div>
+
+      <div class="tab-panels">
+        <div
+          *ngFor="let exp of experiences; let i = index"
+          role="tabpanel"
+          [id]="'panel-' + i"
+          [attr.aria-labelledby]="'tab-' + i"
+          [attr.aria-hidden]="i !== activeTabIndex"
+          class="tab-panel"
+          [style.display]="i === activeTabIndex ? 'block' : 'none'"
+        >
+          <h3>
+            <span>{{ exp.position }}</span>
+            <span class="company">&nbsp;&#64;&nbsp;<a [href]="exp.companyUrl" target="_blank" rel="noopener noreferrer">{{ exp.company }}</a></span>
+          </h3>
+          <p class="duration">{{ exp.duration }}</p>
+          <ul>
+            <li *ngFor="let responsibility of exp.responsibilities">
+              {{ responsibility }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

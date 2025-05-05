@@ -1,6 +1,99 @@
 <section id="projects" class="projects">
   <div class="container">
-    <h2 class="section-heading"><span class="number">03.</span> Work</h2>
-    <!-- Projects content will go here -->
+    <h2 class="section-heading">
+      <span class="number">03.</span> Some Things I've Built
+    </h2>
+    <div class="featured-projects">
+      <div
+        class="project-card"
+        *ngFor="let project of projects; let i = index"
+        [class.reverse]="i % 2 === 1"
+      >
+        <div class="project-image">
+          <img [src]="project.image" [alt]="project.title" />
+        </div>
+        <div class="project-content">
+          <p class="project-type">{{ project.type }}</p>
+          <h3 class="project-title">
+            <a 
+              *ngIf="project.external" 
+              [href]="project.external" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              {{ project.title }}
+            </a>
+            <span *ngIf="!project.external">{{ project.title }}</span>
+          </h3>
+          <div 
+            class="project-description" 
+            [innerHTML]="project.description"
+          ></div>
+          <ul class="project-tech-list">
+            <li *ngFor="let tech of project.tech">{{ tech }}</li>
+          </ul>
+          <div class="project-links">
+            <a 
+              *ngIf="project.github" 
+              [href]="project.github" 
+              target="_blank" 
+              aria-label="GitHub Link"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="2" 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                class="feather feather-github"
+              >
+                <title>GitHub</title>
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+            <a 
+              *ngIf="project.external" 
+              [href]="project.external" 
+              target="_blank" 
+              aria-label="External Link"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="2" 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                class="feather feather-external-link"
+              >
+                <title>External</title>
+                <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Dummy grid below projects -->
+    <h2 class="mini-section-heading">Other Noteworthy Projects</h2>
+    <a class="archive-link" href="#" target="_blank">view the archive</a>
+    <div class="mini-projects-grid">
+      <div class="mini-project-card" *ngFor="let mini of miniProjects">
+        <div class="mini-project-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h3.28a2 2 0 011.42.59l1.42 1.42A2 2 0 0012.72 8H19a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
+        </div>
+        <div class="mini-project-title">{{ mini.title }}</div>
+        <div class="mini-project-period" style="color: #8892b0; font-size: 14px; margin-bottom: 10px;">{{ mini.period }}</div>
+        <div class="mini-project-description" [innerHTML]="mini.description"></div>
+        <ul class="mini-project-tech-list">
+          <li *ngFor="let tech of mini.tech">{{ tech }}</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

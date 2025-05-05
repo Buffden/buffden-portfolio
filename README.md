@@ -6,7 +6,7 @@ A modern, responsive portfolio website built with Angular, showcasing my work an
 
 - **Framework:** Angular 17
 - **Styling:** SCSS
-- **Deployment:** [To be added]
+- **Deployment:** GitHub Pages (via `ng deploy`)
 - **Version Control:** Git
 
 ## 🚀 Features
@@ -41,6 +41,24 @@ ng serve
 # Open http://localhost:4200 in your browser
 ```
 
+## 🚀 Deploying to GitHub Pages
+
+This project uses [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) for easy deployment.
+
+```bash
+# Build and deploy to GitHub Pages
+ng deploy
+```
+- This will build your app for production and push it to the `gh-pages` branch.
+- Your site will be live at: `https://Buffden.github.io/buffden-portfolio/`
+
+### SCSS Budget Warning
+If you see a warning like:
+```
+src/app/sections/projects/projects.component.scss exceeded maximum budget. Budget 4.00 kB was not met by 1.23 kB with a total of 5.23 kB.
+```
+This is just a warning about CSS file size and does not block deployment.
+
 ## 📝 Development Commands
 
 - `ng serve` - Start development server
@@ -48,6 +66,7 @@ ng serve
 - `ng test` - Run unit tests
 - `ng lint` - Run linting
 - `ng e2e` - Run end-to-end tests
+- `ng deploy` - Deploy to GitHub Pages
 
 ## 📂 Project Structure
 
@@ -66,7 +85,7 @@ buffden-portfolio/
 
 ## 🔗 Links
 
-- [Live Portfolio](your-portfolio-url)
+- [Live Portfolio](https://Buffden.github.io/buffden-portfolio/)
 - [Resume](https://docs.google.com/document/d/1cJ7W9DSc-dN7q8x5KywO324tP5XwX9bC6xI4QJfKeME/edit?usp=sharing)
 
 ## 📄 License

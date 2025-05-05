@@ -1,0 +1,71 @@
+@use '../../../styles/variables' as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.contact-subtitle {
+  color: $green;
+  font-family: $font-mono;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.contact-title {
+  color: $lightest-slate;
+  font-size: clamp(40px, 8vw, 60px);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.contact-description {
+  color: $slate;
+  font-size: 22px;
+  max-width: 600px;
+  margin: 0 auto 48px auto;
+  line-height: 1.5;
+}
+
+.contact-button {
+  display: inline-block;
+  color: $green;
+  background: none;
+  border: 1.5px solid $green;
+  border-radius: 6px;
+  padding: 18px 40px;
+  font-size: 22px;
+  font-family: $font-mono;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  margin-top: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 16px 0 rgba(100,255,218,0.08);
+
+  &:hover,
+  &:focus {
+    background: rgba(100,255,218,0.08);
+    color: $lightest-slate;
+    box-shadow: 0 4px 32px 0 rgba(100,255,218,0.18);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-title {
+    font-size: 32px;
+  }
+  .contact-description {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  .contact-button {
+    font-size: 18px;
+    padding: 14px 24px;
+  }
+}

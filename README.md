@@ -86,8 +86,49 @@ buffden-portfolio/
 ## 🔗 Links
 
 - [Live Portfolio](https://Buffden.github.io/buffden-portfolio/)
-- [Resume](https://docs.google.com/document/d/1cJ7W9DSc-dN7q8x5KywO324tP5XwX9bC6xI4QJfKeME/edit?usp=sharing)
+- [Resume](https://drive.google.com/file/d/1e52ICsVtlUCgKNRfQWo32j590EYZOlAO/view?usp=sharing)
 
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## Features
+- Modern, animated portfolio built with Angular
+- Custom animated hexagon loader with initial
+- Sequential animated loading: Header → Sidebar → Hero → Main Content
+- Responsive design and smooth transitions
+
+## Loader Animation
+- The loader uses an SVG hexagon with a custom 'H' initial.
+- The SVG polygon points are carefully chosen to avoid rendering artifacts and ensure all corners are joined perfectly.
+- Animation sequence:
+  1. Loader appears and animates the hexagon outline
+  2. Header fades in
+  3. Sidebar slides in
+  4. Hero section fades in
+  5. Main content appears
+
+### SVG Hexagon Loader
+- The SVG polygon points are:
+  ```
+  points="50,12 88,36 88,74 50,98 12,74 12,36 50,12"
+  ```
+- This ensures the hexagon is closed and avoids gaps at the corners.
+- If you see a gap at the top corner, try nudging the points inward or adjusting the stroke width.
+
+## Customization
+- You can change the loader initial by editing the `<text>` element in `src/app/shared/loader/loader.component.html`.
+- Animation timings can be tweaked in `src/app/app.component.ts` in the `ngOnInit` method.
+
+## Troubleshooting
+- If the hexagon outline appears disconnected, ensure the SVG points are correct and not on the very edge of the viewBox.
+- Use `stroke-linejoin="miter"` for sharp corners.
+
+## Getting Started
+1. Install dependencies: `npm install`
+2. Run the app: `ng serve`
+3. Build for production: `ng build`
+
+---
+
+For more details, see the code comments and the loader component source.

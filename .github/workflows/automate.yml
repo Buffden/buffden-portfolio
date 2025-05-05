@@ -24,8 +24,8 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --configuration production --base-href /buffden-portfolio/
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy using Angular CLI
+        run: npm run deploy
         with:
           branch: gh-pages
           folder: dist/buffden-portfolio/

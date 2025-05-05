@@ -1,4 +1,4 @@
-.header {
+:host {
   position: fixed;
   top: 0;
   z-index: 11;
@@ -7,7 +7,9 @@
   height: 100px;
   background-color: rgba(10, 25, 47, 0.85);
   backdrop-filter: blur(10px);
-  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.7s, transform 0.7s;
 
   @media (max-width: 1080px) {
     padding: 0 40px;
@@ -15,6 +17,11 @@
   @media (max-width: 768px) {
     padding: 0 25px;
   }
+}
+
+:host(.animated-in) {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .nav {

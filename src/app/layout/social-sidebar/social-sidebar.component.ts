@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -62,4 +62,9 @@ interface SocialLink {
   `,
   styleUrls: ['./social-sidebar.component.scss']
 })
-export class SocialSidebarComponent {} 
+export class SocialSidebarComponent {
+  @Input() animatedIn = false;
+  @HostBinding('class.animated-in') get animatedInClass() {
+    return this.animatedIn;
+  }
+} 

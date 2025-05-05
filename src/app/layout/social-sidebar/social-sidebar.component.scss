@@ -1,10 +1,13 @@
-.social-sidebar {
+:host {
   width: 40px;
   position: fixed;
   bottom: 0;
   left: 40px;
   right: auto;
   z-index: 10;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
   
   .social-list {
     display: flex;
@@ -52,17 +55,24 @@
     height: 90px;
     margin: 0 auto;
     background-color: var(--light-slate);
+    opacity: 1;
+    transition: opacity 0.7s, transform 0.7s;
   }
 }
 
+:host(.animated-in) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @media (max-width: 1080px) {
-  .social-sidebar {
+  :host {
     left: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .social-sidebar {
+  :host {
     display: none;
   }
 } 

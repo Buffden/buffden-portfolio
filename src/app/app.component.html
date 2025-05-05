@@ -177,18 +177,23 @@
   }
 </style>
 
-<app-header></app-header>
-<app-mobile-menu></app-mobile-menu>
-<app-social-sidebar></app-social-sidebar>
+<app-loader [show]="isLoading"></app-loader>
 
-<main class="main-content">
-  <app-hero></app-hero>
-  <app-about></app-about>
-  <app-experience></app-experience>
-  <app-projects></app-projects>
-  <app-contact></app-contact>
+<ng-container *ngIf="!isLoading">
+  <app-header [animatedIn]="headerAnimated"></app-header>
+  <app-mobile-menu></app-mobile-menu>
+  <app-social-sidebar [animatedIn]="sidebarAnimated"></app-social-sidebar>
+  <main class="main-content">
+    <app-hero [animatedIn]="heroAnimated"></app-hero>
+    <div [class.fade-in]="contentAnimated">
+      <app-about></app-about>
+      <app-experience></app-experience>
+      <app-projects></app-projects>
+      <app-contact></app-contact>
+    </div>
+  </main>
   <app-footer></app-footer>
-</main>
+</ng-container>
 
 <router-outlet />
 

@@ -29,5 +29,9 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
 
+      - name: Authenticate with GitHub
+        run: |
+          git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
+
       - name: Deploy using Angular CLI
         run: npm run deploy

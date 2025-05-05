@@ -26,6 +26,3 @@ jobs:
 
       - name: Deploy using Angular CLI
         run: npm run deploy
-        with:
-          branch: gh-pages
-          folder: dist/buffden-portfolio/

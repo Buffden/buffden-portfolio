@@ -24,5 +24,10 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --configuration production --base-href /buffden-portfolio/
 
+      - name: Configure Git identity
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
       - name: Deploy using Angular CLI
         run: npm run deploy

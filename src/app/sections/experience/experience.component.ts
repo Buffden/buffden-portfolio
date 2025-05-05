@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollRevealService } from '../../shared/scroll-reveal.service';
+import { srConfig } from '../../shared/scroll-reveal.config';
 
 interface Experience {
   company: string;
@@ -16,7 +18,9 @@ interface Experience {
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements AfterViewInit {
+  @ViewChild('experienceSection', { static: true }) experienceSection!: ElementRef;
+
   activeTabIndex = 0;
 
   experiences: Experience[] = [
@@ -57,6 +61,15 @@ export class ExperienceComponent {
       ]
     }
   ];
+
+  constructor(private scrollReveal: ScrollRevealService) {}
+
+  ngAfterViewInit() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReducedMotion) {
+      this.scrollReveal.reveal(this.experienceSection.nativeElement, srConfig());
+    }
+  }
 
   setActiveTab(index: number): void {
     this.activeTabIndex = index;

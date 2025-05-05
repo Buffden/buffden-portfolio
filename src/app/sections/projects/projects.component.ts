@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollRevealService } from '../../shared/scroll-reveal.service';
+import { srConfig } from '../../shared/scroll-reveal.config';
 
 interface Project {
   title: string;
@@ -19,7 +21,10 @@ interface Project {
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit {
+  @ViewChildren('projectCard') projectCards!: QueryList<ElementRef>;
+  @ViewChildren('miniProjectCard') miniProjectCards!: QueryList<ElementRef>;
+
   projects: Project[] = [
     {
       title: 'Battle Arena – Multiplayer Artillery Game Platform',
@@ -89,4 +94,18 @@ export class ProjectsComponent {
       description: `Dynamic survey builder with real-time analytics and AI-driven data visualization for HR and healthcare workflows.`
     }
   ];
+
+  constructor(private scrollReveal: ScrollRevealService) {}
+
+  ngAfterViewInit() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReducedMotion) {
+      this.projectCards.forEach((card, idx) => {
+        this.scrollReveal.reveal(card.nativeElement, srConfig(200 + idx * 100));
+      });
+      this.miniProjectCards.forEach((card, idx) => {
+        this.scrollReveal.reveal(card.nativeElement, srConfig(200 + idx * 100));
+      });
+    }
+  }
 }

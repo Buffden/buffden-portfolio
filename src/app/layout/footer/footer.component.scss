@@ -1,0 +1,38 @@
+@use '../../../styles/variables' as *;
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin: 60px 0 20px 0;
+    color: $slate;
+    font-family: $font-mono;
+    font-size: 16px;
+  
+    .footer-github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: $slate;
+      text-decoration: none;
+      transition: color 0.2s;
+  
+      svg {
+        color: $green;
+        transition: color 0.2s;
+      }
+  
+      &:hover,
+      &:focus {
+        color: $green;
+        svg {
+          color: $green;
+        }
+      }
+    }
+  
+    .footer-credit {
+      margin-top: 8px;
+      font-size: 15px;
+      color: $light-slate;
+    }
+  }

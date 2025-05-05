@@ -1,4 +1,4 @@
-<section id="projects" class="projects">
+<section #projectsSection id="projects" class="projects">
   <div class="container">
     <h2 class="section-heading">
       <span class="number">03.</span> Some Things I've Built
@@ -8,6 +8,7 @@
         class="project-card"
         *ngFor="let project of projects; let i = index"
         [class.reverse]="i % 2 === 1"
+        #projectCard
       >
         <div class="project-image">
           <img [src]="project.image" [alt]="project.title" />
@@ -83,7 +84,7 @@
     <h2 class="mini-section-heading">Other Noteworthy Projects</h2>
     <a class="archive-link" href="#" target="_blank">view the archive</a>
     <div class="mini-projects-grid">
-      <div class="mini-project-card" *ngFor="let mini of miniProjects">
+      <div class="mini-project-card" *ngFor="let mini of miniProjects" #miniProjectCard>
         <div class="mini-project-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h3.28a2 2 0 011.42.59l1.42 1.42A2 2 0 0012.72 8H19a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
         </div>

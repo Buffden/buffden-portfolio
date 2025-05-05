@@ -8,6 +8,7 @@ import { ProjectsComponent } from './sections/projects/projects.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { MobileMenuComponent } from './layout/mobile-menu/mobile-menu.component';
 import { SocialSidebarComponent } from './layout/social-sidebar/social-sidebar.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { SocialSidebarComponent } from './layout/social-sidebar/social-sidebar.c
     AboutComponent,
     ExperienceComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

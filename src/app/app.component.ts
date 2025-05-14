@@ -11,6 +11,7 @@ import { SocialSidebarComponent } from './layout/social-sidebar/social-sidebar.c
 import { FooterComponent } from './layout/footer/footer.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { CommonModule } from '@angular/common';
+import { EmailSidebarComponent } from './layout/email-sidebar/email-sidebar.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { CommonModule } from '@angular/common';
     HeaderComponent,
     MobileMenuComponent,
     SocialSidebarComponent,
+    EmailSidebarComponent,
     HeroComponent,
     AboutComponent,
     ExperienceComponent,
@@ -39,6 +41,7 @@ export class AppComponent {
   heroAnimated = false;
   sidebarAnimated = false;
   contentAnimated = false;
+  emailSidebarAnimated = false;
 
   ngOnInit() {
     // 0ms: Initial page load - loader appears
@@ -53,7 +56,7 @@ export class AppComponent {
         // 3200ms: Social sidebar slides in from left
         setTimeout(() => {
           this.sidebarAnimated = true;
-          
+          this.emailSidebarAnimated = true;
           // 4200ms: Hero section fades in and animates
           setTimeout(() => {
             this.heroAnimated = true;

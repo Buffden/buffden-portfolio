@@ -35,10 +35,11 @@
           </ul>
           <div class="project-links">
             <a 
-              *ngIf="project.github" 
-              [href]="project.github" 
+              *ngFor="let githubLink of project.github" 
+              [href]="githubLink" 
               target="_blank" 
               aria-label="GitHub Link"
+              class="github-link"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 

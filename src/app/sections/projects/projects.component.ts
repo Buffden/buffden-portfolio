@@ -8,7 +8,7 @@ interface Project {
   type: string;
   description: string;
   image: string;
-  github?: string;
+  github?: string[];
   external?: string;
   tech: string[];
   links?: { label: string; url: string }[];
@@ -37,7 +37,7 @@ export class ProjectsComponent implements AfterViewInit {
         • Dockerized, scalable, and fully modular architecture.
       `,
       image: 'assets/images/battle-arena.png',
-      github: 'https://github.com/Buffden/battle-arena',
+      github: ['https://github.com/Buffden/battle-arena'],
       tech: ['Angular', 'Phaser 3', 'Spring Boot', 'Node.js', 'MongoDB', 'Docker'],
     },
     {
@@ -52,7 +52,7 @@ export class ProjectsComponent implements AfterViewInit {
         <a href='https://github.com/Buffden/AI-Powered-Personal-Finance-Manager' target='_blank'>GitHub Repo</a>
       `,
       image: 'assets/images/ai-finance-manager.png',
-      github: 'https://github.com/Buffden/AI-Powered-Personal-Finance-Manager',
+      github: ['https://github.com/Buffden/AI-Powered-Personal-Finance-Manager'],
       tech: ['Streamlit', 'Flask', 'OpenAI', 'Plaid API', 'Docker', 'AWS RDS'],
     },
     {
@@ -67,8 +67,7 @@ export class ProjectsComponent implements AfterViewInit {
         <a href='https://github.com/Buffden/employee-management-system-gui' target='_blank'>Frontend Repo</a> | <a href='https://github.com/Buffden/ems-api' target='_blank'>Backend Repo</a>
       `,
       image: 'assets/images/ems-gui.png',
-      github: 'https://github.com/Buffden/employee-management-system-gui',
-      external: 'https://github.com/Buffden/ems-api',
+      github: ['https://github.com/Buffden/employee-management-system-gui', 'https://github.com/Buffden/ems-api'],
       tech: ['Angular', 'Spring Boot', 'JWT', 'Docker', 'AWS EC2'],
     }
   ];

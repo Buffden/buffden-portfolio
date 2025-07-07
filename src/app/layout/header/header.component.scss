@@ -95,6 +95,10 @@
           color: var(--green);
         }
 
+        &.active {
+          color: var(--green);
+        }
+
         span {
           margin-right: 5px;
           color: var(--green);

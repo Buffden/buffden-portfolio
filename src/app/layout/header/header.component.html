@@ -26,19 +26,19 @@
     <div class="nav-links">
       <ol>
         <li>
-          <a href="#about" (click)="scrollToSection($event, 'about')">About</a>
+          <a href="#about" (click)="scrollToSection($event, 'about')" [class.active]="activeSection === 'about'">About</a>
         </li>
         <li>
-          <a href="#experience" (click)="scrollToSection($event, 'experience')">Experience</a>
+          <a href="#experience" (click)="scrollToSection($event, 'experience')" [class.active]="activeSection === 'experience'">Experience</a>
         </li>
         <li>
-          <a href="#work" (click)="scrollToSection($event, 'projects')">Work</a>
+          <a href="#work" (click)="scrollToSection($event, 'projects')" [class.active]="activeSection === 'projects'">Work</a>
         </li>
         <li>
-          <a href="#contact" (click)="scrollToSection($event, 'contact')">Contact</a>
+          <a href="#contact" (click)="scrollToSection($event, 'contact')" [class.active]="activeSection === 'contact'">Contact</a>
         </li>
       </ol>
-      <a href="https://drive.google.com/file/d/1e52ICsVtlUCgKNRfQWo32j590EYZOlAO/view?usp=sharing" class="resume-button" target="_blank" rel="noopener noreferrer">
+      <a href="https://drive.google.com/file/d/1arJgloPf4RRQ-QVb2yfNm5kLq8LLgWHA/view?usp=sharing" class="resume-button" target="_blank" rel="noopener noreferrer">
         Resume
       </a>
     </div>

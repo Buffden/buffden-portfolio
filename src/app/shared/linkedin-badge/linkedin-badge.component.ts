@@ -17,7 +17,7 @@ declare global {
       class="badge-base LI-profile-badge"
       data-locale="en_US"
       data-size="medium"
-      data-theme="light"
+      data-theme="dark"
       data-type="VERTICAL"
       data-vanity="harshwardhanpatil23"
       data-version="v1"

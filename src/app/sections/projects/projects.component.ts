@@ -36,7 +36,7 @@ export class ProjectsComponent implements AfterViewInit {
         • Spring Boot REST APIs and Node.js + Socket.io for backend.<br>
         • Dockerized, scalable, and fully modular architecture.
       `,
-      image: 'assets/images/battle-arena.png',
+      image: 'assets/images/battle-arena-new.png',
       github: ['https://github.com/Buffden/battle-arena'],
       tech: ['Angular', 'Phaser 3', 'Spring Boot', 'Node.js', 'MongoDB', 'Docker'],
     },
@@ -56,6 +56,21 @@ export class ProjectsComponent implements AfterViewInit {
       tech: ['Streamlit', 'Flask', 'OpenAI', 'Plaid API', 'Docker', 'AWS RDS'],
     },
     {
+      title: 'Event Management System (EMS)',
+      type: 'Featured Project',
+      description: `
+        • Comprehensive web platform for end-to-end event lifecycle management.<br>
+        • 9 NestJS microservices with Next.js frontend and PostgreSQL database.<br>
+        • Features: registration, digital ticketing, QR validation, real-time tracking.<br>
+        • Containerized deployment with Docker Compose and Kubernetes.<br>
+        • Built as part of CSE 5325 Software Engineering II course.<br>
+        <a href='https://github.com/Buffden/Event-Management-System' target='_blank'>GitHub Repository</a>
+      `,
+      image: 'assets/images/event-management-system-landing-page.png',
+      github: ['https://github.com/Buffden/Event-Management-System'],
+      tech: ['Next.js', 'NestJS', 'TypeScript', 'PostgreSQL', 'Docker', 'Kubernetes'],
+    },
+    {
       title: 'Employee Management System (EMS)',
       type: 'Featured Project',
       description: `
@@ -66,7 +81,7 @@ export class ProjectsComponent implements AfterViewInit {
         • Clean codebase, CI-ready, and fully documented.<br>
         <a href='https://github.com/Buffden/employee-management-system-gui' target='_blank'>Frontend Repo</a> | <a href='https://github.com/Buffden/ems-api' target='_blank'>Backend Repo</a>
       `,
-      image: 'assets/images/ems-gui.png',
+      image: 'assets/images/ems-landing-page.png',
       github: ['https://github.com/Buffden/employee-management-system-gui', 'https://github.com/Buffden/ems-api'],
       tech: ['Angular', 'Spring Boot', 'JWT', 'Docker', 'AWS EC2'],
     }

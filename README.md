@@ -86,7 +86,7 @@ buffden-portfolio/
 ## 🔗 Links
 
 - [Live Portfolio](https://Buffden.github.io/buffden-portfolio/)
-- [Resume](https://drive.google.com/file/d/1lPamNenMwILVviMq_YGB1wKrc1K_EzZQ/view?usp=drive_link)
+- [Resume](https://github.com/Buffden/resume/blob/main/full-stack-resume.pdf)
 
 ## 📄 License
 

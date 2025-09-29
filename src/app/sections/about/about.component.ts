@@ -1,10 +1,11 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { ScrollRevealService } from '../../shared/scroll-reveal.service';
 import { srConfig } from '../../shared/scroll-reveal.config';
+import { LinkedinBadgeComponent } from '../../shared/linkedin-badge/linkedin-badge.component';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [LinkedinBadgeComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

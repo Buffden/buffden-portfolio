@@ -28,36 +28,39 @@ export class ExperienceComponent implements AfterViewInit {
       company: 'Clarivate',
       companyUrl: 'https://clarivate.com',
       position: 'Software Engineer',
-      duration: 'August 2023 - July 2024',
+      duration: 'August 2023 – July 2024',
       responsibilities: [
-        'Led development of multiple web applications using Angular, TypeScript, and RxJS, implementing complex features and optimizing performance',
-        'Architected and maintained CI/CD pipelines with Jenkins and Docker, achieving 40% faster deployments and enhanced code quality',
-        'Mentored junior developers through code reviews and knowledge sharing sessions, fostering team growth and code quality standards',
-        'Collaborated with product teams to design and implement scalable solutions for enterprise-level applications'
+        'Delivered end-to-end features by pairing reusable Angular modules (tables, filters, charts) with Spring Boot REST APIs, ensuring consistent performance and maintainability across apps.',
+        'Implemented secure auth with JWT + Spring Security and Angular route guards (RBAC), improving session reliability and reducing unauthorized access incidents.',
+        'Optimized PostgreSQL schema and queries for heavy reports, cutting data retrieval times by ~40% and maintaining zero production downtime during releases.',
+        'Containerized services with Docker; built CI/CD pipelines in Jenkins/Spinnaker and deployed to AWS (EC2/ECS), standardizing rollouts and reducing release friction.',
+        'Refactored legacy monolith areas into modular, reusable components aligned with Clean Architecture and DDD to lower maintenance overhead.',
+        'Established robust testing (Jasmine/Karma on FE, JUnit + Postman collections on BE) with ~90%+ coverage, significantly reducing post-release defects.'
       ]
     },
     {
       company: 'Clarivate',
       companyUrl: 'https://clarivate.com',
       position: 'Associate Software Engineer',
-      duration: 'October 2021 - July 2023',
+      duration: 'October 2021 – July 2023',
       responsibilities: [
-        'Developed and maintained frontend features using Angular and TypeScript, focusing on responsive design and cross-browser compatibility',
-        'Implemented automated testing strategies resulting in 85% test coverage and reduced bug incidents',
-        'Participated in agile ceremonies and contributed to sprint planning and estimation processes',
-        'Collaborated with UX team to implement pixel-perfect designs and improve user experience'
+        'Developed responsive Angular components with TypeScript and RxJS, improving UX and cross-browser reliability for enterprise workflows.',
+        'Built and maintained Spring Boot endpoints and data access layers; contributed indexes/constraints to strengthen data integrity and query performance.',
+        'Introduced CI quality gates and test automation in Jenkins, lifting team coverage and shortening feedback loops in PRs.',
+        'Collaborated in Agile ceremonies (planning/estimations, reviews, retros) and partnered with UX to ship pixel-perfect, accessible UI.'
       ]
     },
     {
       company: 'Clarivate',
       companyUrl: 'https://clarivate.com',
       position: 'Software Engineer Intern',
-      duration: 'August 2021 - October 2021',
+      duration: 'August 2021 – October 2021',
       responsibilities: [
-        'Assisted in developing new features for web applications using Angular and TypeScript',
-        'Created unit tests and end-to-end tests using Jasmine and Protractor',
-        'Participated in code reviews and implemented feedback to improve code quality',
-        'Learned and applied best practices in frontend development and version control'
+        'Developed a full-stack survey design tool using Angular frontend, Spring Boot REST APIs, and PostgreSQL database, demonstrating end-to-end development capabilities.',
+        'Implemented AWS CI/CD pipeline with Jenkins and Spinnaker for automated testing, building, and deployment, gaining hands-on DevOps experience.',
+        'Contributed Angular feature work and bug fixes while learning team conventions for scalable state management and API integration.',
+        'Wrote unit and e2e tests (Jasmine/Protractor), increasing confidence in critical user flows before handoff.',
+        'Participated in code reviews and followed Git branching/PR standards to maintain code quality.'
       ]
     }
   ];

@@ -17,14 +17,22 @@
           <p class="project-type">{{ project.type }}</p>
           <h3 class="project-title">
             <a 
-              *ngIf="project.external" 
+              *ngIf="project.github && project.github.length > 0" 
+              [href]="project.github[0]" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              {{ project.title }}
+            </a>
+            <a 
+              *ngIf="!project.github && project.external" 
               [href]="project.external" 
               target="_blank" 
               rel="noopener noreferrer"
             >
               {{ project.title }}
             </a>
-            <span *ngIf="!project.external">{{ project.title }}</span>
+            <span *ngIf="!project.github && !project.external">{{ project.title }}</span>
           </h3>
           <div 
             class="project-description" 

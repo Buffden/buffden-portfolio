@@ -112,41 +112,39 @@ export class ProjectsComponent implements AfterViewInit {
   dummyProjects = Array(6).fill({});
 
   miniProjects = [
-    {
-      title: 'Backend API + AWS IaC Deployment (Simulated)',
-      period: 'Sep 2024 - Dec 2025',
-      tech: [
-        'ASP.NET Core',
-        'AWS CDK',
-        'GitHub Actions',
-        'Docker',
-        'EC2',
-        'S3',
-        'Lambda',
-      ],
-      description:
-        `Secure, RESTful microservices in C# with AWS CDK infrastructure and automated CI/CD for simulated collaborative file editing.`,
-    },
+    
     {
       title: 'Better Finance – Hackathon Project (UTA)',
       period: 'Hackathon - Mar 2025',
       tech: [
-        'Angular',
-        'Flask',
-        'Streamlit',
-        'PostgreSQL',
-        'Plaid API',
-        'Docker',
+        'React',
+        'TypeScript',
+        'Vite',
+        'Tailwind CSS',
+        'shadcn-ui',
       ],
       description:
         `Full-stack AI-powered personal finance platform with real-time bank sync, OCR invoice processing, and analytics dashboard.`,
     },
     {
-      title: 'Survey Design Tool – Clarivate Analytics',
-      period: 'August - October 2021',
-      tech: ['Angular', 'Spring Boot', 'MySQL', 'D3.js', 'Jenkins'],
+      title: 'Secure Phone Book REST API',
+      period: 'Oct 2024 - Nov 2024',
+      tech: [
+        'FastAPI',
+        'Spring Boot',
+        'Docker',
+        'SQLite',
+        'JWT',
+      ],
       description:
-        `Dynamic survey builder with real-time analytics and AI-driven data visualization for HR and healthcare workflows.`,
+        `REST API using Industrial Security Practices with regex-based input validation, role-based auth, and audit logging to prevent XSS/SQL injection attacks.`,
+    },
+    {
+      title: 'Spider Squash – Chrome Extension',
+      period: 'Sep 2022',
+      tech: ['JavaScript', 'HTML5', 'CSS3', 'Chrome API'],
+      description:
+        `Interactive browser game extension with random spider spawns, click-to-squash gameplay, score tracking, and progressive difficulty levels.`,
     },
   ];
 

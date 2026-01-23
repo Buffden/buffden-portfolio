@@ -30,12 +30,12 @@ export class ExperienceComponent implements AfterViewInit {
       position: 'Software Engineer',
       duration: 'August 2023 – July 2024',
       responsibilities: [
-        'Delivered end-to-end features by pairing reusable Angular modules (tables, filters, charts) with Spring Boot REST APIs, ensuring consistent performance and maintainability across apps.',
-        'Implemented secure auth with JWT + Spring Security and Angular route guards (RBAC), improving session reliability and reducing unauthorized access incidents.',
-        'Optimized PostgreSQL schema and queries for heavy reports, cutting data retrieval times by ~40% and maintaining zero production downtime during releases.',
-        'Containerized services with Docker; built CI/CD pipelines in Jenkins/Spinnaker and deployed to AWS (EC2/ECS), standardizing rollouts and reducing release friction.',
-        'Refactored legacy monolith areas into modular, reusable components aligned with Clean Architecture and DDD to lower maintenance overhead.',
-        'Established robust testing (Jasmine/Karma on FE, JUnit + Postman collections on BE) with ~90%+ coverage, significantly reducing post-release defects.'
+        'Delivered reusable Angular modules and Spring Boot APIs for reporting, reducing duplicate code by 80%.',
+        'Refactored legacy modules into clean, modular architectures, lowering long-term maintenance costs.',
+        'Optimized PostgreSQL schemas and queries, reducing latency by 40% for large-scale analytical reports.',
+        'Automated CI/CD pipelines using Docker, Jenkins, and Spinnaker, deploying 50+ releases with zero rollbacks.',
+        'Designed and enforced secure authentication using JWT and Spring Security, strengthening access control across services.',
+        'Mentored 2 junior engineers through pair programming and code reviews, doubling sprint throughput.'
       ]
     },
     {
@@ -44,10 +44,13 @@ export class ExperienceComponent implements AfterViewInit {
       position: 'Associate Software Engineer',
       duration: 'October 2021 – July 2023',
       responsibilities: [
-        'Developed responsive Angular components with TypeScript and RxJS, improving UX and cross-browser reliability for enterprise workflows.',
-        'Built and maintained Spring Boot endpoints and data access layers; contributed indexes/constraints to strengthen data integrity and query performance.',
-        'Introduced CI quality gates and test automation in Jenkins, lifting team coverage and shortening feedback loops in PRs.',
-        'Collaborated in Agile ceremonies (planning/estimations, reviews, retros) and partnered with UX to ship pixel-perfect, accessible UI.'
+        'Built Angular charts and reusable table components integrated with Spring Boot APIs for advanced search and reporting features.',
+        'Bootstrapped an Angular frontend application with Dockerized CI/CD pipelines, enabling automated builds and AWS deployments.',
+        'Standardized reusable frontend modules adopted across 5+ teams, reducing onboarding time by 50%.',
+        'Optimized PostgreSQL queries and indexing strategies, improving data retrieval performance by 30%.',
+        'Implemented secure authentication and request-handling mechanisms (JWT, CORS, CSRF protection), along with input validation standards.',
+        'Increased test coverage to 90%+ using Jasmine and JUnit, reducing production defects by 25%.',
+        'Deployed containerized applications to AWS ECS/EC2 with hardened security group configurations.'
       ]
     },
     {
@@ -59,7 +62,7 @@ export class ExperienceComponent implements AfterViewInit {
         'Developed a full-stack survey design tool using Angular frontend, Spring Boot REST APIs, and PostgreSQL database, demonstrating end-to-end development capabilities.',
         'Implemented AWS CI/CD pipeline with Jenkins and Spinnaker for automated testing, building, and deployment, gaining hands-on DevOps experience.',
         'Contributed Angular feature work and bug fixes while learning team conventions for scalable state management and API integration.',
-        'Wrote unit and e2e tests (Jasmine/Protractor), increasing confidence in critical user flows before handoff.',
+        'Wrote unit and e2e tests (Jasmine & JUnit), increasing confidence in critical user flows before handoff.',
         'Participated in code reviews and followed Git branching/PR standards to maintain code quality.'
       ]
     }

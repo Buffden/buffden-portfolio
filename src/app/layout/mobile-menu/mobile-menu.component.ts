@@ -1,10 +1,12 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { PdfViewerComponent } from '../../shared/pdf-viewer/pdf-viewer.component';
 
 @Component({
   selector: 'app-mobile-menu',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, MatDialogModule],
   templateUrl: './mobile-menu.component.html',
   styleUrls: ['./mobile-menu.component.scss']
 })
@@ -19,9 +21,25 @@ export class MobileMenuComponent {
     { name: 'Contact', link: '#contact' }
   ];
 
+  constructor(private dialog: MatDialog) {}
+
   onNavClick(event: Event, link: string) {
     event.preventDefault();
     document.querySelector(link)?.scrollIntoView({ behavior: 'smooth' });
+    this.closeMenu.emit();
+  }
+
+  openPdfViewer(): void {
+    this.dialog.open(PdfViewerComponent, {
+      width: '90vw',
+      height: '90vh',
+      maxWidth: '1200px',
+      maxHeight: '90vh',
+      data: {
+        pdfUrl: 'https://buffden.github.io/resume/full-stack-resume.pdf',
+        fileName: 'resume.pdf'
+      }
+    });
     this.closeMenu.emit();
   }
 }

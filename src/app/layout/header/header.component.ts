@@ -1,10 +1,12 @@
 import { Component, HostBinding, Input, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { PdfViewerComponent } from '../../shared/pdf-viewer/pdf-viewer.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatDialogModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -18,6 +20,8 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   private observer!: IntersectionObserver;
   private sectionIds = ['about', 'experience', 'projects', 'contact'];
 
+  constructor(private dialog: MatDialog) {}
+
   ngOnInit() {}
 
   ngAfterViewInit() {
@@ -28,6 +32,19 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
     if (this.observer) {
       this.observer.disconnect();
     }
+  }
+
+  openPdfViewer(): void {
+    this.dialog.open(PdfViewerComponent, {
+      width: '90vw',
+      height: '90vh',
+      maxWidth: '1200px',
+      maxHeight: '90vh',
+      data: {
+        pdfUrl: 'https://buffden.github.io/resume/full-stack-resume.pdf',
+        fileName: 'resume.pdf'
+      }
+    });
   }
 
   private setupIntersectionObserver() {

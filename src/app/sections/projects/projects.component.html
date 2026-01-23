@@ -20,17 +20,17 @@
               *ngIf="project.github && project.github.length > 0" 
               [href]="project.github[0]" 
               target="_blank" 
+              [innerHTML]="project.title"
               rel="noopener noreferrer"
             >
-              {{ project.title }}
             </a>
             <a 
               *ngIf="!project.github && project.external" 
               [href]="project.external" 
               target="_blank" 
+              [innerHTML]="project.title"
               rel="noopener noreferrer"
             >
-              {{ project.title }}
             </a>
             <span *ngIf="!project.github && !project.external">{{ project.title }}</span>
           </h3>

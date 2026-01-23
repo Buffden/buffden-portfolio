@@ -19,13 +19,29 @@ interface Project {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent implements AfterViewInit {
   @ViewChildren('projectCard') projectCards!: QueryList<ElementRef>;
   @ViewChildren('miniProjectCard') miniProjectCards!: QueryList<ElementRef>;
 
   projects: Project[] = [
+    {
+      title: `<a href='https://ems.buffden.com/' target='_blank'> Employee Management System</a>`,
+      type: 'Featured Project',
+      description: `
+        • Angular 17 UI and Spring Boot REST API backend.<br>
+        • Manage employees, departments, and roles.<br>
+        • JWT authentication and role-based access.<br>
+        • Dockerized for easy deployment on AWS EC2.<br>
+        • Clean codebase, CI-ready, and fully documented.<br>
+      `,
+      image: 'assets/images/ems-landing-page.png',
+      github: [
+        'https://github.com/Buffden/employee-management-system'
+      ],
+      tech: ['Angular', 'Spring Boot', 'JWT', 'Docker', 'AWS EC2'],
+    },
     {
       title: 'Battle Arena – Multiplayer Artillery Game Platform',
       type: 'Featured Project',
@@ -38,7 +54,14 @@ export class ProjectsComponent implements AfterViewInit {
       `,
       image: 'assets/images/battle-arena-new.png',
       github: ['https://github.com/Buffden/battle-arena'],
-      tech: ['Angular', 'Phaser 3', 'Spring Boot', 'Node.js', 'MongoDB', 'Docker'],
+      tech: [
+        'Angular',
+        'Phaser 3',
+        'Spring Boot',
+        'Node.js',
+        'MongoDB',
+        'Docker',
+      ],
     },
     {
       title: 'AI-Powered Personal Finance Manager',
@@ -53,10 +76,17 @@ export class ProjectsComponent implements AfterViewInit {
       `,
       image: 'assets/images/ai-finance-manager.png',
       github: ['https://github.com/Buffden/AI-Powered-Personal-Finance-Manager'],
-      tech: ['Streamlit', 'Flask', 'OpenAI', 'Plaid API', 'Docker', 'AWS RDS'],
+      tech: [
+        'Streamlit',
+        'Flask',
+        'OpenAI',
+        'Plaid API',
+        'Docker',
+        'AWS RDS',
+      ],
     },
     {
-      title: 'Event Management System (EMS)',
+      title: 'Event Management System',
       type: 'Featured Project',
       description: `
         • Comprehensive web platform for end-to-end event lifecycle management.<br>
@@ -68,57 +98,76 @@ export class ProjectsComponent implements AfterViewInit {
       `,
       image: 'assets/images/event-management-system-landing-page.png',
       github: ['https://github.com/Buffden/Event-Management-System'],
-      tech: ['Next.js', 'NestJS', 'TypeScript', 'PostgreSQL', 'Docker', 'Kubernetes'],
+      tech: [
+        'Next.js',
+        'NestJS',
+        'TypeScript',
+        'PostgreSQL',
+        'Docker',
+        'Kubernetes',
+      ],
     },
-    {
-      title: 'Employee Management System (EMS)',
-      type: 'Featured Project',
-      description: `
-        • Angular 17 UI and Spring Boot REST API backend.<br>
-        • Manage employees, departments, and roles.<br>
-        • JWT authentication and role-based access.<br>
-        • Dockerized for easy deployment on AWS EC2.<br>
-        • Clean codebase, CI-ready, and fully documented.<br>
-        <a href='https://github.com/Buffden/employee-management-system-gui' target='_blank'>Frontend Repo</a> | <a href='https://github.com/Buffden/ems-api' target='_blank'>Backend Repo</a>
-      `,
-      image: 'assets/images/ems-landing-page.png',
-      github: ['https://github.com/Buffden/employee-management-system-gui', 'https://github.com/Buffden/ems-api'],
-      tech: ['Angular', 'Spring Boot', 'JWT', 'Docker', 'AWS EC2'],
-    }
   ];
 
   dummyProjects = Array(6).fill({});
+
   miniProjects = [
     {
       title: 'Backend API + AWS IaC Deployment (Simulated)',
       period: 'Sep 2024 - Dec 2025',
-      tech: ['ASP.NET Core', 'AWS CDK', 'GitHub Actions', 'Docker', 'EC2', 'S3', 'Lambda'],
-      description: `Secure, RESTful microservices in C# with AWS CDK infrastructure and automated CI/CD for simulated collaborative file editing.`
+      tech: [
+        'ASP.NET Core',
+        'AWS CDK',
+        'GitHub Actions',
+        'Docker',
+        'EC2',
+        'S3',
+        'Lambda',
+      ],
+      description:
+        `Secure, RESTful microservices in C# with AWS CDK infrastructure and automated CI/CD for simulated collaborative file editing.`,
     },
     {
       title: 'Better Finance – Hackathon Project (UTA)',
       period: 'Hackathon - Mar 2025',
-      tech: ['Angular', 'Flask', 'Streamlit', 'PostgreSQL', 'Plaid API', 'Docker'],
-      description: `Full-stack AI-powered personal finance platform with real-time bank sync, OCR invoice processing, and analytics dashboard.`
+      tech: [
+        'Angular',
+        'Flask',
+        'Streamlit',
+        'PostgreSQL',
+        'Plaid API',
+        'Docker',
+      ],
+      description:
+        `Full-stack AI-powered personal finance platform with real-time bank sync, OCR invoice processing, and analytics dashboard.`,
     },
     {
       title: 'Survey Design Tool – Clarivate Analytics',
       period: 'August - October 2021',
       tech: ['Angular', 'Spring Boot', 'MySQL', 'D3.js', 'Jenkins'],
-      description: `Dynamic survey builder with real-time analytics and AI-driven data visualization for HR and healthcare workflows.`
-    }
+      description:
+        `Dynamic survey builder with real-time analytics and AI-driven data visualization for HR and healthcare workflows.`,
+    },
   ];
 
   constructor(private scrollReveal: ScrollRevealService) {}
 
   ngAfterViewInit() {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
     if (!prefersReducedMotion) {
       this.projectCards.forEach((card, idx) => {
-        this.scrollReveal.reveal(card.nativeElement, srConfig(200 + idx * 100));
+        this.scrollReveal.reveal(
+          card.nativeElement,
+          srConfig(200 + idx * 100)
+        );
       });
       this.miniProjectCards.forEach((card, idx) => {
-        this.scrollReveal.reveal(card.nativeElement, srConfig(200 + idx * 100));
+        this.scrollReveal.reveal(
+          card.nativeElement,
+          srConfig(200 + idx * 100)
+        );
       });
     }
   }

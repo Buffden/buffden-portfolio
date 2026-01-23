@@ -26,16 +26,19 @@
     <div class="nav-links">
       <ol>
         <li>
-          <a href="#about" (click)="scrollToSection($event, 'about')" [class.active]="activeSection === 'about'">About</a>
+          <a href="#about" (click)="scrollToSection($event, 'about')" [class.active]="activeSection === 'about'"><span>01.</span>About</a>
         </li>
         <li>
-          <a href="#experience" (click)="scrollToSection($event, 'experience')" [class.active]="activeSection === 'experience'">Experience</a>
+          <a href="#skills" (click)="scrollToSection($event, 'skills')" [class.active]="activeSection === 'skills'"><span>02.</span>Skills</a>
         </li>
         <li>
-          <a href="#work" (click)="scrollToSection($event, 'projects')" [class.active]="activeSection === 'projects'">Work</a>
+          <a href="#experience" (click)="scrollToSection($event, 'experience')" [class.active]="activeSection === 'experience'"><span>03.</span>Experience</a>
         </li>
         <li>
-          <a href="#contact" (click)="scrollToSection($event, 'contact')" [class.active]="activeSection === 'contact'">Contact</a>
+          <a href="#projects" (click)="scrollToSection($event, 'projects')" [class.active]="activeSection === 'projects'"><span>04.</span>Work</a>
+        </li>
+        <li>
+          <a href="#contact" (click)="scrollToSection($event, 'contact')" [class.active]="activeSection === 'contact'"><span>05.</span>Contact</a>
         </li>
       </ol>
       <button (click)="openPdfViewer()" class="resume-button">

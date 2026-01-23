@@ -20,7 +20,7 @@
             "outputPath": "dist/buffden-portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "baseHref": "/buffden-portfolio/",
+            "baseHref": "/",
             "polyfills": [
               "zone.js"
             ],

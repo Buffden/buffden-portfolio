@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public activeSection: string = '';
   private observer!: IntersectionObserver;
-  private sectionIds = ['about', 'experience', 'projects', 'contact'];
+  private sectionIds = ['about', 'skills', 'experience', 'projects', 'contact'];
 
   constructor(private dialog: MatDialog) {}
 

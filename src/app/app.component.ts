@@ -12,6 +12,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { CommonModule } from '@angular/common';
 import { EmailSidebarComponent } from './layout/email-sidebar/email-sidebar.component';
+import { SkillsComponent } from './sections/skills/skills.component';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +30,8 @@ import { EmailSidebarComponent } from './layout/email-sidebar/email-sidebar.comp
     ContactComponent,
     FooterComponent,
     LoaderComponent,
-    CommonModule
+    CommonModule,
+    SkillsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

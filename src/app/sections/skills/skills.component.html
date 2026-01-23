@@ -1,0 +1,44 @@
+<section #skillsSection
+         id="skills"
+         class="skills">
+    <div class="container">
+        <h2 class="section-heading"><span class="number">02.</span> Technical Skills</h2>
+
+        <div class="highlight-marquee"
+             aria-label="Highlighted skills">
+            <div class="marquee-track">
+                <div class="marquee-item"
+                     *ngFor="let item of highlightIcons">
+                    <img [src]="item.icon"
+                         [alt]="item.name"
+                         loading="lazy" />
+                </div>
+                <div class="marquee-item"
+                     *ngFor="let item of highlightIcons">
+                    <img [src]="item.icon"
+                         [alt]="item.name"
+                         loading="lazy" />
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card"
+                 *ngFor="let cat of categories; let last = last"
+                 [class.card--full]="last">
+                <div class="card-header">
+                    <h3>{{ cat.title }}</h3>
+                </div>
+                <div class="icon-grid">
+                    <div class="icon-chip"
+                         *ngFor="let item of cat.items">
+                        <img [src]="item.icon"
+                             [alt]="item.name"
+                             loading="lazy" />
+                        <span>{{ item.name }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

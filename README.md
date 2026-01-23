@@ -2,14 +2,14 @@
 
 A modern, responsive portfolio website built with Angular, showcasing my work and experience as a Software Engineer.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Framework:** Angular 17
 - **Styling:** SCSS
 - **Deployment:** GitHub Pages (via `ng deploy`)
 - **Version Control:** Git
 
-## 🚀 Features
+## Features
 
 - Responsive design that works on all devices
 - Smooth scroll animations
@@ -23,7 +23,7 @@ A modern, responsive portfolio website built with Angular, showcasing my work an
   - Projects
   - Contact
 
-## 🏃‍♂️ Running Locally
+## Running Locally
 
 ```bash
 # Clone the repository
@@ -41,7 +41,7 @@ ng serve
 # Open http://localhost:4200 in your browser
 ```
 
-## 🚀 Deploying to GitHub Pages
+## Deploying to GitHub Pages
 
 This project uses [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) for easy deployment.
 
@@ -59,7 +59,7 @@ src/app/sections/projects/projects.component.scss exceeded maximum budget. Budge
 ```
 This is just a warning about CSS file size and does not block deployment.
 
-## 📝 Development Commands
+## Development Commands
 
 - `ng serve` - Start development server
 - `ng build` - Build the project
@@ -68,7 +68,7 @@ This is just a warning about CSS file size and does not block deployment.
 - `ng e2e` - Run end-to-end tests
 - `ng deploy` - Deploy to GitHub Pages
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 buffden-portfolio/
@@ -83,12 +83,12 @@ buffden-portfolio/
 └── package.json         # Project dependencies and scripts
 ```
 
-## 🔗 Links
+## Links
 
 - [Live Portfolio](https://Buffden.github.io/buffden-portfolio/)
 - [Resume](https://github.com/Buffden/resume/blob/main/full-stack-resume.pdf)
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 

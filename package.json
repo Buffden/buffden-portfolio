@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration production",
-    "predeploy": "ng build --configuration production --base-href=/buffden-portfolio/",
-    "deploy": "ng deploy --base-href=/buffden-portfolio/",
+    "predeploy": "ng build --configuration production",
+    "deploy": "ng deploy",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

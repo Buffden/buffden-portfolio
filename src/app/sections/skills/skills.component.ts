@@ -6,6 +6,7 @@ import { srConfig } from '../../shared/scroll-reveal.config';
 interface SkillItem {
     name: string;
     icon: string;
+    tooltip?: string;
 }
 
 interface SkillCategory {
@@ -21,26 +22,26 @@ interface SkillCategory {
     styleUrl: './skills.component.scss'
 })
 export class SkillsComponent implements AfterViewInit {
-    @ViewChild('skillsSection', { static: true }) skillsSection!: ElementRef;
+    @ViewChild('skillsSection') skillsSection!: ElementRef<HTMLElement>;
 
     private iconPath(fileName: string): string {
         return `assets/images/icons/${encodeURIComponent(fileName)}`;
     }
 
     highlightIcons: SkillItem[] = [
-        { name: 'AWS', icon: this.iconPath('AWS.svg') },
-        { name: 'Docker', icon: this.iconPath('Docker.svg') },
-        { name: 'Kubernetes', icon: this.iconPath('Kubernetes.svg') },
-        { name: 'Angular', icon: this.iconPath('Angular.svg') },
-        { name: 'Spring', icon: this.iconPath('Spring.svg') },
-        { name: 'Node.js', icon: this.iconPath('Node.js.svg') },
-        { name: 'TypeScript', icon: this.iconPath('TypeScript.svg') },
-        { name: 'PostgreSQL', icon: this.iconPath('PostgresSQL.svg') },
-        { name: 'NGINX', icon: this.iconPath('NGINX.svg') },
-        { name: 'GitHub Actions', icon: this.iconPath('GitHub Actions.svg') },
-        { name: 'Jenkins', icon: this.iconPath('Jenkins.svg') },
-        { name: 'MongoDB', icon: this.iconPath('MongoDB.svg') },
-        { name: 'Redis', icon: this.iconPath('Redis.svg') },
+        { name: 'AWS', icon: this.iconPath('AWS.svg'), tooltip: 'Amazon Web Services' },
+        { name: 'Docker', icon: this.iconPath('Docker.svg'), tooltip: 'Docker Containers' },
+        { name: 'Kubernetes', icon: this.iconPath('Kubernetes.svg'), tooltip: 'Kubernetes Orchestration' },
+        { name: 'Angular', icon: this.iconPath('Angular.svg'), tooltip: 'Angular Framework' },
+        { name: 'Spring', icon: this.iconPath('Spring.svg'), tooltip: 'Spring Framework' },
+        { name: 'Node.js', icon: this.iconPath('Node.js.svg'), tooltip: 'Node.js Runtime' },
+        { name: 'TypeScript', icon: this.iconPath('TypeScript.svg'), tooltip: 'TypeScript Language' },
+        { name: 'PostgreSQL', icon: this.iconPath('PostgreSQL.svg'), tooltip: 'PostgreSQL Database' },
+        { name: 'NGINX', icon: this.iconPath('NGINX.svg'), tooltip: 'NGINX Web Server' },
+        { name: 'GitHub Actions', icon: this.iconPath('GitHub Actions.svg'), tooltip: 'GitHub Actions CI/CD' },
+        { name: 'Jenkins', icon: this.iconPath('Jenkins.svg'), tooltip: 'Jenkins Automation Server' },
+        { name: 'MongoDB', icon: this.iconPath('MongoDB.svg'), tooltip: 'MongoDB Database' },
+        { name: 'Redis', icon: this.iconPath('Redis.svg'), tooltip: 'Redis In-Memory Data Store' },
         { name: 'D3.js', icon: this.iconPath('D3.js.svg') }
     ];
 
@@ -49,7 +50,6 @@ export class SkillsComponent implements AfterViewInit {
             title: 'Frontend & UI',
             items: [
                 { name: 'Angular', icon: this.iconPath('Angular.svg') },
-                { name: 'React', icon: this.iconPath('React.svg') },
                 { name: 'Next.js', icon: this.iconPath('Next.js.svg') },
                 { name: 'TypeScript', icon: this.iconPath('TypeScript.svg') },
                 { name: 'JavaScript', icon: this.iconPath('JavaScript.svg') },
@@ -65,10 +65,8 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Spring', icon: this.iconPath('Spring.svg') },
                 { name: 'Java', icon: this.iconPath('Java.svg') },
                 { name: 'Node.js', icon: this.iconPath('Node.js.svg') },
-                { name: 'FastAPI', icon: this.iconPath('FastAPI.svg') },
                 { name: 'GraphQL', icon: this.iconPath('GraphQL.svg') },
                 { name: 'Postman', icon: this.iconPath('Postman.svg') },
-                { name: 'Swagger', icon: this.iconPath('Swagger.svg') },
                 { name: 'Socket.io', icon: this.iconPath('Socket.io.svg') }
             ]
         },
@@ -82,45 +80,30 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Jenkins', icon: this.iconPath('Jenkins.svg') },
                 { name: 'GitHub Actions', icon: this.iconPath('GitHub Actions.svg') },
                 { name: 'Linux', icon: this.iconPath('Linux.svg') },
-                { name: 'Ubuntu', icon: this.iconPath('Ubuntu.svg') },
-                { name: 'Cloudflare', icon: this.iconPath('Cloudflare.svg') }
+                { name: 'Ubuntu', icon: this.iconPath('Ubuntu.svg') }
             ]
         },
         {
             title: 'Data & Messaging',
             items: [
-                { name: 'PostgreSQL', icon: this.iconPath('PostgresSQL.svg') },
+                { name: 'PostgreSQL', icon: this.iconPath('PostgreSQL.svg') },
                 { name: 'MongoDB', icon: this.iconPath('MongoDB.svg') },
                 { name: 'Redis', icon: this.iconPath('Redis.svg') },
                 { name: 'MySQL', icon: this.iconPath('MySQL.svg') },
                 { name: 'SQLite', icon: this.iconPath('SQLite.svg') },
-                { name: 'Apache Kafka', icon: this.iconPath('Apache Kafka.svg') },
-                { name: 'Apache Hadoop', icon: this.iconPath('Apache Hadoop.svg') },
-                { name: 'Apache Airflow', icon: this.iconPath('Apache Airflow.svg') }
+                { name: 'Apache Kafka', icon: this.iconPath('Apache Kafka.svg') }
             ]
         },
         {
             title: 'Testing & Tools',
             items: [
+                { name: 'Jasmine', icon: this.iconPath('Jasmine.svg') },
+                { name: 'SonarQube', icon: this.iconPath('SonarQube.svg') },
+                { name: 'JUnit', icon: this.iconPath('JUnit.svg') },
+                { name: 'Apache', icon: this.iconPath('Apache.svg') },
+                { name: 'Selenium', icon: this.iconPath('Selenium.svg') },
                 { name: 'Git', icon: this.iconPath('Git.svg') },
                 { name: 'GitHub', icon: this.iconPath('GitHub.svg') },
-                { name: 'Gradle', icon: this.iconPath('Gradle.svg') },
-                { name: 'NPM', icon: this.iconPath('NPM.svg') },
-                { name: 'Yarn', icon: this.iconPath('Yarn.svg') },
-                { name: 'YAML', icon: this.iconPath('YAML.svg') },
-                { name: 'Rust', icon: this.iconPath('Rust.svg') },
-                { name: 'C', icon: this.iconPath('C.svg') },
-                { name: 'C++', icon: this.iconPath('C++ (CPlusPlus).svg') },
-                { name: 'Apache', icon: this.iconPath('Apache.svg') },
-                { name: 'Apache Tomcat', icon: this.iconPath('Apache Tomcat.svg') },
-                { name: 'TortoiseGit', icon: this.iconPath('TortoiseGit.svg') },
-                { name: 'Powershell', icon: this.iconPath('Powershell.svg') },
-                { name: 'PuTTY', icon: this.iconPath('PuTTY.svg') },
-                { name: 'Jasmine', icon: this.iconPath('Jasmine.svg') },
-                { name: 'Selenium', icon: this.iconPath('Selenium.svg') },
-                { name: 'Grafana', icon: this.iconPath('Grafana.svg') },
-                { name: 'SonarQube', icon: this.iconPath('SonarQube.svg') },
-                { name: 'Android Studio', icon: this.iconPath('Android Studio.svg') }
             ]
         }
     ];

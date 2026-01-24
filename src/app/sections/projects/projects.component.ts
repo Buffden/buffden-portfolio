@@ -6,7 +6,7 @@ import { srConfig } from '../../shared/scroll-reveal.config';
 interface Project {
   title: string;
   type: string;
-  description: string;
+  descriptionPoints: string[];
   image: string;
   github?: string[];
   external?: string;
@@ -29,13 +29,13 @@ export class ProjectsComponent implements AfterViewInit {
     {
       title: `<a href='https://ems.buffden.com/' target='_blank'> Employee Management System</a>`,
       type: 'Featured Project',
-      description: `
-        • Angular 17 UI and Spring Boot REST API backend.<br>
-        • Manage employees, departments, and roles.<br>
-        • JWT authentication and role-based access.<br>
-        • Dockerized for easy deployment on AWS EC2.<br>
-        • Clean codebase, CI-ready, and fully documented.<br>
-      `,
+      descriptionPoints: [
+        'Angular 17 UI and Spring Boot REST API backend.',
+        'Manage employees, departments, and roles.',
+        'JWT authentication and role-based access.',
+        'Dockerized for easy deployment on AWS EC2.',
+        'Clean codebase, CI-ready, and fully documented.',
+      ],
       image: 'assets/images/ems-landing-page.png',
       github: [
         'https://github.com/Buffden/employee-management-system'
@@ -45,13 +45,13 @@ export class ProjectsComponent implements AfterViewInit {
     {
       title: 'Battle Arena – Multiplayer Artillery Game Platform',
       type: 'Featured Project',
-      description: `
-        • Real-time multiplayer artillery game inspired by Pocket Tanks.<br>
-        • Microservices for auth, matchmaking, and game engine.<br>
-        • Phaser 3 + Angular 17 for browser-based 2D gameplay.<br>
-        • Spring Boot REST APIs and Node.js + Socket.io for backend.<br>
-        • Dockerized, scalable, and fully modular architecture.
-      `,
+      descriptionPoints: [
+        'Real-time multiplayer artillery game inspired by Pocket Tanks.',
+        'Microservices for auth, matchmaking, and game engine.',
+        'Phaser 3 + Angular 17 for browser-based 2D gameplay.',
+        'Spring Boot REST APIs and Node.js + Socket.io for backend.',
+        'Dockerized, scalable, and fully modular architecture.',
+      ],
       image: 'assets/images/battle-arena-new.png',
       github: ['https://github.com/Buffden/battle-arena'],
       tech: [
@@ -66,14 +66,13 @@ export class ProjectsComponent implements AfterViewInit {
     {
       title: 'AI-Powered Personal Finance Manager',
       type: 'Featured Project',
-      description: `
-        • Securely links bank accounts via Plaid API.<br>
-        • AI auto-categorizes expenses and suggests budgets.<br>
-        • Chatbot and receipt scanning with OpenAI.<br>
-        • Interactive dashboards for budgets and analytics.<br>
-        • Flask backend, Streamlit frontend, Dockerized stack.<br>
-        <a href='https://github.com/Buffden/AI-Powered-Personal-Finance-Manager' target='_blank'>GitHub Repo</a>
-      `,
+      descriptionPoints: [
+        'Securely links bank accounts via Plaid API.',
+        'AI auto-categorizes expenses and suggests budgets.',
+        'Chatbot and receipt scanning with OpenAI.',
+        'Interactive dashboards for budgets and analytics.',
+        'Flask backend, Streamlit frontend, Dockerized stack.',
+      ],
       image: 'assets/images/ai-finance-manager.png',
       github: ['https://github.com/Buffden/AI-Powered-Personal-Finance-Manager'],
       tech: [
@@ -88,14 +87,13 @@ export class ProjectsComponent implements AfterViewInit {
     {
       title: 'Event Management System',
       type: 'Featured Project',
-      description: `
-        • Comprehensive web platform for end-to-end event lifecycle management.<br>
-        • 9 NestJS microservices with Next.js frontend and PostgreSQL database.<br>
-        • Features: registration, digital ticketing, QR validation, real-time tracking.<br>
-        • Containerized deployment with Docker Compose and Kubernetes.<br>
-        • Built as part of CSE 5325 Software Engineering II course.<br>
-        <a href='https://github.com/Buffden/Event-Management-System' target='_blank'>GitHub Repository</a>
-      `,
+      descriptionPoints: [
+        'Comprehensive web platform for end-to-end event lifecycle management.',
+        '9 NestJS microservices with Next.js frontend and PostgreSQL database.',
+        'Features: registration, digital ticketing, QR validation, real-time tracking.',
+        'Containerized deployment with Docker Compose and Kubernetes.',
+        'Built as part of CSE 5325 Software Engineering II course.',
+      ],
       image: 'assets/images/event-management-system-landing-page.png',
       github: ['https://github.com/Buffden/Event-Management-System'],
       tech: [

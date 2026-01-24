@@ -1,13 +1,48 @@
-<section class="hero">
-  <div class="container">
+<section class="hero" [class.animated]="animationStarted">
+  <div class="hero-container">
+    
+    <!-- Profile Image with Animated Overlay -->
+    <div class="hero-image-wrapper">
+      <div class="image-container">
+        <img src="assets/images/profile-photo.png" alt="Harshwardhan Patil" class="profile-image">
+      </div>
+      
+      <!-- Animated particles emanating from image -->
+      <div class="particles">
+        <span class="particle" style="--delay: 0s; --x: 20%; --y: 10%;"></span>
+        <span class="particle" style="--delay: 0.2s; --x: 80%; --y: 15%;"></span>
+        <span class="particle" style="--delay: 0.4s; --x: 15%; --y: 85%;"></span>
+        <span class="particle" style="--delay: 0.6s; --x: 85%; --y: 80%;"></span>
+        <span class="particle" style="--delay: 0.3s; --x: 50%; --y: 5%;"></span>
+        <span class="particle" style="--delay: 0.5s; --x: 50%; --y: 95%;"></span>
+      </div>
+    </div>
+
+    <!-- Content that emerges from the image -->
     <div class="hero-content">
-      <h3 class="greeting">Hi, my name is</h3>
-      <h1 class="name">Harshwardhan Patil</h1>
-      <h2 class="tagline">Software Engineer</h2>
-      <h2 class="sub-tagline">I build reusable, scalable code with high standards, ensuring robust integration, security, and performance.</h2>
+      <h1 class="hero-title">
+        <span class="name-line">Harshwardhan Patil</span>
+      </h1>
+      
+      <div class="title-container">
+        <h2 class="hero-subtitle">
+          <span class="typing-text">Software Engineer</span>
+          <span class="cursor">|</span>
+        </h2>
+      </div>
+      
+      <p class="hero-description">
+        I build reusable, scalable code with high standards, ensuring robust integration, security, and performance.
+      </p>
       <div class="cta-container">
         <a href="#projects" class="cta-button">View My Work</a>
       </div>
     </div>
+  </div>
+  
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" *ngIf="showScrollIndicator">
+    <span class="scroll-text">Scroll Down</span>
+    <div class="scroll-line"></div>
   </div>
 </section>

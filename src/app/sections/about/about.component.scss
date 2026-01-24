@@ -6,6 +6,15 @@
   flex-direction: column;
   justify-content: center;
   scroll-margin-top: 100px; // Accounts for fixed header height
+
+  @media (max-width: 768px) {
+    padding: 80px 20px;
+    min-height: auto;
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 16px;
+  }
 }
 
 .section-heading {
@@ -18,12 +27,21 @@
   white-space: nowrap;
   color: var(--lightest-slate);
   
+  @media (max-width: 768px) {
+    margin: 10px 0 30px;
+    font-size: clamp(22px, 6vw, 28px);
+  }
+  
   .number {
     margin-right: 10px;
     color: var(--green);
     font-family: var(--font-mono);
     font-size: clamp(16px, 3vw, 20px);
     font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: clamp(14px, 4vw, 18px);
+    }
   }
 
   &::after {
@@ -34,6 +52,16 @@
     height: 1px;
     margin-left: 20px;
     background-color: var(--lightest-navy);
+
+    @media (max-width: 768px) {
+      width: 200px;
+      margin-left: 15px;
+    }
+
+    @media (max-width: 480px) {
+      width: 100px;
+      margin-left: 10px;
+    }
   }
 }
 
@@ -44,6 +72,11 @@
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 20px;
   }
 }
 
@@ -53,9 +86,29 @@
     color: var(--slate);
     font-size: var(--fz-lg);
     line-height: 1.6;
+    max-width: 100%;
+    word-wrap: break-word;
+
+    @media (max-width: 768px) {
+      font-size: var(--fz-md);
+      line-height: 1.7;
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    @media (max-width: 480px) {
+      font-size: var(--fz-sm);
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
 
     &:last-child {
       margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 15px;
+      }
     }
   }
 }

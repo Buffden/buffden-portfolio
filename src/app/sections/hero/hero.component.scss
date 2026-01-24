@@ -45,7 +45,7 @@ $green: $accent-color;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  animation: fadeInScale 1.5s ease-out 0.5s forwards;
+  animation: fadeInScale 1.5s ease-out 0.2s forwards;
 
   @media (max-width: 968px) {
     order: -1;
@@ -84,7 +84,7 @@ $green: $accent-color;
   box-shadow: 0 0 40px rgba(100, 255, 218, 0.3);
   position: relative;
   z-index: 2;
-  animation: imageGlow 3s ease-in-out 1.8s infinite alternate;
+  animation: imageGlow 3s ease-in-out 1.3s infinite alternate;
 }
 
 @keyframes imageGlow {
@@ -139,11 +139,11 @@ $green: $accent-color;
 // Content Section - Clean fade in approach
 .hero-content {
   opacity: 0;
-  animation: fadeInUp 1s ease-out 2s forwards;
+  animation: fadeInUp 1s ease-out 1.5s forwards;
 
   @media (max-width: 968px) {
     text-align: center;
-    animation: fadeInUp 1s ease-out 1.8s forwards;
+    animation: fadeInUp 1s ease-out 1.3s forwards;
     margin-bottom: 6rem; // Add space for scroll indicator
   }
 }
@@ -160,57 +160,6 @@ $green: $accent-color;
 }
 
 
-.greeting {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out 2.5s forwards;
-
-  @media (max-width: 968px) {
-    justify-content: center;
-  }
-}
-
-.wave {
-  font-size: 2rem;
-  animation: wave 2s ease-in-out 2.5s infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
-}
-
-@keyframes wave {
-
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-
-  10%,
-  30% {
-    transform: rotate(14deg);
-  }
-
-  20% {
-    transform: rotate(-8deg);
-  }
-
-  40% {
-    transform: rotate(-4deg);
-  }
-
-  50% {
-    transform: rotate(10deg);
-  }
-}
-
-.greeting-text {
-  font-size: 1.2rem;
-  color: $accent-color;
-  font-weight: 500;
-}
-
 .hero-title {
   font-size: clamp(2.5rem, 8vw, 3rem);
   font-weight: 600;
@@ -223,11 +172,11 @@ $green: $accent-color;
     opacity: 0;
 
     &:nth-child(1) {
-      animation: fadeInUp 0.6s ease-out 2.8s forwards;
+      animation: fadeInUp 0.6s ease-out 2.3s forwards;
     }
 
     &:nth-child(2) {
-      animation: fadeInUp 0.6s ease-out 3s forwards;
+      animation: fadeInUp 0.6s ease-out 2.5s forwards;
       background: linear-gradient(120deg, $accent-color, #fff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -240,7 +189,7 @@ $green: $accent-color;
 .title-container {
   margin-bottom: 1.5rem;
   opacity: 0;
-  animation: fadeInUp 0.6s ease-out 3.2s forwards;
+  animation: fadeInUp 0.6s ease-out 2.7s forwards;
 }
 
 .hero-subtitle {
@@ -266,7 +215,7 @@ $green: $accent-color;
     background: $green;
     transform: scaleX(0);
     transform-origin: left;
-    animation: underline 0.8s ease-out 3s forwards;
+    animation: underline 0.8s ease-out 2.5s forwards;
   }
 }
 
@@ -278,7 +227,7 @@ $green: $accent-color;
 
 .cursor {
   color: $accent-color;
-  animation: blink 1s step-end 3s infinite;
+  animation: blink 1s step-end 2.5s infinite;
 }
 
 @keyframes blink {
@@ -294,14 +243,14 @@ $green: $accent-color;
   line-height: 1.8;
   margin-bottom: 2.5rem;
   opacity: 0;
-  animation: fadeInUp 0.6s ease-out 3.4s forwards;
+  animation: fadeInUp 0.6s ease-out 2.9s forwards;
 }
 
 .cta-container {
   display: flex;
   margin-top: 0.5rem;
   opacity: 0;
-  animation: fadeInUp 0.6s ease-out 3.6s forwards;
+  animation: fadeInUp 0.6s ease-out 3.1s forwards;
 
   @media (max-width: 968px) {
     justify-content: center;
@@ -329,135 +278,6 @@ $green: $accent-color;
   &:active {
     transform: translateY(0);
     box-shadow: 0 8px 20px rgba(100, 255, 218, 0.2);
-  }
-}
-
-.hero-cta {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
-  opacity: 0;
-  transform: translateX(-20px);
-  animation: slideInElement 0.6s ease-out 3.2s forwards;
-
-  @media (max-width: 968px) {
-    justify-content: center;
-  }
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-.btn {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-  }
-
-  &:hover::before {
-    width: 300px;
-    height: 300px;
-  }
-
-  span {
-    position: relative;
-    z-index: 1;
-  }
-}
-
-.btn-primary {
-  background: $accent-color;
-  color: $secondary-color;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-}
-
-.btn-secondary {
-  background: transparent;
-  color: $accent-color;
-  border-color: $accent-color;
-
-  &:hover {
-    background: rgba(100, 255, 218, 0.1);
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-}
-
-.arrow-icon {
-  transition: transform 0.3s ease;
-}
-
-.btn:hover .arrow-icon {
-  transform: translateX(4px);
-}
-
-.social-links {
-  display: flex;
-  gap: 1.5rem;
-  opacity: 0;
-  transform: translateX(-20px);
-  animation: slideInElement 0.6s ease-out 3.4s forwards;
-
-  @media (max-width: 968px) {
-    justify-content: center;
-  }
-}
-
-.social-link {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  background: rgba(100, 255, 218, 0.1);
-  color: $accent-color;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: $accent-color;
-    color: $secondary-color;
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.3);
-  }
-
-  svg {
-    width: 24px;
-    height: 24px;
   }
 }
 

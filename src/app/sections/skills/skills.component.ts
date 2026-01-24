@@ -53,8 +53,6 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Next.js', icon: this.iconPath('Next.js.svg') },
                 { name: 'TypeScript', icon: this.iconPath('TypeScript.svg') },
                 { name: 'JavaScript', icon: this.iconPath('JavaScript.svg') },
-                { name: 'HTML5', icon: this.iconPath('HTML5.svg') },
-                { name: 'CSS3', icon: this.iconPath('CSS3.svg') },
                 { name: 'Redux', icon: this.iconPath('Redux.svg') },
                 { name: 'D3.js', icon: this.iconPath('D3.js.svg') }
             ]
@@ -66,7 +64,7 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Java', icon: this.iconPath('Java.svg') },
                 { name: 'Node.js', icon: this.iconPath('Node.js.svg') },
                 { name: 'GraphQL', icon: this.iconPath('GraphQL.svg') },
-                { name: 'Postman', icon: this.iconPath('Postman.svg') },
+                
                 { name: 'Socket.io', icon: this.iconPath('Socket.io.svg') }
             ]
         },
@@ -80,7 +78,6 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Jenkins', icon: this.iconPath('Jenkins.svg') },
                 { name: 'GitHub Actions', icon: this.iconPath('GitHub Actions.svg') },
                 { name: 'Linux', icon: this.iconPath('Linux.svg') },
-                { name: 'Ubuntu', icon: this.iconPath('Ubuntu.svg') }
             ]
         },
         {
@@ -89,8 +86,7 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'PostgreSQL', icon: this.iconPath('PostgreSQL.svg') },
                 { name: 'MongoDB', icon: this.iconPath('MongoDB.svg') },
                 { name: 'Redis', icon: this.iconPath('Redis.svg') },
-                { name: 'MySQL', icon: this.iconPath('MySQL.svg') },
-                { name: 'SQLite', icon: this.iconPath('SQLite.svg') },
+                { name: 'Elasticsearch', icon: this.iconPath('Elasticsearch.svg') },
                 { name: 'Apache Kafka', icon: this.iconPath('Apache Kafka.svg') }
             ]
         },
@@ -100,8 +96,8 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Jasmine', icon: this.iconPath('Jasmine.svg') },
                 { name: 'SonarQube', icon: this.iconPath('SonarQube.svg') },
                 { name: 'JUnit', icon: this.iconPath('JUnit.svg') },
-                { name: 'Apache', icon: this.iconPath('Apache.svg') },
                 { name: 'Selenium', icon: this.iconPath('Selenium.svg') },
+                { name: 'Postman', icon: this.iconPath('Postman.svg') },
                 { name: 'Git', icon: this.iconPath('Git.svg') },
                 { name: 'GitHub', icon: this.iconPath('GitHub.svg') },
             ]

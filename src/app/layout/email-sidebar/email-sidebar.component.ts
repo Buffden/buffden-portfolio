@@ -7,8 +7,8 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <div class="email-sidebar">
-      <a href="mailto:contact.harshwardhanpatil&#64;gmail.com" class="email-link">
-        contact.harshwardhanpatil&#64;gmail.com
+      <a href="mailto:work.harshwardhanpatil&#64;gmail.com" class="email-link">
+        work.harshwardhanpatil&#64;gmail.com
       </a>
       <div class="line"></div>
     </div>

@@ -34,7 +34,7 @@
             content: "";
             display: block;
             position: relative;
-            width: 300px;
+            width: 200px;
             height: 1px;
             margin-left: 20px;
             background-color: $lightest-navy;
@@ -84,6 +84,15 @@
             background: rgba($green, 0.06);
             border: 1px solid rgba($green, 0.2);
             box-shadow: 0 0 0 1px rgba($green, 0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: rgba($green, 0.12);
+                border-color: rgba($green, 0.4);
+                box-shadow: 0 4px 12px rgba($green, 0.2);
+                transform: translateY(-2px);
+            }
 
             img {
                 width: 28px;
@@ -112,6 +121,10 @@
         gap: 14px;
         animation: marquee 25s linear infinite;
         will-change: transform;
+        
+        &:hover {
+            animation-play-state: paused;
+        }
     }
 
     .marquee-track.reverse {
@@ -124,10 +137,28 @@
         gap: 15px;
         padding: 15px 20px;
         border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: rgba($green, 0);
+
+        &:hover {
+            background: rgba($green, 0.12);
+            transform: translateY(-2px);
+        }
+
+        // Highlight adjacent icons when one is hovered
+        &:has(+ .marquee-item:hover) {
+            background: rgba($green, 0.06);
+        }
+
+        &:hover + .marquee-item {
+            background: rgba($green, 0.06);
+        }
 
         img {
-            width: 70px;
-            height: 70px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
         }
 
@@ -137,6 +168,32 @@
             font-size: $fz-xs;
             white-space: nowrap;
         }
+    }
+
+    .marquee-item[title]::after {
+        content: attr(title);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-8px);
+        background: rgba($navy, 0.95);
+        color: $green;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-family: $font-mono;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        border: 1px solid rgba($green, 0.3);
+        z-index: 1000;
+    }
+
+    .marquee-item[title]:hover::after {
+        opacity: 1;
+        // visibility: visible;
     }
 
     @keyframes marquee {

@@ -4,15 +4,19 @@
     
     <div class="about-content">
       <div class="text-content">
-        <p>
-          My journey into software engineering started with automating a simple math problem and grew into building scalable, real-world systems. At 
-          <a href="https://clarivate.com" target="_blank" rel="noopener noreferrer" class="highlight-link">Clarivate Analytics</a>, I spent three years shipping production-grade features, owning CI/CD, and contributing to reliable architectures.
-          Along the way, I learned to balance speed with rigor—keeping delivery fast while safeguarding quality, accessibility, and resilience.
-        </p>
-
-        <p>
-          Now pursuing an MS in Software Engineering at the 
-          <a href="https://www.uta.edu" target="_blank" rel="noopener noreferrer" class="highlight-link">University of Texas at Arlington</a>, I’m deepening system design, Spring Boot, and AWS cloud skills—aiming for clean, maintainable full-stack systems. I love pairing strong design with pragmatic delivery, collaborating closely with teams to keep performance, scalability, and long-term maintainability aligned. Outside work, I recharge with video games, hiking, and football.
+        <p *ngFor="let paragraph of aboutParagraphs; trackBy: trackByIndex">
+          <ng-container *ngFor="let part of paragraph">
+            <ng-container *ngIf="part.type === 'text'">{{ part.content }}</ng-container>
+            <a
+              *ngIf="part.type === 'link'"
+              [href]="part.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="highlight-link"
+            >
+              {{ part.content }}
+            </a>
+          </ng-container>
         </p>
       </div>
       

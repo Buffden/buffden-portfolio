@@ -4,58 +4,20 @@
     
     <div class="about-content">
       <div class="text-content">
-        <p>
-          It all started with a math problem.
+        <p *ngFor="let paragraph of aboutParagraphs; trackBy: trackByIndex">
+          <ng-container *ngFor="let part of paragraph">
+            <ng-container *ngIf="part.type === 'text'">{{ part.content }}</ng-container>
+            <a
+              *ngIf="part.type === 'link'"
+              [href]="part.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="highlight-link"
+            >
+              {{ part.content }}
+            </a>
+          </ng-container>
         </p>
-        
-        <p>
-          What seemed like a simple challenge — writing a formula to automate a calculation — ended up unlocking a world of possibilities. 
-          That first taste of coding showed me the power of turning logic into real-world solutions, and I've been hooked ever since.
-        </p>
-
-        <p>
-          Over the past few years, I've grown from that curious coder into a professional software engineer. At 
-          <a href="https://clarivate.com" target="_blank" rel="noopener noreferrer" class="highlight-link">Clarivate Analytics</a>, 
-          I spent 3 years building frontend systems, leading production deployments, and diving into CI/CD pipelines — experiences that shaped how I think about scale, reliability, and clean architecture.
-        </p>
-
-        <p>
-          Now, as a master's student at the 
-          <a href="https://www.uta.edu" target="_blank" rel="noopener noreferrer" class="highlight-link">University of Texas at Arlington</a>, 
-          I'm deepening my skills in system design, software architecture, and backend development with Spring Boot. My mission? To become a well-rounded full-stack developer who crafts maintainable systems that solve complex problems — elegantly.
-        </p>
-
-        <p>
-          Outside of tech, you'll find me gaming, hiking, or playing football — always seeking a new challenge, whether it's on the field or in the terminal.
-        </p>
-
-        <div class="skills-list">
-          <div class="tech-group">
-            <ul>
-              <li>Spring Boot</li>
-              <li>Python, Flask, Streamlit</li>
-            </ul>
-          </div>
-          <div class="tech-group">
-            <ul>
-              <li>AWS EC2, S3, ECR, ECS, RDS</li>
-              <li>Docker, CI/CD, Jenkins</li>
-            </ul>
-          </div>
-          <div class="tech-group">
-            <ul>
-              <li>ML, PyTorch, TensorFlow</li>
-              <li>Scikit-learn, Pandas, Numpy</li>
-            </ul>
-          </div>
-          <div class="tech-group">
-            <ul>
-              <li>Design Patterns</li>
-              <li>System Design</li>
-              <li>Software Architecture</li>
-            </ul>
-          </div>
-        </div>
       </div>
       
       <div class="linkedin-badge-container">

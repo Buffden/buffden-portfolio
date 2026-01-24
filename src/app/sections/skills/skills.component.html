@@ -8,13 +8,15 @@
              aria-label="Highlighted skills">
             <div class="marquee-track">
                 <div class="marquee-item"
-                     *ngFor="let item of highlightIcons">
+                     *ngFor="let item of highlightIcons"
+                     [title]="item.name">
                     <img [src]="item.icon"
                          [alt]="item.name"
                          loading="lazy" />
                 </div>
                 <div class="marquee-item"
-                     *ngFor="let item of highlightIcons">
+                     *ngFor="let item of highlightIcons"
+                     [title]="item.name">
                     <img [src]="item.icon"
                          [alt]="item.name"
                          loading="lazy" />

@@ -34,10 +34,11 @@
             </a>
             <span *ngIf="!project.github && !project.external">{{ project.title }}</span>
           </h3>
-          <div 
-            class="project-description" 
-            [innerHTML]="project.description"
-          ></div>
+          <ul class="project-description">
+            <li *ngFor="let point of project.descriptionPoints">
+              {{ point }}
+            </li>
+          </ul>
           <ul class="project-tech-list">
             <li *ngFor="let tech of project.tech">{{ tech }}</li>
           </ul>

@@ -167,6 +167,14 @@ $green: $accent-color;
   margin: 0 0 1rem 0;
   line-height: 1.1;
 
+  @media (max-width: 768px) {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+  }
+
+  @media (max-width: 480px) {
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+  }
+
   .name-line {
     display: block;
     opacity: 0;
@@ -200,6 +208,14 @@ $green: $accent-color;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    font-size: clamp(1.2rem, 3.5vw, 1.3rem);
+  }
+
+  @media (max-width: 480px) {
+    font-size: clamp(1rem, 3vw, 1.1rem);
+  }
 }
 
 .typing-text {
@@ -241,9 +257,19 @@ $green: $accent-color;
   color: $text-secondary;
   max-width: 600px;
   line-height: 1.8;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   opacity: 0;
   animation: fadeInUp 0.6s ease-out 2.9s forwards;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
 }
 
 .cta-container {
@@ -268,9 +294,9 @@ $green: $accent-color;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     opacity: 0;
-    animation: fadeInUp 0.6s ease-out 2.7s forwards;
+    animation: fadeInUp 0.6s ease-out 3.1s forwards;
     
     a {
       color: $text-secondary;

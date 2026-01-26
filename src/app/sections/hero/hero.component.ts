@@ -62,15 +62,19 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   openPdfViewer(): void {
-    this.dialog.open(PdfViewerComponent, {
-      width: '90vw',
-      height: '90vh',
-      maxWidth: '1200px',
-      maxHeight: '90vh',
-      data: {
-        pdfUrl: 'https://buffden.github.io/resume/full-stack-resume.pdf',
-        fileName: 'resume.pdf'
-      }
-    });
+    if (window.innerWidth <= 700) {
+      window.open('https://buffden.github.io/resume/full-stack-resume.pdf', '_blank');
+    } else {
+      this.dialog.open(PdfViewerComponent, {
+        width: '90vw',
+        height: '90vh',
+        maxWidth: '1200px',
+        maxHeight: '90vh',
+        data: {
+          pdfUrl: 'https://buffden.github.io/resume/full-stack-resume.pdf',
+          fileName: 'resume.pdf'
+        }
+      });
+    }
   }
 }

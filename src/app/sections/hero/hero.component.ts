@@ -1,10 +1,12 @@
 import { Component, HostBinding, Input, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { PdfViewerComponent } from '../../shared/pdf-viewer/pdf-viewer.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatDialogModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
@@ -18,6 +20,8 @@ export class HeroComponent implements OnInit, OnDestroy {
   showScrollIndicator = true;
   private heroElement: HTMLElement | null = null;
   private scrollListener: (() => void) | null = null;
+
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit() {
     setTimeout(() => {
@@ -58,9 +62,15 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   openPdfViewer(): void {
-    // Emit event or call service to open PDF viewer
-    // This should match the same method from header component
-    console.log('Opening PDF viewer...');
-    // Add your PDF viewer logic here
+    this.dialog.open(PdfViewerComponent, {
+      width: '90vw',
+      height: '90vh',
+      maxWidth: '1200px',
+      maxHeight: '90vh',
+      data: {
+        pdfUrl: 'https://buffden.github.io/resume/full-stack-resume.pdf',
+        fileName: 'resume.pdf'
+      }
+    });
   }
 }

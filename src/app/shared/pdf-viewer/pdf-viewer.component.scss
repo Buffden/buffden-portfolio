@@ -5,6 +5,85 @@
   width: 100%;
   background-color: #0a0e27;
 
+  .pdf-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 56px;
+    background: #181c34;
+    border-bottom: 1px solid #23264a;
+    padding: 0 8px;
+  }
+
+  .close-btn {
+    background: rgba(20, 20, 30, 0.85);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    margin-right: 8px;
+    margin-left: 0;
+    position: static;
+  }
+
+  .pdf-title {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding-left: 0;
+  }
+
+  .pdf-header-spacer {
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+  }
+
+  .close-btn:active,
+  .close-btn:focus {
+    background: rgba(40, 40, 60, 0.95);
+    outline: none;
+  }
+
+  @media (max-width: 600px) {
+    .pdf-header {
+      justify-content: flex-start;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    .close-btn {
+      font-size: 1.5rem;
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+      margin-left: 0;
+      position: static;
+    }
+    .pdf-title {
+      text-align: center;
+      font-size: 1rem;
+      padding-left: 0;
+    }
+    .pdf-header-spacer {
+      width: 32px;
+      height: 32px;
+      margin-left: 8px;
+    }
+  }
+
   .pdf-container {
     flex: 1;
     overflow: hidden;

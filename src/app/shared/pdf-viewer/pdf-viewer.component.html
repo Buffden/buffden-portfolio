@@ -1,4 +1,12 @@
 <div class="pdf-viewer-modal">
+  <div class="pdf-header">
+    <button class="close-btn" (click)="onClose()" aria-label="Close PDF preview">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="pdf-title">Preview</div>
+    <!-- Placeholder for centering -->
+    <div class="pdf-header-spacer"></div>
+  </div>
   <div class="pdf-container">
     <iframe
       [src]="safePdfUrl"

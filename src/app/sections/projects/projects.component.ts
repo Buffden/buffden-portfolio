@@ -30,11 +30,11 @@ export class ProjectsComponent implements AfterViewInit {
       title: `<a href='https://ems.buffden.com/' target='_blank'> Employee Management System</a>`,
       type: 'Featured Project',
       descriptionPoints: [
-        'Angular 17 UI and Spring Boot REST API backend.',
-        'Manage employees, departments, and roles.',
-        'JWT authentication and role-based access.',
+        'Built with Angular 17 UI and Spring Boot REST API backend.',
+        'Enables management of employees, departments, and roles.',
+        'Implements JWT authentication and role-based access control.',
         'Dockerized for easy deployment on AWS EC2.',
-        'Clean codebase, CI-ready, and fully documented.',
+        'Features a clean codebase, CI-ready, and fully documented.',
       ],
       image: 'assets/images/ems-landing-page.png',
       github: [
@@ -47,10 +47,10 @@ export class ProjectsComponent implements AfterViewInit {
       type: 'Featured Project',
       descriptionPoints: [
         'Real-time multiplayer artillery game inspired by Pocket Tanks.',
-        'Microservices for auth, matchmaking, and game engine.',
-        'Phaser 3 + Angular 17 for browser-based 2D gameplay.',
-        'Spring Boot REST APIs and Node.js + Socket.io for backend.',
-        'Dockerized, scalable, and fully modular architecture.',
+        'Uses microservices architecture for auth, matchmaking, and game engine.',
+        'Built with Phaser 3 and Angular 17 for browser-based 2D gameplay.',
+        'Uses Spring Boot REST APIs and Node.js with Socket.io for backend.',
+        'Features a Dockerized, scalable, and fully modular architecture.',
       ],
       image: 'assets/images/battle-arena-new.png',
       github: ['https://github.com/Buffden/battle-arena'],
@@ -68,10 +68,10 @@ export class ProjectsComponent implements AfterViewInit {
       type: 'Featured Project',
       descriptionPoints: [
         'Securely links bank accounts via Plaid API.',
-        'AI auto-categorizes expenses and suggests budgets.',
-        'Chatbot and receipt scanning with OpenAI.',
-        'Interactive dashboards for budgets and analytics.',
-        'Flask backend, Streamlit frontend, Dockerized stack.',
+        'AI automatically categorizes expenses and suggests budgets.',
+        'Features a chatbot and receipt scanning powered by OpenAI.',
+        'Includes interactive dashboards for budgets and analytics.',
+        'Built with Flask backend, Streamlit frontend, and Dockerized stack.',
       ],
       image: 'assets/images/ai-finance-manager.png',
       github: ['https://github.com/Buffden/AI-Powered-Personal-Finance-Manager'],
@@ -122,7 +122,7 @@ export class ProjectsComponent implements AfterViewInit {
         'shadcn-ui',
       ],
       description:
-        `Full-stack AI-powered personal finance platform with real-time bank sync, OCR invoice processing, and analytics dashboard.`,
+        `Full-stack AI-powered personal finance platform with real-time bank synchronization, OCR invoice processing, and analytics dashboard.`,
     },
     {
       title: 'Secure Phone Book REST API',
@@ -135,7 +135,7 @@ export class ProjectsComponent implements AfterViewInit {
         'JWT',
       ],
       description:
-        `REST API using Industrial Security Practices with regex-based input validation, role-based auth, and audit logging to prevent XSS/SQL injection attacks.`,
+        `REST API using industrial security practices with regex-based input validation, role-based authentication, and audit logging to prevent XSS and SQL injection attacks.`,
     },
     {
       title: 'Spider Squash – Chrome Extension',

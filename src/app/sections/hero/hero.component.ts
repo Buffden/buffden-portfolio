@@ -56,4 +56,11 @@ export class HeroComponent implements OnInit, OnDestroy {
       });
     }
   }
+
+  openPdfViewer(): void {
+    // Emit event or call service to open PDF viewer
+    // This should match the same method from header component
+    console.log('Opening PDF viewer...');
+    // Add your PDF viewer logic here
+  }
 }

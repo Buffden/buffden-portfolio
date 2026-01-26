@@ -35,7 +35,7 @@ export class ExperienceComponent implements AfterViewInit {
         'Optimized PostgreSQL schemas and queries, reducing latency by 40% for large-scale analytical reports.',
         'Automated CI/CD pipelines using Docker, Jenkins, and Spinnaker, deploying 50+ releases with zero rollbacks.',
         'Designed and enforced secure authentication using JWT and Spring Security, strengthening access control across services.',
-        'Mentored 2 junior engineers through pair programming and code reviews, doubling sprint throughput.'
+        'Mentored two junior engineers through pair programming and code reviews, doubling sprint throughput.'
       ]
     },
     {
@@ -46,10 +46,10 @@ export class ExperienceComponent implements AfterViewInit {
       responsibilities: [
         'Built Angular charts and reusable table components integrated with Spring Boot APIs for advanced search and reporting features.',
         'Bootstrapped an Angular frontend application with Dockerized CI/CD pipelines, enabling automated builds and AWS deployments.',
-        'Standardized reusable frontend modules adopted across 5+ teams, reducing onboarding time by 50%.',
+        'Standardized reusable frontend modules adopted across five or more teams, reducing onboarding time by 50%.',
         'Optimized PostgreSQL queries and indexing strategies, improving data retrieval performance by 30%.',
         'Implemented secure authentication and request-handling mechanisms (JWT, CORS, CSRF protection), along with input validation standards.',
-        'Increased test coverage to 90%+ using Jasmine and JUnit, reducing production defects by 25%.',
+        'Increased test coverage to over 90% using Jasmine and JUnit, reducing production defects by 25%.',
         'Deployed containerized applications to AWS ECS/EC2 with hardened security group configurations.'
       ]
     },

@@ -1,4 +1,9 @@
+
 # Harshwardhan Patil - Portfolio
+
+[![Portfolio Landing Page](src/assets/images/portfolio-landing-page.png)](https://portfolio.buffden.com/)
+
+**[Visit the live website](https://portfolio.buffden.com/)**
 
 A modern, responsive portfolio website built with Angular, showcasing my work and experience as a Software Engineer.
 

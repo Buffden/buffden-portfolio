@@ -22,7 +22,7 @@ export class PdfViewerComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private sanitizer: DomSanitizer
   ) {
-    this.pdfUrl = data?.pdfUrl || 'https://buffden.github.io/resume/full-stack-resume.pdf';
+    this.pdfUrl = data?.pdfUrl || 'https://buffden.github.io/resume/Harshwardhan-Patil-Resume.pdf';
     this.fileName = data?.fileName || 'resume.pdf';
     this.safePdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.pdfUrl);
   }

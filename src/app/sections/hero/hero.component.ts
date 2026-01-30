@@ -63,7 +63,7 @@ export class HeroComponent implements OnInit, OnDestroy {
 
   openPdfViewer(): void {
     if (window.innerWidth <= 700) {
-      window.open('https://buffden.github.io/resume/full-stack-resume.pdf', '_blank');
+      window.open('https://buffden.github.io/resume/Harshwardhan-Patil-Resume.pdf', '_blank');
     } else {
       this.dialog.open(PdfViewerComponent, {
         width: '90vw',
@@ -71,7 +71,7 @@ export class HeroComponent implements OnInit, OnDestroy {
         maxWidth: '1200px',
         maxHeight: '90vh',
         data: {
-          pdfUrl: 'https://buffden.github.io/resume/full-stack-resume.pdf',
+          pdfUrl: 'https://buffden.github.io/resume/Harshwardhan-Patil-Resume.pdf',
           fileName: 'resume.pdf'
         }
       });

@@ -36,7 +36,7 @@ export class MobileMenuComponent {
       maxWidth: '1200px',
       maxHeight: '90vh',
       data: {
-        pdfUrl: 'https://buffden.github.io/resume/full-stack-resume.pdf',
+        pdfUrl: 'https://buffden.github.io/resume/Harshwardhan-Patil-Resume.pdf',
         fileName: 'resume.pdf'
       }
     });

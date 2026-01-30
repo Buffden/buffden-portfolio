@@ -86,7 +86,7 @@ buffden-portfolio/
 ## Links
 
 - [Live Portfolio](https://Buffden.github.io/buffden-portfolio/)
-- [Resume](https://github.com/Buffden/resume/blob/main/full-stack-resume.pdf)
+- [Resume](https://github.com/Buffden/resume/blob/main/Harshwardhan-Patil-Resume.pdf)
 
 ## License
 

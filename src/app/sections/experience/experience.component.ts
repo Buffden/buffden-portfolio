@@ -25,45 +25,34 @@ export class ExperienceComponent implements AfterViewInit {
 
   experiences: Experience[] = [
     {
-      company: 'Clarivate',
+      company: 'Clarivate Analytics',
       companyUrl: 'https://clarivate.com',
       position: 'Software Engineer',
-      duration: 'August 2023 – July 2024',
+      duration: 'Aug 2023 – Aug 2024',
       responsibilities: [
-        'Delivered reusable Angular modules and Spring Boot APIs for reporting, reducing duplicate code by 80%.',
-        'Refactored legacy modules into clean, modular architectures, lowering long-term maintenance costs.',
-        'Optimized PostgreSQL schemas and queries, reducing latency by 40% for large-scale analytical reports.',
-        'Automated CI/CD pipelines using Docker, Jenkins, and Spinnaker, deploying 50+ releases with zero rollbacks.',
-        'Designed and enforced secure authentication using JWT and Spring Security, strengthening access control across services.',
-        'Mentored two junior engineers through pair programming and code reviews, doubling sprint throughput.'
+        'Designed scalable Spring Boot REST APIs with DTO contracts and standardized error handling, reducing breaking changes by 30% across releases.',
+        'Containerized and built deployment pipelines using Docker, Jenkins, and Spinnaker, supporting 50+ production releases with zero rollbacks.',
+        'Proactively identified performance bottlenecks in reporting services and optimized API and cache layers, reducing response latency by 25–35%.',
+        'Implemented role-based access control across backend and frontend layers, enforcing tiered and region-based data visibility for 10+ access variants.',
+        'Designed and implemented low-latency typeahead and autocomplete services, improving search response times by ~40% over large-scale datasets.',
+        'Architected a highly configurable, reusable Angular table framework adopted across 3 internal teams, reducing duplicated frontend effort by ~50%.',
+        'Built reusable, aggregation-driven Angular chart components using D3.js, powering 15+ analytics views for interactive reporting services.',
+        'Developed dynamic PPT and PDF export pipelines, generating 100+ customized reports with user-selected filters, layouts, and metadata.'
       ]
     },
     {
-      company: 'Clarivate',
+      company: 'Clarivate Analytics',
       companyUrl: 'https://clarivate.com',
       position: 'Associate Software Engineer',
-      duration: 'October 2021 – July 2023',
+      duration: 'Aug 2021 – Jul 2023',
       responsibilities: [
-        'Built Angular charts and reusable table components integrated with Spring Boot APIs for advanced search and reporting features.',
-        'Bootstrapped an Angular frontend application with Dockerized CI/CD pipelines, enabling automated builds and AWS deployments.',
-        'Standardized reusable frontend modules adopted across five or more teams, reducing onboarding time by 50%.',
-        'Optimized PostgreSQL queries and indexing strategies, improving data retrieval performance by 30%.',
-        'Implemented secure authentication and request-handling mechanisms (JWT, CORS, CSRF protection), along with input validation standards.',
-        'Increased test coverage to over 90% using Jasmine and JUnit, reducing production defects by 25%.',
-        'Deployed containerized applications to AWS ECS/EC2 with hardened security group configurations.'
-      ]
-    },
-    {
-      company: 'Clarivate',
-      companyUrl: 'https://clarivate.com',
-      position: 'Software Engineer Intern',
-      duration: 'August 2021 – October 2021',
-      responsibilities: [
-        'Developed a full-stack survey design tool using Angular frontend, Spring Boot REST APIs, and PostgreSQL database, demonstrating end-to-end development capabilities.',
-        'Implemented AWS CI/CD pipeline with Jenkins and Spinnaker for automated testing, building, and deployment, gaining hands-on DevOps experience.',
-        'Contributed Angular feature work and bug fixes while learning team conventions for scalable state management and API integration.',
-        'Wrote unit and e2e tests (Jasmine & JUnit), increasing confidence in critical user flows before handoff.',
-        'Participated in code reviews and followed Git branching/PR standards to maintain code quality.'
+        'Optimized frontend rendering and state management for data-heavy views, improving responsiveness of interactive charts and tables by ~20–25%.',
+        'Implemented and optimized PostgreSQL schemas, queries, and indexing strategies, improving query performance by 40% for analytics services.',
+        'Integrated Elasticsearch into Spring Boot to provide fast, advanced queries across millions of drug records, reducing search latency by 30%.',
+        'Improved frontend performance by minimizing unnecessary re-renders and optimizing data-fetching patterns, resulting in ~20% faster page loads.',
+        'Migrated a legacy client-side component to an Angular 13 application, rebuilding 5+ core business flows with a modular architecture.',
+        'Implemented secure request-handling mechanisms, including JWT authentication, CORS/CSRF protection, and input validation in multiple services.',
+        'Developed reusable Angular UI components, including charts and advanced table views, reused across multiple reporting modules consistently.'
       ]
     }
   ];

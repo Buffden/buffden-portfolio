@@ -29,20 +29,20 @@ export class AboutComponent implements AfterViewInit {
       {
         type: 'text',
         content:
-          ', I spent three years shipping production-grade features, owning CI/CD, and contributing to reliable architectures. Along the way, I learned to balance speed with rigor—keeping delivery fast while safeguarding quality, accessibility, and resilience.'
+          ', I spent three years shipping production-grade features, owning CI/CD, and contributing to reliable architectures-learning to balance speed with rigor along the way.'
       }
     ],
     [
       {
         type: 'text',
         content:
-          'Now pursuing an MS in Software Engineering at the '
+          'I\'m currently pursuing an MS in Software Engineering at the '
       },
       { type: 'link', content: 'University of Texas at Arlington', href: 'https://www.uta.edu' },
       {
         type: 'text',
         content:
-          ', I’m deepening system design, Spring Boot, and AWS cloud skills—aiming for clean, maintainable full-stack systems. I love pairing strong design with pragmatic delivery, collaborating closely with teams to keep performance, scalability, and long-term maintainability aligned. Outside work, I recharge with video games, hiking, and football.'
+          ', focusing on system design and building clean, maintainable full-stack systems with Spring Boot and AWS. Outside work, I recharge with video games, football, and occasionally touch grass.'
       }
     ]
   ];

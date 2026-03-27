@@ -27,6 +27,23 @@ export class ProjectsComponent implements AfterViewInit {
 
   projects: Project[] = [
     {
+      title: `<a href='https://tinyurl.buffden.com/' target='_blank'>TinyURL — URL Shortener</a>`,
+      type: 'Featured Project',
+      descriptionPoints: [
+        'Full-stack URL shortener with Angular 17 SPA frontend and Spring Boot REST API backend.',
+        'Supports custom expiry — users enter a date or number of days for link lifetime.',
+        'QR code generation with PNG/SVG download for any shortened or custom URL.',
+        'Deployed on AWS with S3 + CloudFront for the SPA, EC2 + ALB for the API, and RDS PostgreSQL for persistence.',
+        'Secured behind Cloudflare for DNS, DDoS protection, and SSL termination.',
+        'CI/CD pipeline via GitHub Actions — automated build and deploy on every push.',
+      ],
+      image: 'assets/images/tinyurl-landing-page.png',
+      github: [
+        'https://github.com/Buffden/tinyurl-api'
+      ],
+      tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'CloudFront', 'S3', 'Docker', 'Cloudflare', 'GitHub Actions'],
+    },
+    {
       title: `<a href='https://ems.buffden.com/' target='_blank'> Employee Management System</a>`,
       type: 'Featured Project',
       descriptionPoints: [

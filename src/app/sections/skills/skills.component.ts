@@ -72,8 +72,10 @@ export class SkillsComponent implements AfterViewInit {
             title: 'Cloud & DevOps',
             items: [
                 { name: 'AWS', icon: this.iconPath('AWS.svg') },
+                { name: 'CloudFront', icon: this.iconPath('aws-cloudfront.svg') },
+                { name: 'ALB', icon: this.iconPath('Elastic Load Balancing.svg') },
+                { name: 'Cloudflare', icon: this.iconPath('Cloudflare.svg') },
                 { name: 'Docker', icon: this.iconPath('Docker.svg') },
-                { name: 'Kubernetes', icon: this.iconPath('Kubernetes.svg') },
                 { name: 'NGINX', icon: this.iconPath('NGINX.svg') },
                 { name: 'Jenkins', icon: this.iconPath('Jenkins.svg') },
                 { name: 'GitHub Actions', icon: this.iconPath('GitHub Actions.svg') },

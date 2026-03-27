@@ -11,28 +11,90 @@
         #projectCard
       >
         <div class="project-image">
-          <img [src]="project.image" [alt]="project.title" />
+          <a
+            *ngIf="project.title === 'TinyURL — URL Shortener'"
+            href="https://tinyurl.buffden.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img [src]="project.image" [alt]="project.title" />
+          </a>
+          <a
+            *ngIf="project.title === 'Employee Management System'"
+            href="https://ems.buffden.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img [src]="project.image" [alt]="project.title" />
+          </a>
+          <a
+            *ngIf="project.title === 'Battle Arena – Multiplayer Artillery Game Platform'"
+            href="https://github.com/Buffden/battle-arena"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img [src]="project.image" [alt]="project.title" />
+          </a>
+          <a
+            *ngIf="project.title === 'AI-Powered Personal Finance Manager'"
+            href="https://github.com/Buffden/AI-Powered-Personal-Finance-Manager"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img [src]="project.image" [alt]="project.title" />
+          </a>
+          <a
+            *ngIf="project.title === 'Event Management System'"
+            href="https://github.com/Buffden/Event-Management-System"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img [src]="project.image" [alt]="project.title" />
+          </a>
         </div>
         <div class="project-content">
           <p class="project-type">{{ project.type }}</p>
           <h3 class="project-title">
-            <a 
-              *ngIf="project.github && project.github.length > 0" 
-              [href]="project.github[0]" 
-              target="_blank" 
-              [innerHTML]="project.title"
+            <a
+              *ngIf="project.title === 'TinyURL — URL Shortener'"
+              href="https://tinyurl.buffden.com/"
+              target="_blank"
               rel="noopener noreferrer"
             >
+              {{ project.title }}
             </a>
-            <a 
-              *ngIf="!project.github && project.external" 
-              [href]="project.external" 
-              target="_blank" 
-              [innerHTML]="project.title"
+            <a
+              *ngIf="project.title === 'Employee Management System'"
+              href="https://ems.buffden.com/"
+              target="_blank"
               rel="noopener noreferrer"
             >
+              {{ project.title }}
             </a>
-            <span *ngIf="!project.github && !project.external">{{ project.title }}</span>
+            <a
+              *ngIf="project.title === 'Battle Arena – Multiplayer Artillery Game Platform'"
+              href="https://github.com/Buffden/battle-arena"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ project.title }}
+            </a>
+            <a
+              *ngIf="project.title === 'AI-Powered Personal Finance Manager'"
+              href="https://github.com/Buffden/AI-Powered-Personal-Finance-Manager"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ project.title }}
+            </a>
+            <a
+              *ngIf="project.title === 'Event Management System'"
+              href="https://github.com/Buffden/Event-Management-System"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ project.title }}
+            </a>
           </h3>
           <ul class="project-description">
             <li *ngFor="let point of project.descriptionPoints">

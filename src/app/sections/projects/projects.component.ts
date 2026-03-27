@@ -27,7 +27,7 @@ export class ProjectsComponent implements AfterViewInit {
 
   projects: Project[] = [
     {
-      title: `<a href='https://tinyurl.buffden.com/' target='_blank'>TinyURL — URL Shortener</a>`,
+      title: 'TinyURL — URL Shortener',
       type: 'Featured Project',
       descriptionPoints: [
         'Full-stack URL shortener with Angular 17 SPA frontend and Spring Boot REST API backend.',
@@ -41,10 +41,11 @@ export class ProjectsComponent implements AfterViewInit {
       github: [
         'https://github.com/Buffden/tinyurl-api'
       ],
+      external: 'https://tinyurl.buffden.com/',
       tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'CloudFront', 'S3', 'Docker', 'Cloudflare', 'GitHub Actions'],
     },
     {
-      title: `<a href='https://ems.buffden.com/' target='_blank'> Employee Management System</a>`,
+      title: 'Employee Management System',
       type: 'Featured Project',
       descriptionPoints: [
         'Built with Angular 17 UI and Spring Boot REST API backend.',
@@ -57,6 +58,7 @@ export class ProjectsComponent implements AfterViewInit {
       github: [
         'https://github.com/Buffden/employee-management-system'
       ],
+      external: 'https://ems.buffden.com/',
       tech: ['Angular', 'Spring Boot', 'JWT', 'Docker', 'AWS EC2'],
     },
     {
@@ -71,6 +73,7 @@ export class ProjectsComponent implements AfterViewInit {
       ],
       image: 'assets/images/battle-arena-new.png',
       github: ['https://github.com/Buffden/battle-arena'],
+      external: 'https://github.com/Buffden/battle-arena',
       tech: [
         'Angular',
         'Phaser 3',
@@ -92,6 +95,7 @@ export class ProjectsComponent implements AfterViewInit {
       ],
       image: 'assets/images/ai-finance-manager.png',
       github: ['https://github.com/Buffden/AI-Powered-Personal-Finance-Manager'],
+      external: 'https://github.com/Buffden/AI-Powered-Personal-Finance-Manager',
       tech: [
         'Streamlit',
         'Flask',
@@ -113,6 +117,7 @@ export class ProjectsComponent implements AfterViewInit {
       ],
       image: 'assets/images/event-management-system-landing-page.png',
       github: ['https://github.com/Buffden/Event-Management-System'],
+      external: 'https://github.com/Buffden/Event-Management-System',
       tech: [
         'Next.js',
         'NestJS',

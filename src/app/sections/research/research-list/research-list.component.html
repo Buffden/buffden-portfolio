@@ -10,13 +10,13 @@
 
     <!-- Papers Grid -->
     <div class="papers-grid" *ngIf="papers.length > 0; else emptyState">
-      <div class="paper-card" *ngFor="let paper of papers">
+      <div [routerLink]="['/research', paper.slug]" class="paper-card" *ngFor="let paper of papers">
+        <h3 class="card-title">{{ paper.title }}</h3>
         <div class="card-top">
           <div class="card-tags">
             <span class="tag" *ngFor="let tag of paper.tags">{{ tag }}</span>
           </div>
         </div>
-        <h3 class="card-title">{{ paper.title }}</h3>
         <p class="card-authors">{{ paper.authors }}</p>
         <p class="card-one-liner">{{ paper.oneLiner }}</p>
         <div class="card-footer">

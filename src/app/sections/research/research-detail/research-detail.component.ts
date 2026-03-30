@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Paper, papers } from '../../../data/constants/papers';
+import { SafeUrlPipe } from '../../../shared/safe-url.pipe';
 
 @Component({
   selector: 'app-research-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, SafeUrlPipe],
   templateUrl: './research-detail.component.html',
   styleUrl: './research-detail.component.scss',
 })
@@ -17,6 +18,7 @@ export class ResearchDetailComponent implements OnInit, OnDestroy {
   nextPaper: Paper | null = null;
   reviewParagraphs: string[] = [];
   notFound = false;
+  showPdfPreview = false;
 
   private paramSub!: Subscription;
 
@@ -36,6 +38,7 @@ export class ResearchDetailComponent implements OnInit, OnDestroy {
       }
 
       this.notFound = false;
+      this.showPdfPreview = false;
       this.paper = papers[index];
       this.prevPaper = index > 0 ? papers[index - 1] : null;
       this.nextPaper = index < papers.length - 1 ? papers[index + 1] : null;
@@ -54,6 +57,7 @@ export class ResearchDetailComponent implements OnInit, OnDestroy {
       });
     });
   }
+
   ngOnDestroy(): void {
     this.paramSub?.unsubscribe();
   }

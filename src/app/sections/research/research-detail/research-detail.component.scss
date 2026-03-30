@@ -91,6 +91,21 @@
   font-size: $fz-md;
   color: $light-slate;
   line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+// --- PDF Footer
+.paper-footer {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.paper-footer-button {
+  @include button-styles;
+  font-size: $fz-xs;
+  padding: 10px 20px;
+  margin-top: 4px;
 }
 
 // ─── Review Body ──────────────────────────────────────────────────────────────

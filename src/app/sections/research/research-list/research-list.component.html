@@ -1,0 +1,35 @@
+<section class="research">
+  <div class="container">
+
+    <h2 class="section-heading">
+      <span class="number">05.</span> Research Papers
+    </h2>
+    <p class="section-subtitle">
+      Selected reviews of security research papers from top academic venues including USENIX, NDSS, and IEEE S&amp;P.
+    </p>
+
+    <!-- Papers Grid -->
+    <div class="papers-grid" *ngIf="papers.length > 0; else emptyState">
+      <div class="paper-card" *ngFor="let paper of papers">
+        <div class="card-top">
+          <div class="card-tags">
+            <span class="tag" *ngFor="let tag of paper.tags">{{ tag }}</span>
+          </div>
+        </div>
+        <h3 class="card-title">{{ paper.title }}</h3>
+        <p class="card-authors">{{ paper.authors }}</p>
+        <p class="card-one-liner">{{ paper.oneLiner }}</p>
+        <div class="card-footer">
+          <a [routerLink]="['/research', paper.slug]" class="read-btn">
+            Read Review
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #emptyState>
+      <p class="empty-state">No papers found for this topic.</p>
+    </ng-template>
+
+  </div>
+</section>

@@ -1,0 +1,102 @@
+<div class="detail-page">
+  <div class="container">
+
+    <!-- Not Found -->
+    <ng-container *ngIf="notFound">
+      <a routerLink="/"
+         class="back-link">
+        <span class="back-arrow">&#8592;</span> Back to Research
+      </a>
+      <p class="not-found">Paper not found.</p>
+    </ng-container>
+
+    <!-- Paper Detail -->
+    <ng-container *ngIf="paper">
+
+      <a (click)="backToButtonClick()"
+         class="back-link"
+         style="cursor:pointer">
+        <span class="back-arrow">&#8592;</span> Back to Research
+      </a>
+
+      <!-- Metadata -->
+      <header class="paper-header">
+        <div class="meta-top">
+          <span class="venue">{{ paper.venue }} {{ paper.year }}</span>
+          <div class="tags">
+            <span class="tag"
+                  *ngFor="let tag of paper.tags">{{ tag }}</span>
+          </div>
+        </div>
+        <h1 class="paper-title">{{ paper.title }}</h1>
+        <p class="authors">{{ paper.authors }}</p>
+        <p class="one-liner">{{ paper.oneLiner }}</p>
+
+        <div class="paper-footer">
+          <button *ngIf="paper.link && paper.link.endsWith('.pdf')"
+                  class="paper-footer-button"
+                  (click)="showPdfPreview = !showPdfPreview">
+            {{ showPdfPreview ? 'Hide PDF Preview' : 'View PDF Preview' }}
+          </button>
+          <a *ngIf="paper.link"
+             [href]="paper.link"
+             target="_blank"
+             rel="noopener"
+             class="paper-footer-button">
+            Open PDF in new tab
+          </a>
+        </div>
+      </header>
+
+      <!-- PDF Preview -->
+      <section class="paper-pdf-preview"
+               *ngIf="showPdfPreview && paper.link">
+        <h2 class="review-heading">Paper PDF Preview</h2>
+        <iframe [src]="paper.link | safeUrl"
+                width="100%"
+                height="600px"
+                style="border:1px solid #444; border-radius:8px; background:#222;"
+                allowfullscreen></iframe>
+      </section>
+
+      <!-- Review Body -->
+      <section class="review-body">
+        <h2 class="review-heading">Review</h2>
+
+        <ng-container *ngIf="reviewHtml; else emptyReview">
+          <div class="review-markdown" [innerHTML]="reviewHtml"></div>
+        </ng-container>
+
+        <ng-template #emptyReview>
+          <p class="review-placeholder">
+            Review coming soon. Check back later.
+          </p>
+        </ng-template>
+      </section>
+
+      <!-- Prev / Next Navigation -->
+      <nav class="paper-nav">
+        <a *ngIf="prevPaper; else prevPlaceholder"
+           [routerLink]="['/research', prevPaper.slug]"
+           class="nav-btn prev">
+          <span class="nav-label">&#8592; Previous</span>
+          <span class="nav-title">{{ prevPaper.title }}</span>
+        </a>
+        <ng-template #prevPlaceholder>
+          <span class="nav-btn prev disabled"></span>
+        </ng-template>
+
+        <a *ngIf="nextPaper; else nextPlaceholder"
+           [routerLink]="['/research', nextPaper.slug]"
+           class="nav-btn next">
+          <span class="nav-label">Next &#8594;</span>
+          <span class="nav-title">{{ nextPaper.title }}</span>
+        </a>
+        <ng-template #nextPlaceholder>
+          <span class="nav-btn next disabled"></span>
+        </ng-template>
+      </nav>
+
+    </ng-container>
+  </div>
+</div>

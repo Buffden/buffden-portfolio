@@ -8,6 +8,7 @@ export interface Paper {
   tags: string[];
   oneLiner: string;
   review: string;
+  reviewPath: string;
 }
 
 export const papers: Paper[] = [
@@ -20,7 +21,8 @@ export const papers: Paper[] = [
     year: 2022,
     tags: ["software supply chain", "npm", "malware detection"],
     oneLiner: "Presents a practical approach for automatically detecting malicious npm packages in the JavaScript ecosystem.",
-    review: ""
+    review: "",
+    reviewPath: "assets/reviews/practical-automated-detection-of-malicious-npm-packages.md"
   },
   {
     slug: "dns-cache-poisoning-attack-reloaded",
@@ -31,7 +33,9 @@ export const papers: Paper[] = [
     year: 2020,
     tags: ["DNS", "cache poisoning", "side channels", "network security"],
     oneLiner: "Shows how side channels can revive practical off-path DNS cache poisoning despite modern randomization defenses.",
-    review: ""
+    review: "",
+    reviewPath: "assets/reviews/dns-cache-poisoning-attack-reloaded.md"
+
   },
   {
     slug: "package-hallucinations-code-generating-llms",
@@ -42,7 +46,9 @@ export const papers: Paper[] = [
     year: 2025,
     tags: ["LLMs", "code generation", "package hallucinations", "software supply chain"],
     oneLiner: "Analyzes how code-generating LLMs hallucinate non-existent packages and the security risks that follow.",
-    review: ""
+    review: "",
+    reviewPath: "assets/reviews/package-hallucinations-code-generating-llms.md"
+
   },
   {
     slug: "abuser-inside-apps-mobile-ad-fraud",
@@ -53,7 +59,8 @@ export const papers: Paper[] = [
     year: 2021,
     tags: ["mobile security", "ad fraud", "Android", "dynamic analysis"],
     oneLiner: "Builds a framework to trace observed mobile ad fraud back to the responsible app components and user interactions.",
-    review: ""
+    review: "",
+    reviewPath: "assets/reviews/abuser-inside-apps-mobile-ad-fraud.md"
   },
 
 ];

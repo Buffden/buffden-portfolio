@@ -1,0 +1,213 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.archive-page {
+  min-height: 100vh;
+  padding-top: 100px;
+  background: $navy;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 25px 100px;
+}
+
+// ─── Back Link ────────────────────────────────────────────────────────────────
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: $green;
+  font-family: $font-mono;
+  font-size: $fz-sm;
+  text-decoration: none;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .back-arrow {
+    font-size: 1.1em;
+  }
+}
+
+// ─── Header ───────────────────────────────────────────────────────────────────
+
+.archive-header {
+  margin-bottom: 48px;
+}
+
+.archive-title {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
+  color: $lightest-slate;
+  margin-bottom: 10px;
+}
+
+.archive-subtitle {
+  font-family: $font-mono;
+  font-size: $fz-sm;
+  color: $slate;
+}
+
+// ─── Table ────────────────────────────────────────────────────────────────────
+
+.archive-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  thead tr {
+    border-bottom: 1px solid $lightest-navy;
+  }
+
+  th {
+    font-family: $font-mono;
+    font-size: $fz-xs;
+    color: $green;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0 16px 16px 0;
+    text-align: left;
+    white-space: nowrap;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+// ─── Row ──────────────────────────────────────────────────────────────────────
+
+.archive-row {
+  border-bottom: 1px solid rgba($lightest-navy, 0.4);
+  transition: $transition;
+
+  &:hover {
+    background: rgba($light-navy, 0.5);
+    transform: translateY(-4px);
+
+    .project-title {
+      color: $green;
+    }
+  }
+
+  td {
+    padding: 18px 16px 18px 0;
+    vertical-align: top;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+// ─── Columns ──────────────────────────────────────────────────────────────────
+
+.col-year {
+  width: 130px;
+}
+
+.year-text {
+  font-family: $font-mono;
+  font-size: $fz-xs;
+  color: $slate;
+  white-space: nowrap;
+}
+
+.col-title {
+  min-width: 180px;
+}
+
+.project-title {
+  font-size: $fz-md;
+  font-weight: 600;
+  color: $lightest-slate;
+  line-height: 1.3;
+  transition: $transition;
+}
+
+.col-tech {
+  width: 220px;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-item {
+  font-family: $font-mono;
+  font-size: $fz-xxs;
+  color: $slate;
+  background: rgba($lightest-navy, 0.6);
+  padding: 2px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.col-desc {
+  min-width: 200px;
+}
+
+.project-desc {
+  font-size: $fz-sm;
+  color: $light-slate;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.col-links {
+  width: 70px;
+}
+
+.links-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 2px;
+}
+
+.link-icon {
+  color: $slate;
+  display: flex;
+  align-items: center;
+  transition: $transition;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
+
+@media (max-width: $tablet) {
+  .col-desc {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .archive-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .col-year {
+    width: auto;
+  }
+
+  .col-tech {
+    width: auto;
+  }
+}

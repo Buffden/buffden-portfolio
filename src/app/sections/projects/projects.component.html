@@ -154,19 +154,6 @@
     </div>
     <!-- Dummy grid below projects -->
     <h2 class="mini-section-heading">Other Noteworthy Projects</h2>
-    <a class="archive-link" href="https://github.com/Buffden?tab=repositories" target="_blank">view the archive</a>
-    <div class="mini-projects-grid">
-      <div class="mini-project-card" *ngFor="let mini of miniProjects" #miniProjectCard>
-        <div class="mini-project-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h3.28a2 2 0 011.42.59l1.42 1.42A2 2 0 0012.72 8H19a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
-        </div>
-        <div class="mini-project-title">{{ mini.title }}</div>
-        <div class="mini-project-period" style="color: #8892b0; font-size: 14px; margin-bottom: 10px;">{{ mini.period }}</div>
-        <div class="mini-project-description" [innerHTML]="mini.description"></div>
-        <ul class="mini-project-tech-list">
-          <li *ngFor="let tech of mini.tech">{{ tech }}</li>
-        </ul>
-      </div>
-    </div>
+    <a class="archive-link" [routerLink]="['/project/archive']">View the projects archive</a>
   </div>
 </section>

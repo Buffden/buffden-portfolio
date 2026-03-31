@@ -63,9 +63,8 @@
       <section class="review-body">
         <h2 class="review-heading">Review</h2>
 
-        <ng-container *ngIf="reviewParagraphs.length > 0; else emptyReview">
-          <p *ngFor="let para of reviewParagraphs"
-             class="review-para">{{ para }}</p>
+        <ng-container *ngIf="reviewHtml; else emptyReview">
+          <div class="review-markdown" [innerHTML]="reviewHtml"></div>
         </ng-container>
 
         <ng-template #emptyReview>

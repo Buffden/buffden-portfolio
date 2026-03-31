@@ -1,7 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
+import { marked } from 'marked';
 import { Paper, papers } from '../../../data/constants/papers';
 import { SafeUrlPipe } from '../../../shared/safe-url.pipe';
 
@@ -16,13 +19,18 @@ export class ResearchDetailComponent implements OnInit, OnDestroy {
   paper: Paper | null = null;
   prevPaper: Paper | null = null;
   nextPaper: Paper | null = null;
-  reviewParagraphs: string[] = [];
+  reviewHtml: SafeHtml | null = null;
   notFound = false;
   showPdfPreview = false;
 
   private paramSub!: Subscription;
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private http: HttpClient,
+    private sanitizer: DomSanitizer
+  ) {}
 
   ngOnInit(): void {
     this.paramSub = this.route.paramMap.subscribe((params) => {
@@ -39,14 +47,22 @@ export class ResearchDetailComponent implements OnInit, OnDestroy {
 
       this.notFound = false;
       this.showPdfPreview = false;
+      this.reviewHtml = null;
       this.paper = papers[index];
       this.prevPaper = index > 0 ? papers[index - 1] : null;
       this.nextPaper = index < papers.length - 1 ? papers[index + 1] : null;
 
-      this.reviewParagraphs = this.paper.review
-        .split('\n')
-        .map((p) => p.trim())
-        .filter((p) => p.length > 0);
+      if (this.paper.reviewPath) {
+        this.http.get(this.paper.reviewPath, { responseType: 'text' }).subscribe({
+          next: (md) => {
+            const html = marked.parse(md) as string;
+            this.reviewHtml = this.sanitizer.bypassSecurityTrustHtml(html);
+          },
+          error: () => {
+            this.reviewHtml = null;
+          },
+        });
+      }
     });
   }
 

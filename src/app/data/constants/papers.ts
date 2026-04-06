@@ -62,5 +62,29 @@ export const papers: Paper[] = [
     review: "",
     reviewPath: "assets/reviews/abuser-inside-apps-mobile-ad-fraud.md"
   },
+  {
+    slug: "hbbtv-privacy-european-smart-tv-landscape",
+    title: "I Still Know What You Watched Last Sunday: Privacy of the HbbTV Protocol in the European Smart TV Landscape",
+    authors: "Carlotta Tagliaro, Florian Hahn, Riccardo Sepe, Alessio Aceti, Martina Lindorfer",
+    venue: "NDSS",
+    link: "https://ris.utwente.nl/ws/portalfiles/portal/319904007/ndss2023_f102_paper.pdf",
+    year: 2023,
+    tags: ["smart TV", "HbbTV", "privacy", "measurement"],
+    oneLiner: "Examines privacy risks in HbbTV deployments and how smart TVs expose users to tracking and data leakage.",
+    review: "",
+    reviewPath: "assets/reviews/hbbtv-privacy-european-smart-tv-landscape.md"
+  },
+  {
+    slug: "privacy-framework-security-research-social-media-data",
+    title: "SoK: A Privacy Framework for Security Research Using Social Media Data",
+    authors: "Kyle Beadle, Kieron Ivy Turk, Aliai Eusebi, Mindy Tran, Marilyne Ordekian, Enrico Mariconti, Yixin Zou, Marie Vasek",
+    venue: "IEEE Symposium on Security and Privacy",
+    link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11023489&tag=1",
+    year: 2025,
+    tags: ["SoK", "privacy", "social media", "research methods"],
+    oneLiner: "Systematizes privacy risks and reporting gaps in security research that uses social media data.",
+    review: "",
+    reviewPath: "assets/reviews/privacy-framework-security-research-social-media-data.md"
+  },
 
 ];

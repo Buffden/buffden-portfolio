@@ -1,15 +1,25 @@
 # Practical Automated Detection of Malicious npm Packages (ICSE 2022)
 
-**Summary:**
-This paper addresses a critical issue in modern software supply chains: the presence of malicious packages in the npm ecosystem. Given npm’s massive scale and decentralized nature, attackers can easily publish packages that perform malicious actions such as data exfiltration, credential theft, or backdoor installation. The authors propose an automated detection framework designed to identify such malicious packages at scale. Their approach combines static analysis, behavioral heuristics, and pattern-based detection techniques to flag suspicious packages without requiring manual inspection.
+## Summary
 
-The system focuses on identifying known malicious patterns such as obfuscated code, suspicious install scripts, and unusual network behavior. It also leverages metadata signals like package update frequency and dependency relationships. The authors evaluate their approach on real-world npm datasets and demonstrate that their method can effectively detect previously unknown malicious packages with reasonable precision. Importantly, the system is designed to be practical—meaning it can operate at ecosystem scale and integrate into existing security workflows.
+This paper addresses a critical issue in modern software supply chains: the presence of malicious packages in the npm ecosystem. Given npm's massive scale and decentralized nature, attackers can easily publish packages that perform malicious actions such as data exfiltration, credential theft, or backdoor installation. The authors propose an automated detection framework designed to identify such malicious packages at scale. Their approach combines static analysis, behavioral heuristics, and pattern-based detection techniques to flag suspicious packages without requiring manual inspection.
 
-**Discussion:**
-One of the strongest aspects of this paper is its focus on practicality. Many academic solutions are theoretically sound but fail in real-world deployment due to scalability or complexity. Here, the authors explicitly design their system to work within the constraints of npm’s ecosystem. I particularly liked how they combined multiple signals (code patterns + metadata + behavior) instead of relying on a single detection mechanism. This multi-layered approach reflects how real-world security systems operate.
+The system focuses on identifying known malicious patterns such as obfuscated code, suspicious install scripts, and unusual network behavior. It also leverages metadata signals like package update frequency and dependency relationships. The authors evaluate their approach on real-world npm datasets and demonstrate that their method can effectively detect previously unknown malicious packages with reasonable precision. Importantly, the system is designed to be practical — meaning it can operate at ecosystem scale and integrate into existing security workflows.
 
-However, one limitation is that the detection heavily depends on known patterns of malicious behavior. This raises concerns about zero-day or highly sophisticated attacks that deliberately avoid known signatures. I would have liked to see more discussion on adversarial evasion—how attackers might adapt once such detection systems are deployed. Additionally, while the evaluation shows effectiveness, it is not entirely clear how many false positives would be acceptable in a production environment where developers rely on these packages.
+## Discussion
 
-Another interesting point is how the paper implicitly highlights the fragility of the software supply chain. Even a single malicious dependency can compromise thousands of downstream applications. This was not surprising, but the scale at which it happens in npm is still concerning. I think an example showing a real attack chain (package → dependency → victim app) would have strengthened the paper’s impact.
+### What Works
+
+One of the strongest aspects of this paper is its focus on practicality. Many academic solutions are theoretically sound but fail in real-world deployment due to scalability or complexity. Here, the authors explicitly design their system to work within the constraints of npm's ecosystem. I particularly liked how they combined multiple signals (code patterns + metadata + behavior) instead of relying on a single detection mechanism. This multi-layered approach reflects how real-world security systems operate.
+
+### Limitations
+
+One limitation is that the detection heavily depends on known patterns of malicious behavior. This raises concerns about zero-day or highly sophisticated attacks that deliberately avoid known signatures. I would have liked to see more discussion on adversarial evasion — how attackers might adapt once such detection systems are deployed. Additionally, while the evaluation shows effectiveness, it is not entirely clear how many false positives would be acceptable in a production environment where developers rely on these packages.
+
+### Broader Observations
+
+Another interesting point is how the paper implicitly highlights the fragility of the software supply chain. Even a single malicious dependency can compromise thousands of downstream applications. This was not surprising, but the scale at which it happens in npm is still concerning. I think an example showing a real attack chain (package → dependency → victim app) would have strengthened the paper's impact.
+
+### Overall Take
 
 Overall, the paper is well-structured and clear, but I felt that the explanation of some heuristics lacked depth. For instance, why certain thresholds were chosen or how they generalize across ecosystems is not fully justified. Still, the contribution is valuable and highly relevant to modern DevSecOps practices.

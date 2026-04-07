@@ -1,0 +1,31 @@
+# SoK: A Privacy Framework for Security Research Using Social Media Data (IEEE S&P 2025)
+
+## Summary
+
+### Paper Overview
+
+This paper is a systematization of knowledge that examines how security researchers handle the privacy of social media data. The authors systematically reviewed 601 papers published across 16 years and six academic disciplines, all of which use social media data to study security-related topics. Their central concern is that while ethics in research is commonly discussed at a high level, that kind of broad ethical framing tends to miss the specific, granular privacy risks that emerge when researchers collect, process, and publish social media data. To structure their analysis, the authors adapt Solove's taxonomy of privacy — a legal framework originally developed with the government as the primary threat actor — and map it onto the social media research context. This produces eleven distinct privacy risks organized into three categories: information collection risks like surveillance and aggregation, information processing risks like identification and insecurity, and dissemination risks like disclosure, blackmail, and increased accessibility. The paper also identifies several novel privacy-preserving practices not previously captured in the literature, including data donations, certificates of confidentiality, and large-scale legal data sharing agreements.
+
+### Key Findings
+
+The authors' central empirical finding is that only 35% of the 601 analyzed papers mention any considerations of data anonymization, availability, or storage. Reporting also varied significantly across disciplines, with HCI and computer security papers performing better than humanities and social science venues. Critically, this gap did not improve meaningfully following the adoption and enforcement of GDPR in 2016 and 2018. The paper then uses the adapted Solove framework to walk through each privacy risk in detail, covering how it manifests in practice, how researchers can try to prevent it, and what tradeoffs those mitigations introduce. The final section addresses implications for three stakeholder groups: researchers, IRBs and ethics boards, and publication venues. The authors argue that small behavioral changes from each group, taken together, could meaningfully reduce the privacy harms that social media research currently imposes on the people whose data is used.
+
+## Discussion
+
+### What Works
+
+There is a lot to appreciate in this paper. The decision to ground the analysis in Solove's taxonomy rather than treating ethics as a single undifferentiated concept was the right call, and the taxonomy table mapping each risk to its social media manifestation is one of the most practically useful things in the paper. The tradeoffs section under each risk was especially strong. For example, the observation that paraphrasing quotes to reduce disclosure risk can itself distort the original meaning — and that solving one problem can create another — is the kind of nuanced reasoning that sets this paper apart from a checklist-style contribution. I also appreciated the honest acknowledgment that the paper's own methodology carried aggregation risk, and the authors described their mitigation steps for that directly.
+
+### Limitations
+
+What I found less satisfying was the discussion of IRBs. The paper correctly identifies that IRBs often exempt social media research from full review and that this is a problem, but the proposed path forward feels thin. Telling IRBs they need to better understand digital research does not give them much to act on, and the paper does not propose any concrete mechanisms for reform.
+
+### Surprising Observations
+
+A few things surprised me. I did not expect Twitter to account for nearly half of the entire dataset, and that concentration raises the distortion risk the authors describe — since Twitter's user demographics skew younger and more urban than many populations researchers claim to be studying. The paper points this out, but it would have helped to see a worked example showing how a specific published study reached conclusions that were likely distorted by this platform choice.
+
+The blackmail risk section was the one that most contradicted my expectations going in. I had not thought about researchers themselves being threatened as a consequence of their publication choices, and the brief note that venues could allow pseudonymous authorship for work on sensitive topics like online extremism was genuinely interesting, even if the tradeoffs of that idea could fill their own paper.
+
+### Points of Confusion
+
+One concept I found confusing on first read was the exclusion risk — specifically the tension between users having a right to be forgotten and the GDPR research exemption that can override that right. The paper mentions this tension but does not resolve it clearly, and I had to reread that section twice before I understood that the authors were describing an unresolved legal debate rather than presenting a settled answer. A short concrete example illustrating when the exemption applies versus when it does not would have helped significantly there.

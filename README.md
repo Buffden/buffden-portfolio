@@ -65,8 +65,6 @@ ng deploy
 
 Primary domain is `buffden.com` (set in `public/CNAME` and GitHub Pages settings). Subdomains `portfolio.buffden.com` and `harshwardhanpatil.buffden.com` redirect to it via Cloudflare Redirect Rules (proxy ON).
 
-> **Gotcha:** No trailing space after `/*` in Cloudflare wildcard redirect rules — it silently breaks the rule.
-
 ### SCSS Budget Warning
 If you see a warning like:
 ```

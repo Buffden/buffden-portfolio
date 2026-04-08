@@ -61,24 +61,11 @@ ng deploy
 - This will build your app for production and push it to the `gh-pages` branch.
 - Your site will be live at: `https://buffden.com/`
 
-## Custom Domain & DNS Setup
+## Custom Domain
 
-The site is hosted on GitHub Pages with a custom domain via Cloudflare.
+Primary domain is `buffden.com` (set in `public/CNAME` and GitHub Pages settings). Subdomains `portfolio.buffden.com` and `harshwardhanpatil.buffden.com` redirect to it via Cloudflare Redirect Rules (proxy ON).
 
-### Primary domain: `buffden.com`
-- `public/CNAME` contains `buffden.com`
-- GitHub Pages settings → Custom domain set to `buffden.com`
-- Cloudflare DNS: `CNAME @ → buffden.github.io` (DNS only, proxy OFF)
-
-### Subdomain redirects (via Cloudflare)
-Both subdomains redirect to `buffden.com` using Cloudflare Redirect Rules (proxy ON):
-
-| Subdomain | DNS | Proxy | Rule |
-|-----------|-----|-------|------|
-| `portfolio.buffden.com` | `CNAME → buffden.com` | ON | Wildcard redirect to `https://buffden.com/${1}` |
-| `harshwardhanpatil.buffden.com` | `CNAME → buffden.com` | ON | Wildcard redirect to `https://buffden.com/${1}` |
-
-> **Note:** When creating Cloudflare Redirect Rules with wildcard pattern, ensure there is **no trailing space** after `/*` in the Request URL field — a trailing space will silently break the rule.
+> **Gotcha:** No trailing space after `/*` in Cloudflare wildcard redirect rules — it silently breaks the rule.
 
 ### SCSS Budget Warning
 If you see a warning like:

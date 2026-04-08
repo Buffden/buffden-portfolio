@@ -1,9 +1,13 @@
 
 # Harshwardhan Patil - Portfolio
 
-[![Portfolio Landing Page](src/assets/images/portfolio-landing-page.png)](https://portfolio.buffden.com/)
+[![Portfolio Landing Page](src/assets/images/portfolio-landing-page.png)](https://buffden.com/)
 
-**[Visit the live website](https://portfolio.buffden.com/)**
+**[Visit the live website](https://buffden.com/)**
+
+> Also accessible via:
+> - [portfolio.buffden.com](https://portfolio.buffden.com/) → redirects to buffden.com
+> - [harshwardhanpatil.buffden.com](https://harshwardhanpatil.buffden.com/) → redirects to buffden.com
 
 A modern, responsive portfolio website built with Angular, showcasing my work and experience as a Software Engineer.
 
@@ -55,7 +59,11 @@ This project uses [angular-cli-ghpages](https://github.com/angular-schule/angula
 ng deploy
 ```
 - This will build your app for production and push it to the `gh-pages` branch.
-- Your site will be live at: `https://Buffden.github.io/buffden-portfolio/`
+- Your site will be live at: `https://buffden.com/`
+
+## Custom Domain
+
+Primary domain is `buffden.com` (set in `public/CNAME` and GitHub Pages settings). Subdomains `portfolio.buffden.com` and `harshwardhanpatil.buffden.com` redirect to it via Cloudflare Redirect Rules (proxy ON).
 
 ### SCSS Budget Warning
 If you see a warning like:
@@ -90,7 +98,7 @@ buffden-portfolio/
 
 ## Links
 
-- [Live Portfolio](https://Buffden.github.io/buffden-portfolio/)
+- [Live Portfolio](https://buffden.com/)
 - [Resume](https://github.com/Buffden/resume/blob/main/Harshwardhan-Patil-Resume.pdf)
 
 ## License

@@ -1,9 +1,13 @@
 
 # Harshwardhan Patil - Portfolio
 
-[![Portfolio Landing Page](src/assets/images/portfolio-landing-page.png)](https://portfolio.buffden.com/)
+[![Portfolio Landing Page](src/assets/images/portfolio-landing-page.png)](https://buffden.com/)
 
-**[Visit the live website](https://portfolio.buffden.com/)**
+**[Visit the live website](https://buffden.com/)**
+
+> Also accessible via:
+> - [portfolio.buffden.com](https://portfolio.buffden.com/) → redirects to buffden.com
+> - [harshwardhanpatil.buffden.com](https://harshwardhanpatil.buffden.com/) → redirects to buffden.com
 
 A modern, responsive portfolio website built with Angular, showcasing my work and experience as a Software Engineer.
 
@@ -55,7 +59,26 @@ This project uses [angular-cli-ghpages](https://github.com/angular-schule/angula
 ng deploy
 ```
 - This will build your app for production and push it to the `gh-pages` branch.
-- Your site will be live at: `https://Buffden.github.io/buffden-portfolio/`
+- Your site will be live at: `https://buffden.com/`
+
+## Custom Domain & DNS Setup
+
+The site is hosted on GitHub Pages with a custom domain via Cloudflare.
+
+### Primary domain: `buffden.com`
+- `public/CNAME` contains `buffden.com`
+- GitHub Pages settings → Custom domain set to `buffden.com`
+- Cloudflare DNS: `CNAME @ → buffden.github.io` (DNS only, proxy OFF)
+
+### Subdomain redirects (via Cloudflare)
+Both subdomains redirect to `buffden.com` using Cloudflare Redirect Rules (proxy ON):
+
+| Subdomain | DNS | Proxy | Rule |
+|-----------|-----|-------|------|
+| `portfolio.buffden.com` | `CNAME → buffden.com` | ON | Wildcard redirect to `https://buffden.com/${1}` |
+| `harshwardhanpatil.buffden.com` | `CNAME → buffden.com` | ON | Wildcard redirect to `https://buffden.com/${1}` |
+
+> **Note:** When creating Cloudflare Redirect Rules with wildcard pattern, ensure there is **no trailing space** after `/*` in the Request URL field — a trailing space will silently break the rule.
 
 ### SCSS Budget Warning
 If you see a warning like:
@@ -90,7 +113,7 @@ buffden-portfolio/
 
 ## Links
 
-- [Live Portfolio](https://Buffden.github.io/buffden-portfolio/)
+- [Live Portfolio](https://buffden.com/)
 - [Resume](https://github.com/Buffden/resume/blob/main/Harshwardhan-Patil-Resume.pdf)
 
 ## License

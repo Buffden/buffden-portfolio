@@ -11,7 +11,6 @@ import { ResearchListComponent } from './sections/research/research-list/researc
 import { MobileMenuComponent } from './layout/mobile-menu/mobile-menu.component';
 import { SocialSidebarComponent } from './layout/social-sidebar/social-sidebar.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { LoaderComponent } from './shared/loader/loader.component';
 import { CommonModule } from '@angular/common';
 import { EmailSidebarComponent } from './layout/email-sidebar/email-sidebar.component';
 import { SkillsComponent } from './sections/skills/skills.component';
@@ -32,7 +31,6 @@ import { SkillsComponent } from './sections/skills/skills.component';
     ContactComponent,
     ResearchListComponent,
     FooterComponent,
-    LoaderComponent,
     CommonModule,
     SkillsComponent,
   ],
@@ -41,7 +39,6 @@ import { SkillsComponent } from './sections/skills/skills.component';
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'buffden-portfolio';
-  isLoading = true;
   headerAnimated = false;
   heroAnimated = false;
   sidebarAnimated = false;
@@ -54,11 +51,9 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // Determine the initial route from the URL hash before Angular processes it
     const hash = window.location.hash;
     this.isHomeRoute = !hash || hash === '#/' || hash === '#';
 
-    // Keep isHomeRoute in sync on subsequent client-side navigations
     this.routerSub = this.router.events
       .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
       .subscribe((e) => {
@@ -67,34 +62,23 @@ export class AppComponent implements OnInit, OnDestroy {
       });
 
     if (this.isHomeRoute) {
-      // Full staggered animation sequence for the home page
       setTimeout(() => {
-        this.isLoading = false;
+        this.headerAnimated = true;
 
-        // 2400ms: Header fades in and animates
         setTimeout(() => {
-          this.headerAnimated = true;
+          this.sidebarAnimated = true;
+          this.emailSidebarAnimated = true;
 
-          // 3200ms: Social sidebar slides in from left
           setTimeout(() => {
-            this.sidebarAnimated = true;
-            this.emailSidebarAnimated = true;
+            this.heroAnimated = true;
 
-            // 4200ms: Hero section fades in and animates
             setTimeout(() => {
-              this.heroAnimated = true;
-
-              // 4700ms: Main content sections fade in from bottom
-              setTimeout(() => {
-                this.contentAnimated = true;
-              }, 500);
+              this.contentAnimated = true;
             }, 500);
           }, 500);
         }, 500);
-      }, 2000);
+      }, 0);
     } else {
-      // Skip the loader for research detail pages — show content immediately
-      this.isLoading = false;
       this.headerAnimated = true;
       this.sidebarAnimated = true;
       this.emailSidebarAnimated = true;

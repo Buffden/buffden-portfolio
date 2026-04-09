@@ -93,6 +93,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
 
   scrollToSection(event: Event, sectionId: string): void {
     event.preventDefault();
+    (event.target as HTMLElement).blur();
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -42,26 +42,58 @@
   justify-content: center;
   align-items: center;
 
-  a {
-    color: var(--green);
-    width: 42px;
-    height: 42px;
-    position: relative;
-    z-index: 1;
+  a.wordmark {
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+    user-select: none;
+    transition: var(--transition);
 
-    &:hover,
-    &:focus {
-      svg {
-        fill: var(--green-tint);
-      }
-    }
-
-    svg {
-      fill: none;
-      transition: var(--transition);
-      user-select: none;
+    &:hover .wm-text,
+    &:focus .wm-text {
+      color: var(--green);
     }
   }
+
+  .wm-text {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--lightest-slate);
+    letter-spacing: 1.5px;
+    transition: color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation: glitch 5s infinite;
+  }
+
+  .wm-dot {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1;
+    margin-left: 1px;
+    animation: dotFlicker 5s infinite;
+  }
+}
+
+@keyframes glitch {
+  0%, 84%  { transform: none;                         text-shadow: none; color: var(--lightest-slate); }
+  85%       { transform: translateX(-3px);              text-shadow:  3px 0 #64ffda, -3px 0 rgba(255, 80, 180, 0.7); }
+  86%       { transform: translateX(3px)  skewX(-3deg); text-shadow: -3px 0 #64ffda,  3px 0 rgba(255, 80, 180, 0.7); }
+  87%       { transform: translateX(-2px);              text-shadow:  2px 0 rgba(100, 255, 218, 0.9); color: var(--lightest-slate); }
+  88%       { transform: translateX(4px)  skewX(2deg);  text-shadow: -4px 0 rgba(255, 80, 180, 0.8); }
+  89%       { transform: translateX(-1px);              text-shadow:  1px 0 #64ffda; }
+  90%       { transform: translateX(2px);               text-shadow: -2px 0 rgba(255, 80, 180, 0.5), 2px 0 #64ffda; }
+  91%, 100% { transform: none;                         text-shadow: none; color: var(--lightest-slate); }
+}
+
+@keyframes dotFlicker {
+  0%, 85%  { opacity: 1; }
+  86%       { opacity: 0; }
+  87%       { opacity: 1; }
+  88%       { opacity: 0; }
+  89%       { opacity: 1; }
+  91%, 100% { opacity: 1; }
 }
 
 .nav-links {
@@ -88,11 +120,15 @@
 
       a {
         padding: 10px;
-        color: var(--lightest-slate);
+        color: var(--light-slate);
+        display: inline-block;
+        transform: translateY(0);
+        transition: var(--transition);
 
         &:hover,
         &:focus {
           color: var(--green);
+          transform: translateY(-3px);
         }
 
         &.active {

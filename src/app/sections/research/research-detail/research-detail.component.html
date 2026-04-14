@@ -34,7 +34,7 @@
         <p class="one-liner">{{ paper.oneLiner }}</p>
 
         <div class="paper-footer">
-          <button *ngIf="paper.link && paper.link.endsWith('.pdf')"
+          <button *ngIf="paper.link"
                   class="paper-footer-button"
                   (click)="showPdfPreview = !showPdfPreview">
             {{ showPdfPreview ? 'Hide PDF Preview' : 'View PDF Preview' }}

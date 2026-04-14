@@ -13,6 +13,18 @@ export interface Paper {
 
 export const papers: Paper[] = [
   {
+    slug: "extracting-training-data-from-large-language-models",
+    title: "Extracting Training Data from Large Language Models",
+    authors: "Nicholas Carlini, Florian Tramèr, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom Brown, Dawn Song, Úlfar Erlingsson, Alina Oprea, Colin Raffel",
+    venue: "USENIX Security",
+    link: "https://arxiv.org/pdf/2012.07805",
+    year: 2021,
+    tags: ["LLMs", "privacy", "data extraction", "memorization"],
+    oneLiner: "Shows that large language models can leak verbatim training examples, including sensitive information, through querying.",
+    review: "",
+    reviewPath: "assets/reviews/extracting-training-data-from-large-language-models.md"
+  },
+  {
     slug: "practical-automated-detection-of-malicious-npm-packages",
     title: "Practical Automated Detection of Malicious npm Packages",
     authors: "Adriana Sejfia, Max Schäfer",

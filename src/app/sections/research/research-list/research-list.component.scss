@@ -147,3 +147,73 @@
   text-align: center;
   padding: 60px 0;
 }
+
+// ─── Pagination ───────────────────────────────────────────────────────────────
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid $green;
+  color: $green;
+  font-family: $font-mono;
+  font-size: $fz-xs;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover:not(:disabled) {
+    background: rgba($green, 0.08);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.page-indicator {
+  font-family: $font-mono;
+  font-size: $fz-sm;
+  color: $slate;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.page-current {
+  color: $green;
+  font-weight: 600;
+}
+
+.page-sep {
+  color: $lightest-navy;
+}
+
+// ─── Archive Link ─────────────────────────────────────────────────────────────
+
+.archive-link {
+  display: block;
+  text-align: center;
+  margin-top: 28px;
+  font-family: $font-mono;
+  font-size: $fz-sm;
+  color: $green;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    opacity: 0.75;
+    letter-spacing: 0.04em;
+  }
+}

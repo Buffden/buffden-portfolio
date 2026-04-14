@@ -31,5 +31,29 @@
       <p class="empty-state">No papers found for this topic.</p>
     </ng-template>
 
+    <!-- Pagination -->
+    <div class="pagination" *ngIf="totalPages > 1">
+      <button class="page-btn" (click)="prevPage()" [disabled]="currentPage === 0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Prev
+      </button>
+      <span class="page-indicator">
+        <span class="page-current">{{ currentPage + 1 }}</span>
+        <span class="page-sep">/</span>
+        <span class="page-total">{{ totalPages }}</span>
+      </span>
+      <button class="page-btn" (click)="nextPage()" [disabled]="currentPage === totalPages - 1">
+        Next
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- View All Link -->
+    <a class="archive-link" [routerLink]="['/research/archive']">View all research papers</a>
+
   </div>
 </section>

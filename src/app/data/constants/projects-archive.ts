@@ -1,6 +1,6 @@
 export interface MiniProject {
   title: string;
-  period: string;
+  period?: string;
   tech: string[];
   description: string;
   github?: string[];
@@ -8,6 +8,37 @@ export interface MiniProject {
 }
 
 export const miniProjects: MiniProject[] = [
+  {
+    title: 'TinyURL — URL Shortener',
+    period: 'Feb 2026 – Mar 2026',
+    tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'CloudFront', 'S3', 'Docker', 'Cloudflare', 'GitHub Actions'],
+    description: `Full-stack URL shortener with Angular 19 SPA frontend and Spring Boot REST API backend. Supports custom expiry — users enter a date or number of days for link lifetime. QR code generation with PNG/SVG download for any shortened or custom URL. Deployed on AWS with S3 + CloudFront for the SPA, EC2 + ALB for the API, and RDS PostgreSQL for persistence. Secured behind Cloudflare for DNS, DDoS protection, and SSL termination. CI/CD pipeline via GitHub Actions — automated build and deploy on every push.`,
+    github: ['https://github.com/Buffden/tinyurl-api'],
+    external: 'https://tinyurl.buffden.com/',
+  },
+  {
+    title: 'Employee Management System',
+    period: 'Dec 2024 – May 2025',
+    tech: ['Angular', 'Spring Boot', 'JWT', 'Docker', 'AWS EC2'],
+    description: `Built with Angular 19 UI and Spring Boot REST API backend. Enables management of employees, departments, and roles. Implements JWT authentication and role-based access control. Dockerized for easy deployment on AWS EC2. Features a clean codebase, CI-ready, and fully documented.`,
+    github: ['https://github.com/Buffden/employee-management-system'],
+    external: 'https://ems.buffden.com/',
+  },
+  {
+    title: 'RingNet — Graph-Based Fraud Ring Detection',
+    period: 'May 2026',
+    tech: ['Neo4j', 'Java', 'Cypher', 'Graph Data Science', 'Docker', 'Maven'],
+    description: `Demonstrates why fraud ring detection is fundamentally a graph problem. Models financial entities as a property graph with 6 node types. Generates a synthetic dataset with 3 planted rings across 150 accounts — all 25 fraud accounts surfaced with zero false positives. Progressive Cypher queries from basic traversal to composite risk scoring. Fully containerized with Docker Compose.`,
+    github: ['https://github.com/Buffden/ringnet'],
+  },
+  {
+    title: 'Battle Arena – Real-Time Multiplayer Platform',
+    period: 'May 2025 – Present',
+    tech: ['Angular', 'Phaser 3', 'Spring Boot', 'Node.js', 'MongoDB', 'Docker'],
+    description: `Real-time multiplayer artillery game inspired by Pocket Tanks. Uses microservices architecture for auth, matchmaking, and game engine. Built with Phaser 3 and Angular 21 for browser-based 2D gameplay. Uses Spring Boot REST APIs and Node.js with Socket.io for backend. Features a Dockerized, scalable, and fully modular architecture.`,
+    github: ['https://github.com/Buffden/battle-arena'],
+    external: 'https://github.com/Buffden/battle-arena',
+  },
   {
     title: 'Event Management System',
     period: 'Sep 2025 - Nov 2025',

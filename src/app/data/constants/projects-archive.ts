@@ -76,6 +76,13 @@ export const miniProjects: MiniProject[] = [
     github: ['https://github.com/Buffden/input-validation-secure-programming'],
   },
   {
+    title: 'RSA Encryption & Signature Lab',
+    period: 'Mar 20256 - Apr 2026',
+    tech: ['Java', 'Maven', 'RSA-OAEP', 'RSA-PSS', 'X.509', 'GCP'],
+    description: `Implemented RSA cryptography from scratch — key generation via Euler's Totient, manual modPow, and digital signatures. Progressed from textbook RSA to production-grade RSA-OAEP and RSA-PSS. Validated real-world X.509 certificates by connecting to live HTTPS servers without automated tools.`,
+    github: ['https://github.com/Buffden/rsa-encryption-signature-lab'],
+  },
+  {
     title: 'Spider Squash – Chrome Extension',
     period: 'Sep 2022',
     tech: ['JavaScript', 'HTML5', 'CSS3', 'Chrome API'],

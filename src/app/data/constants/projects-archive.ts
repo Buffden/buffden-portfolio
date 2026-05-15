@@ -11,15 +11,15 @@ export const miniProjects: MiniProject[] = [
   {
     title: 'TinyURL — URL Shortener',
     period: 'Feb 2026 – Mar 2026',
-    tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'CloudFront', 'S3', 'Docker', 'Cloudflare', 'GitHub Actions'],
-    description: `Production-grade URL shortener with Base62 short codes, server-enforced expiry (301/302/410), and QR code export in PNG and SVG. Six-layer security (Cloudflare WAF → Nginx rate limiting → Bucket4j cap → split DB users); zero-credential CI/CD via GitHub Actions OIDC with cosign-signed images and KMS-encrypted secrets in AWS SSM.`,
+    tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'CloudFront', 'S3', 'Lambda', 'Docker', 'Cloudflare', 'GitHub Actions'],
+    description: `Production-grade URL shortener with Base62 short codes, server-enforced expiry (301/302/410), QR code export, and a serverless Lambda + EventBridge expiry scheduler that cut monthly costs by ~40%. Six-layer security (Cloudflare WAF → Nginx rate limiting → Bucket4j cap → split DB users); zero-credential CI/CD via GitHub Actions OIDC with cosign-signed images and KMS-encrypted secrets.`,
     github: ['https://github.com/Buffden/tinyurl-api'],
     external: 'https://tinyurl.buffden.com/',
   },
   {
     title: 'Employee Management System',
     period: 'Dec 2024 – May 2025',
-    tech: ['Angular', 'Spring Boot', 'JWT', 'Docker', 'AWS EC2'],
+    tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'Redis', 'JWT', 'Docker', 'AWS EC2', 'GitHub Actions'],
     description: `Full-stack HR platform for employee lifecycle, department, project/task, and location management with a normalized PostgreSQL schema. Three-tier RBAC (SYSTEM_ADMIN / HR_MANAGER / EMPLOYEE), JWT in HTTP-Only cookies, BCrypt hashing, Nginx + Redis rate limiting, and blue-green zero-downtime deployment on AWS RDS.`,
     github: ['https://github.com/Buffden/employee-management-system'],
     external: 'https://ems.buffden.com/',
@@ -41,7 +41,7 @@ export const miniProjects: MiniProject[] = [
   },
   {
     title: 'Event Management System',
-    period: 'Sep 2025 - Nov 2025',
+    period: 'Sep 2025 – Nov 2025',
     tech: [
       'Next.js',
       'Node.js',
@@ -55,7 +55,7 @@ export const miniProjects: MiniProject[] = [
   },
   {
     title: 'AI-Powered Personal Finance Manager',
-    period: 'Mar 2025 - Apr 2025',
+    period: 'Mar 2025 – Apr 2025',
     tech: ['Streamlit', 'Flask', 'OpenAI', 'Plaid API', 'Docker', 'AWS RDS'],
     description: `Plaid-connected finance manager that auto-categorizes transactions, suggests budgets, scans receipts via GPT-4 Vision, and answers questions through a conversational chatbot. Includes trend analysis, anomaly detection, bill reminders, and exportable reports — Streamlit + Altair frontend, Flask API, AWS RDS backend.`,
     github: ['https://github.com/Buffden/AI-Powered-Personal-Finance-Manager'],
@@ -63,21 +63,21 @@ export const miniProjects: MiniProject[] = [
 
   {
     title: 'Better Finance – Hackathon Project (UTA)',
-    period: 'Hackathon - Mar 2025',
+    period: 'Mar 2025',
     tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn-ui'],
     description: `Hackathon project (UTA, Mar 2025) — AI-powered personal finance platform with bank sync, OCR invoice processing, and a spending analytics dashboard, built with React, TypeScript, Vite, and Tailwind CSS.`,
     github: ['https://github.com/Buffden/Better-Finance'],
   },
   {
     title: 'Secure Phone Book REST API',
-    period: 'Oct 2024 - Nov 2024',
+    period: 'Oct 2024 – Nov 2024',
     tech: ['FastAPI', 'Spring Boot', 'Docker', 'SQLite', 'JWT'],
     description: `Contact management API rebuilt across four stacks (FastAPI, Spring Boot, ASP.NET, Go) to contrast security primitives — regex input validation, role-based auth, and full audit logging. Unit tests explicitly assert protection against XSS, SQL injection, and privilege escalation.`,
     github: ['https://github.com/Buffden/input-validation-secure-programming'],
   },
   {
     title: 'RSA Encryption & Signature Lab',
-    period: 'Mar 2026 - Apr 2026',
+    period: 'Mar 2026 – Apr 2026',
     tech: ['Java', 'Maven', 'RSA-OAEP', 'RSA-PSS', 'X.509', 'GCP'],
     description: `RSA implemented from first principles in Java — key derivation via Euler's Totient, manual modular exponentiation, and signatures demonstrating the avalanche effect — with zero external dependencies. Validates live X.509 certificates against real HTTPS servers using java.security APIs; migration to RSA-OAEP and RSA-PSS in progress on GCP.`,
     github: ['https://github.com/Buffden/rsa-encryption-signature-lab'],

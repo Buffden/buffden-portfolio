@@ -33,14 +33,14 @@ export class ProjectsComponent implements AfterViewInit {
       descriptionPoints: [
         'Full-stack URL shortener: Angular 19 SPA on AWS (S3 + CloudFront, ALB + EC2, RDS PostgreSQL) backed by a stateless Spring Boot API — Base62-encoded short codes, server-enforced expiry, and correct redirect semantics (301 permanent / 302 expiring / 410 Gone). On-demand QR code export in PNG and SVG.',
         'Security-first with defense-in-depth across six layers: Cloudflare WAF → Nginx per-IP rate zones → Bucket4j application cap → least-privilege split DB users. Secrets in AWS SSM Parameter Store (KMS-encrypted); zero-credential CI/CD via GitHub Actions OIDC with cosign-signed Docker images.',
-        'Flyway schema migrations, JUnit 5 + Testcontainers integration tests against a real PostgreSQL instance, Prometheus metrics, and structured JSON logging to CloudWatch.',
+        'Serverless expiry scheduler via AWS Lambda + EventBridge with SNS/SQS DLQ, reducing monthly infrastructure costs by ~40%; Flyway migrations, JUnit 5 + Testcontainers, Prometheus metrics, and CloudWatch logging.',
       ],
       image: 'assets/images/tinyurl-landing-page.png',
       github: [
         'https://github.com/Buffden/tinyurl-api'
       ],
       external: 'https://tinyurl.buffden.com/',
-      tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'CloudFront', 'S3', 'Docker', 'Cloudflare', 'GitHub Actions'],
+      tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'CloudFront', 'S3', 'Lambda', 'Docker', 'Cloudflare', 'GitHub Actions'],
     },
     {
       title: 'Employee Management System',
@@ -55,7 +55,7 @@ export class ProjectsComponent implements AfterViewInit {
         'https://github.com/Buffden/employee-management-system'
       ],
       external: 'https://ems.buffden.com/',
-      tech: ['Angular', 'Spring Boot', 'JWT', 'Docker', 'AWS EC2'],
+      tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'Redis', 'JWT', 'Docker', 'AWS EC2', 'GitHub Actions'],
     },
     {
       title: 'RingNet — Graph-Based Fraud Ring Detection',

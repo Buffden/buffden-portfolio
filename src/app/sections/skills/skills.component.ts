@@ -76,6 +76,7 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'ALB', icon: this.iconPath('Elastic Load Balancing.svg') },
                 { name: 'Cloudflare', icon: this.iconPath('Cloudflare.svg') },
                 { name: 'Docker', icon: this.iconPath('Docker.svg') },
+                { name: 'Kubernetes', icon: this.iconPath('Kubernetes.svg') },
                 { name: 'NGINX', icon: this.iconPath('NGINX.svg') },
                 { name: 'Jenkins', icon: this.iconPath('Jenkins.svg') },
                 { name: 'GitHub Actions', icon: this.iconPath('GitHub Actions.svg') },
@@ -88,6 +89,7 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'PostgreSQL', icon: this.iconPath('PostgreSQL.svg') },
                 { name: 'MongoDB', icon: this.iconPath('MongoDB.svg') },
                 { name: 'Redis', icon: this.iconPath('Redis.svg') },
+                { name: 'Neo4j', icon: this.iconPath('Neo4j.svg') },
                 { name: 'Elasticsearch', icon: this.iconPath('Elasticsearch.svg') },
                 { name: 'Apache Kafka', icon: this.iconPath('Apache Kafka.svg') }
             ]
@@ -95,9 +97,9 @@ export class SkillsComponent implements AfterViewInit {
         {
             title: 'Testing & Tools',
             items: [
+                { name: 'JUnit', icon: this.iconPath('JUnit.svg') },
                 { name: 'Jasmine', icon: this.iconPath('Jasmine.svg') },
                 { name: 'SonarQube', icon: this.iconPath('SonarQube.svg') },
-                { name: 'JUnit', icon: this.iconPath('JUnit.svg') },
                 { name: 'Selenium', icon: this.iconPath('Selenium.svg') },
                 { name: 'Postman', icon: this.iconPath('Postman.svg') },
                 { name: 'Git', icon: this.iconPath('Git.svg') },

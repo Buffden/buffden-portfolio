@@ -29,7 +29,7 @@ export class AboutComponent implements AfterViewInit {
       {
         type: 'text',
         content:
-          ', I spent three years shipping production-grade features, owning CI/CD, and contributing to reliable architectures-learning to balance speed with rigor along the way.'
+          ', I spent three years shipping production-grade features, owning CI/CD, and contributing to reliable architectures — learning to balance speed with rigor along the way.'
       }
     ],
     [

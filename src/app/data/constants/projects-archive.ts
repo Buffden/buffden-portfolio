@@ -40,12 +40,18 @@ export const miniProjects: MiniProject[] = [
     external: 'https://www.npmjs.com/package/diagram-sync',
   },
   {
+    title: 'AI Text Intelligence Dashboard',
+    period: 'May 2026 – Jun 2026',
+    tech: ['Angular', 'Spring Boot', 'Spring AI', 'OpenAI', 'Claude', 'Java', 'TypeScript'],
+    description: `Full-stack AI pipeline where every layer connects end-to-end: Angular frontend → Spring Boot intermediary → multi-provider LLM (OpenAI/Claude with automatic fallback) → validated structured response. Performs text summarization, sentiment analysis with confidence scores, category classification with chain-of-thought reasoning, and entity extraction. Production-ready patterns throughout: prompt injection hardening, exponential backoff with jitter, Retry-After support, configurable timeouts, and per-request token usage and cost estimation.`,
+    github: ['https://github.com/Buffden/ai-text-intelligence-dashboard'],
+  },
+  {
     title: 'Battle Arena – Real-Time Multiplayer Platform',
     period: 'May 2025 – Present',
     tech: ['Angular', 'Phaser 3', 'Spring Boot', 'Node.js', 'Socket.io', 'MongoDB', 'Docker', 'AWS'],
     description: `Turn-based browser artillery game with real-time WebSocket sync and bi-directional player position sync across active sessions; Phaser 3 + Matter.js for physics (10 weapons per match), Angular 17 for UI. Five microservices (JWT + Google OAuth auth, profiles, leaderboards, matchmaking, game engine) backed by Redis matchmaking queues and game state caching, MongoDB, and an Nginx gateway.`,
     github: ['https://github.com/Buffden/battle-arena'],
-    external: 'https://github.com/Buffden/battle-arena',
   },
   {
     title: 'Event Management System',
@@ -68,7 +74,6 @@ export const miniProjects: MiniProject[] = [
     description: `Plaid-connected finance manager that auto-categorizes transactions, suggests budgets, scans receipts via GPT-4 Vision, and answers questions through a conversational chatbot. Includes trend analysis, anomaly detection, bill reminders, and exportable reports — Streamlit + Altair frontend, Flask API, AWS RDS backend.`,
     github: ['https://github.com/Buffden/AI-Powered-Personal-Finance-Manager'],
   },
-
   {
     title: 'Better Finance – Hackathon Project (UTA)',
     period: 'Mar 2025',

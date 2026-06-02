@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { ResearchDetailComponent } from './sections/research/research-detail/research-detail.component';
 import { ResearchArchiveComponent } from './sections/research/research-archive/research-archive.component';
 import { ProjectListComponent } from './sections/project-archive/project-list/project-list.component';
+import { BlogArchiveComponent } from './sections/blog/blog-archive/blog-archive.component';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,10 @@ export const routes: Routes = [
   {
     path: 'project/archive',
     component: ProjectListComponent,
+  },
+  {
+    path: 'blog/archive',
+    component: BlogArchiveComponent,
   },
   {
     path: '**',

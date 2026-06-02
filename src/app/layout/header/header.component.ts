@@ -20,21 +20,24 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public activeSection: string = '';
   public isResearchRoute = false;
+  public isBlogRoute = false;
   private observer!: IntersectionObserver;
-  private sectionIds = ['about', 'skills', 'experience', 'projects', 'contact', 'research'];
+  private sectionIds = ['about', 'skills', 'experience', 'projects', 'research', 'blog', 'contact'];
   private routerSub!: Subscription;
 
   constructor(private dialog: MatDialog, private router: Router) {}
 
   ngOnInit() {
     this.isResearchRoute = this.router.url.startsWith('/research');
+    this.isBlogRoute = this.router.url.startsWith('/blog');
 
     this.routerSub = this.router.events
       .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
       .subscribe((e) => {
         this.isResearchRoute = e.urlAfterRedirects.startsWith('/research');
-        // Re-attach observer after navigating back home so #research is found
-        if (!this.isResearchRoute) {
+        this.isBlogRoute = e.urlAfterRedirects.startsWith('/blog');
+        // Re-attach observer after navigating back home
+        if (!this.isResearchRoute && !this.isBlogRoute) {
           setTimeout(() => this.setupIntersectionObserver(), 50);
         }
       });

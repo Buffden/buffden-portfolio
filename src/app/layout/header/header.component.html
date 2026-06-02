@@ -36,6 +36,11 @@
              [class.active]="activeSection === 'research' || isResearchRoute">Research</a>
         </li>
         <li>
+          <a href="#blog"
+             (click)="scrollToSection($event, 'blog')"
+             [class.active]="activeSection === 'blog' || isBlogRoute">Blog</a>
+        </li>
+        <li>
           <a href="#contact"
              (click)="scrollToSection($event, 'contact')"
              [class.active]="activeSection === 'contact'">Contact</a>

@@ -21,6 +21,7 @@ export class MobileMenuComponent {
     { name: 'Work', link: '#work' },
     { name: 'Contact', link: '#contact' },
     { name: 'Research', link: '#research' },
+    { name: 'Blog', link: '#blog' },
   ];
 
   constructor(private dialog: MatDialog, private router: Router) {}

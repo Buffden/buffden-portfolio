@@ -8,6 +8,7 @@ import { ExperienceComponent } from './sections/experience/experience.component'
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { ResearchListComponent } from './sections/research/research-list/research-list.component';
+import { BlogListComponent } from './sections/blog/blog-list/blog-list.component';
 import { MobileMenuComponent } from './layout/mobile-menu/mobile-menu.component';
 import { SocialSidebarComponent } from './layout/social-sidebar/social-sidebar.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -30,6 +31,7 @@ import { SkillsComponent } from './sections/skills/skills.component';
     ProjectsComponent,
     ContactComponent,
     ResearchListComponent,
+    BlogListComponent,
     FooterComponent,
     CommonModule,
     SkillsComponent,

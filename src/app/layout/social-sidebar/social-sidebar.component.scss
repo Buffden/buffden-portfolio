@@ -44,6 +44,11 @@
           stroke-linecap: round;
           stroke-linejoin: round;
         }
+
+        &.favicon-icon img {
+          display: block;
+          border-radius: 3px;
+        }
       }
     }
   }

@@ -2,9 +2,9 @@
 @use '../../../styles/mixins' as *;
 
 .skills {
-    @include section-padding;
     background: $navy;
     color: $lightest-slate;
+    @include section-padding;
 
     .container {
         max-width: 1200px; // widen container to keep card width

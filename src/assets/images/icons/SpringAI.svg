@@ -1,0 +1,39 @@
+<svg width="1448" height="1086" viewBox="0 0 1448 1086" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Spring AI Reference-Style Logo Transparent</title>
+  <desc id="desc">Original flat green AI logo with a rounded A, lowercase i, and transparent spring leaf cutouts.</desc>
+
+  <defs>
+    <mask id="leaf-cutouts" maskUnits="userSpaceOnUse" x="0" y="0" width="1448" height="1086">
+      <rect width="1448" height="1086" fill="#ffffff"/>
+      <path d="M376 802
+               C281 743 302 608 405 534
+               C505 462 623 492 728 443
+               C797 411 832 360 874 342"
+            fill="none" stroke="#000000" stroke-width="62" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M455 802
+               C603 776 754 706 855 584"
+            fill="none" stroke="#000000" stroke-width="43" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="353" cy="805" r="54" fill="#000000"/>
+      <path d="M450 818
+               C574 826 738 814 853 727"
+            fill="none" stroke="#000000" stroke-width="38" stroke-linecap="round"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#leaf-cutouts)">
+    <g fill="none" stroke="#68B640" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M235 957 L576 116 Q603 48 631 116 L955 957" stroke-width="150"/>
+    </g>
+    <path d="M363 775
+             C302 710 307 597 391 529
+             C487 451 598 477 690 443
+             C778 410 820 353 869 341
+             C929 468 946 641 843 738
+             C737 839 520 842 363 775Z"
+          fill="#68B640"/>
+  </g>
+
+  <circle cx="353" cy="805" r="31" fill="#68B640"/>
+  <rect x="1124" y="339" width="154" height="636" rx="77" fill="#68B640"/>
+  <circle cx="1201" cy="222" r="76" fill="#68B640"/>
+</svg>

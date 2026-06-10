@@ -26,18 +26,19 @@
 
         <div class="cards">
             <div class="card"
-                 *ngFor="let cat of categories; let last = last"
-                 [class.card--full]="last">
+                 *ngFor="let cat of categories">
                 <div class="card-header">
                     <h3>{{ cat.title }}</h3>
                 </div>
-                <div class="icon-grid">
+                <div class="icon-grid" [class.icon-grid--compact]="cat.compact">
                     <div class="icon-chip"
-                         *ngFor="let item of cat.items">
+                         [class.icon-chip--icon-only]="cat.compact"
+                         *ngFor="let item of cat.items"
+                         [title]="cat.compact ? (item.tooltip || item.name) : ''">
                         <img [src]="item.icon"
                              [alt]="item.name"
                              loading="lazy" />
-                        <span>{{ item.name }}</span>
+                        <span *ngIf="!cat.compact">{{ item.name }}</span>
                     </div>
                 </div>
             </div>

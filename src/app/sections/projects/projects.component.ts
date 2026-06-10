@@ -43,6 +43,19 @@ export class ProjectsComponent implements AfterViewInit {
       tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'ALB', 'CloudFront', 'S3', 'Lambda', 'EventBridge', 'SNS', 'SQS', 'Docker', 'Cloudflare', 'GitHub Actions'],
     },
     {
+      title: 'diagram-sync — Diagram-as-Code CLI',
+      type: 'Featured Project',
+      descriptionPoints: [
+        'Engineered provider-registry architecture mapping 14+ file extensions to isolated rendering adapters with runtime graceful degradation on missing tools.',
+        'Developed recursive repo scan, --files, and --changed via git diff HEAD with untracked support, enabling CI to regenerate only PR-changed files.',
+        'Architected tiered format resolution across CLI flag, job, and global config with per-provider validation and actionable errors for unsupported formats.',
+      ],
+      image: 'assets/images/diagram-sync.png',
+      github: ['https://github.com/Buffden/diagram-sync'],
+      external: 'https://www.npmjs.com/package/diagram-sync',
+      tech: ['TypeScript', 'Node.js', 'PlantUML', 'Mermaid', 'Graphviz', 'Draw.io', 'D2', 'Excalidraw', 'BPMN', 'Vitest', 'ESLint', 'GitHub Actions'],
+    },
+    {
       title: 'Employee Management System',
       type: 'Featured Project',
       descriptionPoints: [

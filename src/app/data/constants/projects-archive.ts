@@ -32,9 +32,9 @@ export const miniProjects: MiniProject[] = [
     github: ['https://github.com/Buffden/ringnet'],
   },
   {
-    title: 'diagram-sync — Published npm CLI Package',
+    title: 'diagram-sync — Diagram-as-Code CLI',
     period: 'May 2026 - Present',
-    tech: ['TypeScript', 'Node.js', 'PlantUML', 'Mermaid', 'npm'],
+    tech: ['TypeScript', 'Node.js', 'PlantUML', 'Mermaid', 'Graphviz', 'Draw.io', 'D2', 'Excalidraw', 'BPMN', 'Vitest', 'ESLint', 'GitHub Actions', 'npm'],
     description: `Published npm package (npx diagram-sync) that solves stale architecture documentation — recursively discovers PlantUML (.puml) and Mermaid (.mmd) files across a repo and auto-exports SVGs to a path-mirrored diagrams/ folder with zero configuration. Installable globally or as a dev dependency; integrates seamlessly into npm scripts and CI/CD pipelines; output SVGs mirror the exact source directory structure, making diagram assets trivially committable and referenceable in documentation. Graphviz and Draw.io support planned.`,
     github: ['https://github.com/Buffden/diagram-sync'],
     external: 'https://www.npmjs.com/package/diagram-sync',

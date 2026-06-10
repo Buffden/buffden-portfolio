@@ -88,6 +88,7 @@ export class SkillsComponent implements AfterViewInit {
             items: [
                 { name: 'PostgreSQL', icon: this.iconPath('PostgreSQL.svg') },
                 { name: 'MongoDB', icon: this.iconPath('MongoDB.svg') },
+                { name: 'MySQL', icon: this.iconPath('MySQL.svg') },
                 { name: 'Redis', icon: this.iconPath('Redis.svg') },
                 { name: 'Neo4j', icon: this.iconPath('Neo4j.svg') },
                 { name: 'Elasticsearch', icon: this.iconPath('Elasticsearch.svg') },

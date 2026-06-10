@@ -36,6 +36,14 @@
             <img [src]="project.image" [alt]="project.title" />
           </a>
           <a
+            *ngIf="project.title === 'diagram-sync — Diagram-as-Code CLI'"
+            href="https://www.npmjs.com/package/diagram-sync"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img [src]="project.image" [alt]="project.title" />
+          </a>
+          <a
             *ngIf="project.title === 'AI-Powered Personal Finance Manager'"
             href="https://github.com/Buffden/AI-Powered-Personal-Finance-Manager"
             target="_blank"
@@ -74,6 +82,14 @@
             <a
               *ngIf="project.title === 'RingNet — Graph-Based Fraud Ring Detection'"
               href="https://github.com/Buffden/ringnet"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ project.title }}
+            </a>
+            <a
+              *ngIf="project.title === 'diagram-sync — Diagram-as-Code CLI'"
+              href="https://www.npmjs.com/package/diagram-sync"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -147,6 +163,16 @@
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
+            </a>
+            <a
+              *ngIf="project.npmPackage && npmDownloads[project.npmPackage]"
+              [href]="project.external"
+              target="_blank"
+              aria-label="npm Downloads"
+              class="npm-downloads-link"
+            >
+              <img src="https://unpkg.com/feather-icons/dist/icons/download.svg" alt="downloads" class="npm-icon" />
+              <span class="npm-download-count">{{ npmDownloads[project.npmPackage!] | number }}</span>
             </a>
           </div>
         </div>

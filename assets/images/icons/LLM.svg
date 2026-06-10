@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="LLM circuit icon">
+  <rect width="512" height="512" fill="#efefef"/>
+  <g fill="none" stroke="#15153c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Center circle -->
+    <circle cx="256" cy="256" r="72" fill="#efefef"/>
+
+    <!-- Top -->
+    <path d="M256 184 L256 124"/>
+    <circle cx="256" cy="94" r="14" fill="#efefef"/>
+
+    <!-- Bottom -->
+    <path d="M256 328 L256 388"/>
+    <circle cx="256" cy="418" r="14" fill="#efefef"/>
+
+    <!-- Left -->
+    <path d="M184 256 L124 256"/>
+    <circle cx="94" cy="256" r="14" fill="#efefef"/>
+
+    <!-- Right -->
+    <path d="M328 256 L388 256"/>
+    <circle cx="418" cy="256" r="14" fill="#efefef"/>
+
+    <!-- Top-left inner -->
+    <path d="M210 207 L186 183 L166 183 L152 154"/>
+    <circle cx="141" cy="132" r="14" fill="#efefef"/>
+
+    <!-- Top-left outer -->
+    <path d="M227 191 L227 158 L204 135"/>
+    <circle cx="184" cy="115" r="14" fill="#efefef"/>
+
+    <!-- Top-right outer -->
+    <path d="M285 191 L285 158 L308 135"/>
+    <circle cx="328" cy="115" r="14" fill="#efefef"/>
+
+    <!-- Top-right inner -->
+    <path d="M302 207 L326 183 L346 183 L360 154"/>
+    <circle cx="371" cy="132" r="14" fill="#efefef"/>
+
+    <!-- Bottom-right inner -->
+    <path d="M302 305 L326 329 L346 329 L360 358"/>
+    <circle cx="371" cy="380" r="14" fill="#efefef"/>
+
+    <!-- Bottom-right outer -->
+    <path d="M285 321 L285 354 L308 377"/>
+    <circle cx="328" cy="397" r="14" fill="#efefef"/>
+
+    <!-- Bottom-left outer -->
+    <path d="M227 321 L227 354 L204 377"/>
+    <circle cx="184" cy="397" r="14" fill="#efefef"/>
+
+    <!-- Bottom-left inner -->
+    <path d="M210 305 L186 329 L166 329 L152 358"/>
+    <circle cx="141" cy="380" r="14" fill="#efefef"/>
+  </g>
+
+  <text x="256" y="269" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="600" fill="#15153c">LLM</text>
+</svg>

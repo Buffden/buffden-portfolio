@@ -177,7 +177,9 @@
       }
       .project-links {
         display: flex;
+        align-items: center;
         gap: 18px;
+        width: 100%;
         a {
           color: $slate;
           transition: color 0.2s;
@@ -188,6 +190,24 @@
           }
           &:hover {
             color: $green;
+          }
+        }
+        .npm-downloads-link {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          text-decoration: none;
+          margin-left: auto;
+          .npm-icon {
+            width: 20px;
+            height: 20px;
+            filter: invert(93%) sepia(47%) saturate(500%) hue-rotate(100deg) brightness(1.1) drop-shadow(0 0 4px #64ffda);
+          }
+          .npm-download-count {
+            font-size: 13px;
+            font-family: $font-mono;
+            color: $green;
+            text-shadow: 0 0 8px #64ffda;
           }
         }
       }

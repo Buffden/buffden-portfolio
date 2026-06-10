@@ -164,6 +164,16 @@
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
             </a>
+            <a
+              *ngIf="project.npmPackage && npmDownloads[project.npmPackage]"
+              [href]="project.external"
+              target="_blank"
+              aria-label="npm Downloads"
+              class="npm-downloads-link"
+            >
+              <img src="https://unpkg.com/feather-icons/dist/icons/download.svg" alt="downloads" class="npm-icon" />
+              <span class="npm-download-count">{{ npmDownloads[project.npmPackage!] | number }}</span>
+            </a>
           </div>
         </div>
       </div>

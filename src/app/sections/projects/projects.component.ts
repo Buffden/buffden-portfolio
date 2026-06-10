@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { ScrollRevealService } from '../../shared/scroll-reveal.service';
 import { srConfig } from '../../shared/scroll-reveal.config';
 import { Router, RouterLink } from '@angular/router';
@@ -13,6 +14,7 @@ interface Project {
   external?: string;
   tech: string[];
   links?: { label: string; url: string }[];
+  npmPackage?: string;
 }
 
 @Component({
@@ -25,6 +27,8 @@ interface Project {
 export class ProjectsComponent implements AfterViewInit {
   @ViewChildren('projectCard') projectCards!: QueryList<ElementRef>;
   @ViewChildren('miniProjectCard') miniProjectCards!: QueryList<ElementRef>;
+
+  npmDownloads: Record<string, number> = {};
 
   projects: Project[] = [
     {
@@ -54,6 +58,7 @@ export class ProjectsComponent implements AfterViewInit {
       github: ['https://github.com/Buffden/diagram-sync'],
       external: 'https://www.npmjs.com/package/diagram-sync',
       tech: ['TypeScript', 'Node.js', 'PlantUML', 'Mermaid', 'Graphviz', 'Draw.io', 'D2', 'Excalidraw', 'BPMN', 'Vitest', 'ESLint', 'GitHub Actions'],
+      npmPackage: 'diagram-sync',
     },
     {
       title: 'Employee Management System',
@@ -91,7 +96,14 @@ export class ProjectsComponent implements AfterViewInit {
     },
   ];
 
-  constructor(private scrollReveal: ScrollRevealService, private router: Router) {}
+  constructor(private scrollReveal: ScrollRevealService, private router: Router, private http: HttpClient) {
+    this.projects
+      .filter(p => p.npmPackage)
+      .forEach(p => {
+        this.http.get<{ downloads: number }>(`https://api.npmjs.org/downloads/point/2020-01-01:2099-12-31/${p.npmPackage}`)
+          .subscribe({ next: res => { this.npmDownloads[p.npmPackage!] = res.downloads; } });
+      });
+  }
 
   ngAfterViewInit() {
     const prefersReducedMotion = window.matchMedia(

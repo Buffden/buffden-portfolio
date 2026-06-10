@@ -12,6 +12,7 @@ interface SkillItem {
 interface SkillCategory {
     title: string;
     items: SkillItem[];
+    compact?: boolean;
 }
 
 @Component({
@@ -50,10 +51,10 @@ export class SkillsComponent implements AfterViewInit {
             title: 'Frontend & UI',
             items: [
                 { name: 'Angular', icon: this.iconPath('Angular.svg') },
-                { name: 'Next.js', icon: this.iconPath('Next.js.svg') },
                 { name: 'TypeScript', icon: this.iconPath('TypeScript.svg') },
                 { name: 'JavaScript', icon: this.iconPath('JavaScript.svg') },
-                { name: 'Redux', icon: this.iconPath('Redux.svg') },
+                { name: 'HTML5', icon: this.iconPath('HTML5.svg') },
+                { name: 'CSS3', icon: this.iconPath('CSS3.svg') },
                 { name: 'D3.js', icon: this.iconPath('D3.js.svg') }
             ]
         },
@@ -64,16 +65,13 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Java', icon: this.iconPath('Java.svg') },
                 { name: 'Node.js', icon: this.iconPath('Node.js.svg') },
                 { name: 'GraphQL', icon: this.iconPath('GraphQL.svg') },
-                
-                { name: 'Socket.io', icon: this.iconPath('Socket.io.svg') }
+                { name: 'FastAPI', icon: this.iconPath('FastAPI.svg') },
+                { name: 'Python', icon: this.iconPath('Python.svg') },
             ]
         },
         {
             title: 'Cloud & DevOps',
             items: [
-                { name: 'AWS', icon: this.iconPath('AWS.svg') },
-                { name: 'CloudFront', icon: this.iconPath('aws-cloudfront.svg') },
-                { name: 'ALB', icon: this.iconPath('Elastic Load Balancing.svg') },
                 { name: 'Cloudflare', icon: this.iconPath('Cloudflare.svg') },
                 { name: 'Docker', icon: this.iconPath('Docker.svg') },
                 { name: 'Kubernetes', icon: this.iconPath('Kubernetes.svg') },
@@ -81,13 +79,13 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Jenkins', icon: this.iconPath('Jenkins.svg') },
                 { name: 'GitHub Actions', icon: this.iconPath('GitHub Actions.svg') },
                 { name: 'Linux', icon: this.iconPath('Linux.svg') },
+                { name: 'YAML', icon: this.iconPath('YAML.svg') },
             ]
         },
         {
             title: 'Data & Messaging',
             items: [
                 { name: 'PostgreSQL', icon: this.iconPath('PostgreSQL.svg') },
-                { name: 'MongoDB', icon: this.iconPath('MongoDB.svg') },
                 { name: 'MySQL', icon: this.iconPath('MySQL.svg') },
                 { name: 'Redis', icon: this.iconPath('Redis.svg') },
                 { name: 'Neo4j', icon: this.iconPath('Neo4j.svg') },
@@ -96,15 +94,52 @@ export class SkillsComponent implements AfterViewInit {
             ]
         },
         {
-            title: 'Testing & Tools',
+            title: 'AWS Services',
+            compact: true,
+            items: [
+                { name: 'Amazon EC2', icon: this.iconPath('Amazon EC2.svg'), tooltip: 'Elastic Compute Cloud' },
+                { name: 'Amazon VPC', icon: this.iconPath('Amazon VPC.svg'), tooltip: 'Virtual Private Cloud' },
+                { name: 'AWS IAM', icon: this.iconPath('AWS IAM.svg'), tooltip: 'Identity & Access Management' },
+                { name: 'Amazon RDS', icon: this.iconPath('Amazon RDS.svg'), tooltip: 'Relational Database Service' },
+                { name: 'AWS Lambda', icon: this.iconPath('AWS Lambda.svg'), tooltip: 'Serverless Functions' },
+                { name: 'Amazon EventBridge', icon: this.iconPath('Amazon EventBridge.svg'), tooltip: 'Serverless Event Bus' },
+                { name: 'Amazon ECS', icon: this.iconPath('Amazon ECS.svg'), tooltip: 'Elastic Container Service' },
+                { name: 'Amazon SNS', icon: this.iconPath('Amazon SNS.svg'), tooltip: 'Simple Notification Service' },
+                { name: 'Amazon SQS', icon: this.iconPath('Amazon SQS.svg'), tooltip: 'Simple Queue Service' },
+                { name: 'AWS Secrets Manager', icon: this.iconPath('AWS Secrets Manager.svg'), tooltip: 'Secrets Manager' },
+                { name: 'Amazon S3', icon: this.iconPath('Amazon S3.svg'), tooltip: 'Simple Storage Service' },
+                { name: 'Amazon CloudFront', icon: this.iconPath('aws-cloudfront.svg'), tooltip: 'CloudFront CDN' },
+                { name: 'AWS ALB', icon: this.iconPath('Elastic Load Balancing.svg'), tooltip: 'Application Load Balancer' },
+            ]
+        },
+        {
+            title: 'AI & ML',
+            items: [
+                { name: 'OpenAI', icon: this.iconPath('OpenAI.svg') },
+                { name: 'Spring AI', icon: this.iconPath('SpringAI.svg') },
+                { name: 'LLM', icon: this.iconPath('LLM.svg'), tooltip: 'Large Language Models' },
+            ]
+        },
+        {
+            title: 'Testing',
             items: [
                 { name: 'JUnit', icon: this.iconPath('JUnit.svg') },
+                { name: 'Mockito', icon: this.iconPath('Mockito.svg') },
+                { name: 'Vitest', icon: this.iconPath('Vitest.svg') },
                 { name: 'Jasmine', icon: this.iconPath('Jasmine.svg') },
-                { name: 'SonarQube', icon: this.iconPath('SonarQube.svg') },
                 { name: 'Selenium', icon: this.iconPath('Selenium.svg') },
                 { name: 'Postman', icon: this.iconPath('Postman.svg') },
+            ]
+        },
+        {
+            title: 'Dev Tools',
+            items: [
                 { name: 'Git', icon: this.iconPath('Git.svg') },
                 { name: 'GitHub', icon: this.iconPath('GitHub.svg') },
+                { name: 'Maven', icon: this.iconPath('Maven.svg') },
+                { name: 'NPM', icon: this.iconPath('NPM.svg') },
+                { name: 'ESLint', icon: this.iconPath('ESLint.svg') },
+                { name: 'SonarQube', icon: this.iconPath('SonarQube.svg') },
             ]
         }
     ];

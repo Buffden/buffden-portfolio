@@ -1,25 +1,25 @@
-<section #aboutSection id="about" class="about">
+<section #aboutSection
+         id="about"
+         class="about">
   <div class="container">
     <h2 class="section-heading"><span class="number">01.</span> About Me</h2>
-    
+
     <div class="about-content">
       <div class="text-content">
         <p *ngFor="let paragraph of aboutParagraphs; trackBy: trackByIndex">
           <ng-container *ngFor="let part of paragraph">
             <ng-container *ngIf="part.type === 'text'">{{ part.content }}</ng-container>
-            <a
-              *ngIf="part.type === 'link'"
-              [href]="part.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="highlight-link"
-            >
+            <a *ngIf="part.type === 'link'"
+               [href]="part.href"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="highlight-link">
               {{ part.content }}
             </a>
           </ng-container>
         </p>
       </div>
-      
+
       <div class="linkedin-badge-container">
         <app-linkedin-badge></app-linkedin-badge>
       </div>

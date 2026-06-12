@@ -29,25 +29,25 @@ export class AboutComponent implements AfterViewInit {
       {
         type: 'text',
         content:
-          ', I spent three years shipping production-grade features, owning CI/CD, and contributing to reliable architectures — learning to balance speed with rigor along the way.'
+          ', I spent three years shipping production-grade features, owning CI/CD, and contributing to reliable architectures, learning to balance speed with quality along the way.'
       }
     ],
     [
       {
         type: 'text',
         content:
-          'I\'m currently pursuing an MS in Software Engineering at the '
+          'I deepened my expertise in system design, design patterns, distributed systems, and web and software security, earning my MS in Software Engineering from the '
       },
       { type: 'link', content: 'University of Texas at Arlington', href: 'https://www.uta.edu' },
       {
         type: 'text',
         content:
-          ', focusing on system design and building clean, maintainable full-stack systems with Spring Boot and AWS. Outside work, I recharge with video games, football, and occasionally touch grass.'
+          '. Outside work, I recharge with video games, football, and occasionally touch grass.'
       }
     ]
   ];
 
-  constructor(private scrollReveal: ScrollRevealService) {}
+  constructor(private scrollReveal: ScrollRevealService) { }
 
   ngAfterViewInit() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

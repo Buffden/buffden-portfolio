@@ -100,6 +100,7 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Amazon EC2', icon: this.iconPath('Amazon EC2.svg'), tooltip: 'Elastic Compute Cloud' },
                 { name: 'Amazon VPC', icon: this.iconPath('Amazon VPC.svg'), tooltip: 'Virtual Private Cloud' },
                 { name: 'AWS IAM', icon: this.iconPath('AWS IAM.svg'), tooltip: 'Identity & Access Management' },
+                { name: 'AWS SSM', icon: this.iconPath('Amazon SSM.svg'), tooltip: 'AWS Systems Manager' },
                 { name: 'Amazon RDS', icon: this.iconPath('Amazon RDS.svg'), tooltip: 'Relational Database Service' },
                 { name: 'AWS Lambda', icon: this.iconPath('AWS Lambda.svg'), tooltip: 'Serverless Functions' },
                 { name: 'Amazon EventBridge', icon: this.iconPath('Amazon EventBridge.svg'), tooltip: 'Serverless Event Bus' },

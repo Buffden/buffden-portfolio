@@ -1,7 +1,10 @@
 
 # Harshwardhan Patil - Portfolio
 
-[![Portfolio Landing Page](src/assets/images/portfolio-landing-page.png)](https://buffden.com/)
+<p align="center">
+  <img src="src/assets/images/portfolio-mockup-dark.svg" alt="Portfolio — dark theme" width="49%"/>
+  <img src="src/assets/images/portfolio-mockup-light.svg" alt="Portfolio — light theme" width="49%"/>
+</p>
 
 **[Visit the live website](https://buffden.com/)**
 

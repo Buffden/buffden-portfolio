@@ -5,6 +5,7 @@ export interface MiniProject {
   description: string;
   github?: string[];
   external?: string;
+  npmPackage?: string;
 }
 
 export const miniProjects: MiniProject[] = [
@@ -15,6 +16,15 @@ export const miniProjects: MiniProject[] = [
     description: `Production-grade URL shortener with Base62 short codes, server-enforced expiry (301/302/410), QR code export, and a serverless Lambda + EventBridge expiry scheduler that cut monthly EC2/RDS costs by ~40%. Six-layer security (Cloudflare WAF → Nginx rate limiting → Bucket4j cap → split DB users); zero-credential CI/CD via GitHub Actions OIDC automating S3 sync and CloudFront cache invalidation on every push to main.`,
     github: ['https://github.com/Buffden/tinyurl-api'],
     external: 'https://tinyurl.buffden.com/',
+  },
+  {
+    title: 'diagram-sync — Diagram-as-Code CLI',
+    period: 'May 2026 - Present',
+    tech: ['TypeScript', 'Node.js', 'PlantUML', 'Mermaid', 'Graphviz', 'Draw.io', 'D2', 'Excalidraw', 'BPMN', 'Vitest', 'ESLint', 'GitHub Actions', 'npm'],
+    description: `Published npm package (npx diagram-sync) that solves stale architecture documentation — recursively discovers PlantUML (.puml) and Mermaid (.mmd) files across a repo and auto-exports SVGs to a path-mirrored diagrams/ folder with zero configuration. Installable globally or as a dev dependency; integrates seamlessly into npm scripts and CI/CD pipelines; output SVGs mirror the exact source directory structure, making diagram assets trivially committable and referenceable in documentation. Graphviz and Draw.io support planned.`,
+    github: ['https://github.com/Buffden/diagram-sync'],
+    external: 'https://www.npmjs.com/package/diagram-sync',
+    npmPackage: 'diagram-sync',
   },
   {
     title: 'Employee Management System',
@@ -30,14 +40,6 @@ export const miniProjects: MiniProject[] = [
     tech: ['Neo4j', 'Java', 'Cypher', 'Graph Data Science', 'Docker', 'Maven'],
     description: `Fraud ring detection as a graph problem — shared identifiers as first-class nodes enable up-to-6-hop Cypher traversals that stay constant-complexity where SQL recursive CTEs grow exponentially. 150-account synthetic dataset with 3 planted rings; all 25 fraud accounts detected with zero false positives. GDS composite risk scoring weighted by hop distance from fraud nodes, identifier overlap, and transaction velocity.`,
     github: ['https://github.com/Buffden/ringnet'],
-  },
-  {
-    title: 'diagram-sync — Diagram-as-Code CLI',
-    period: 'May 2026 - Present',
-    tech: ['TypeScript', 'Node.js', 'PlantUML', 'Mermaid', 'Graphviz', 'Draw.io', 'D2', 'Excalidraw', 'BPMN', 'Vitest', 'ESLint', 'GitHub Actions', 'npm'],
-    description: `Published npm package (npx diagram-sync) that solves stale architecture documentation — recursively discovers PlantUML (.puml) and Mermaid (.mmd) files across a repo and auto-exports SVGs to a path-mirrored diagrams/ folder with zero configuration. Installable globally or as a dev dependency; integrates seamlessly into npm scripts and CI/CD pipelines; output SVGs mirror the exact source directory structure, making diagram assets trivially committable and referenceable in documentation. Graphviz and Draw.io support planned.`,
-    github: ['https://github.com/Buffden/diagram-sync'],
-    external: 'https://www.npmjs.com/package/diagram-sync',
   },
   {
     title: 'AI Text Intelligence Dashboard',

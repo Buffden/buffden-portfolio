@@ -4,6 +4,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { PdfViewerComponent } from '../../shared/pdf-viewer/pdf-viewer.component';
+import { ThemeService } from '../../shared/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -25,7 +26,15 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   private sectionIds = ['about', 'skills', 'experience', 'projects', 'research', 'blog', 'contact'];
   private routerSub!: Subscription;
 
-  constructor(private dialog: MatDialog, private router: Router) {}
+  constructor(
+    private dialog: MatDialog,
+    private router: Router,
+    public themeService: ThemeService,
+  ) {}
+
+  toggleTheme(): void {
+    this.themeService.toggle();
+  }
 
   ngOnInit() {
     this.isResearchRoute = this.router.url.startsWith('/research');

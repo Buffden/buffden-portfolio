@@ -9,6 +9,19 @@
   text-align: center;
 }
 
+.section-heading {
+  font-size: clamp(14px, 3vw, 18px);
+  color: $slate;
+  margin-bottom: 20px;
+
+  .number {
+    color: var(--green);
+    font-family: $font-mono;
+    font-size: clamp(12px, 2.5vw, 16px);
+    font-weight: 400;
+  }
+}
+
 .contact-title {
   color: $lightest-slate;
   font-size: clamp(40px, 8vw, 60px);
@@ -26,9 +39,9 @@
 
 .contact-button {
   display: inline-block;
-  color: $green;
+  color: var(--green);
   background: none;
-  border: 1.5px solid $green;
+  border: 1.5px solid var(--green);
   border-radius: 6px;
   padding: 18px 40px;
   font-size: 22px;
@@ -37,13 +50,13 @@
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   margin-top: 24px;
   cursor: pointer;
-  box-shadow: 0 2px 16px 0 rgba(100,255,218,0.08);
+  box-shadow: 0 2px 16px 0 rgba(var(--green-rgb),0.08);
 
   &:hover,
   &:focus {
-    background: rgba(100,255,218,0.08);
+    background: rgba(var(--green-rgb),0.08);
     color: $lightest-slate;
-    box-shadow: 0 4px 32px 0 rgba(100,255,218,0.18);
+    box-shadow: 0 4px 32px 0 rgba(var(--green-rgb),0.18);
   }
 }
 

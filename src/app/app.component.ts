@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { ThemeService } from './shared/theme.service';
 import { filter, Subscription } from 'rxjs';
 import { HeaderComponent } from './layout/header/header.component';
 import { HeroComponent } from './sections/hero/hero.component';
@@ -50,9 +51,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private routerSub!: Subscription;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private themeService: ThemeService) {}
 
   ngOnInit() {
+    this.themeService.init();
     const hash = window.location.hash;
     this.isHomeRoute = !hash || hash === '#/' || hash === '#';
 

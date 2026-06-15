@@ -14,6 +14,7 @@
   @media (max-width: 1080px) {
     padding: 0 40px;
   }
+
   @media (max-width: 768px) {
     padding: 0 25px;
   }
@@ -77,23 +78,94 @@
 }
 
 @keyframes glitch {
-  0%, 84%  { transform: none;                         text-shadow: none; color: var(--lightest-slate); }
-  85%       { transform: translateX(-3px);              text-shadow:  3px 0 var(--green), -3px 0 rgba(255, 80, 180, 0.7); }
-  86%       { transform: translateX(3px)  skewX(-3deg); text-shadow: -3px 0 var(--green),  3px 0 rgba(255, 80, 180, 0.7); }
-  87%       { transform: translateX(-2px);              text-shadow:  2px 0 var(--green); color: var(--lightest-slate); }
-  88%       { transform: translateX(4px)  skewX(2deg);  text-shadow: -4px 0 rgba(255, 80, 180, 0.8); }
-  89%       { transform: translateX(-1px);              text-shadow:  1px 0 var(--green); }
-  90%       { transform: translateX(2px);               text-shadow: -2px 0 rgba(255, 80, 180, 0.5), 2px 0 var(--green); }
-  91%, 100% { transform: none;                         text-shadow: none; color: var(--lightest-slate); }
+
+  0%,
+  84% {
+    transform: none;
+    text-shadow: none;
+    color: var(--lightest-slate);
+  }
+
+  85% {
+    transform: translateX(-3px);
+    text-shadow: 3px 0 var(--green), -3px 0 rgba(255, 80, 180, 0.7);
+  }
+
+  86% {
+    transform: translateX(3px) skewX(-3deg);
+    text-shadow: -3px 0 var(--green), 3px 0 rgba(255, 80, 180, 0.7);
+  }
+
+  87% {
+    transform: translateX(-2px);
+    text-shadow: 2px 0 var(--green);
+    color: var(--lightest-slate);
+  }
+
+  88% {
+    transform: translateX(4px) skewX(2deg);
+    text-shadow: -4px 0 rgba(255, 80, 180, 0.8);
+  }
+
+  89% {
+    transform: translateX(-1px);
+    text-shadow: 1px 0 var(--green);
+  }
+
+  90% {
+    transform: translateX(2px);
+    text-shadow: -2px 0 rgba(255, 80, 180, 0.5), 2px 0 var(--green);
+  }
+
+  91%,
+  100% {
+    transform: none;
+    text-shadow: none;
+    color: var(--lightest-slate);
+  }
 }
 
 @keyframes dotFlicker {
-  0%, 85%  { opacity: 1; }
-  86%       { opacity: 0; }
-  87%       { opacity: 1; }
-  88%       { opacity: 0; }
-  89%       { opacity: 1; }
-  91%, 100% { opacity: 1; }
+
+  0%,
+  85% {
+    opacity: 1;
+  }
+
+  86% {
+    opacity: 0;
+  }
+
+  87% {
+    opacity: 1;
+  }
+
+  88% {
+    opacity: 0;
+  }
+
+  89% {
+    opacity: 1;
+  }
+
+  91%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.theme-toggle--mobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    margin-right: 16px;
+  }
+}
+
+.theme-toggle--desktop {
+  margin-left: 8px;
+  margin-right: 4px;
 }
 
 .nav-links {
@@ -145,26 +217,6 @@
     }
   }
 
-  .theme-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: var(--green);
-    padding: 8px;
-    margin-left: 10px;
-    border-radius: 4px;
-    transition: var(--transition);
-
-    &:hover,
-    &:focus {
-      background-color: var(--green-tint);
-      outline: none;
-    }
-  }
-
   .resume-button {
     color: var(--green);
     background-color: transparent;
@@ -176,7 +228,7 @@
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     margin-left: 15px;
 
     &:hover,

@@ -5,11 +5,12 @@ import { filter, Subscription } from 'rxjs';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { PdfViewerComponent } from '../../shared/pdf-viewer/pdf-viewer.component';
 import { ThemeService } from '../../shared/theme.service';
+import { ThemeToggleComponent } from '../../shared/theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, MatDialogModule],
+  imports: [CommonModule, MatDialogModule, ThemeToggleComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

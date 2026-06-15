@@ -26,7 +26,7 @@
 
   .number {
     margin-right: 10px;
-    color: $green;
+    color: var(--green);
     font-family: $font-mono;
     font-size: clamp(16px, 3vw, 20px);
     font-weight: 400;
@@ -80,7 +80,7 @@
   border: 1px solid transparent;
 
   &:hover {
-    border-color: $green;
+    border-color: var(--green);
     transform: translateY(-4px);
   }
 }
@@ -100,9 +100,9 @@
 .card-platform {
   font-family: $font-mono;
   font-size: $fz-xxs;
-  color: $green;
-  background: rgba($green, 0.08);
-  border: 1px solid rgba($green, 0.2);
+  color: var(--green);
+  background: rgba(var(--green-rgb), 0.08);
+  border: 1px solid rgba(var(--green-rgb), 0.2);
   padding: 2px 8px;
   border-radius: 3px;
   white-space: nowrap;
@@ -122,7 +122,7 @@
   text-decoration: none;
   flex-shrink: 0;
 
-  &:hover { color: $green; }
+  &:hover { color: var(--green); }
 }
 
 .card-title {
@@ -137,7 +137,7 @@
     text-decoration: none;
     transition: $transition;
 
-    &:hover { color: $green; }
+    &:hover { color: var(--green); }
   }
 }
 
@@ -159,7 +159,7 @@
   font-family: $font-mono;
   font-size: $fz-xxs;
   color: $slate;
-  background: rgba($lightest-navy, 0.6);
+  background: var(--lightest-navy-60);
   padding: 2px 8px;
   border-radius: 3px;
 }

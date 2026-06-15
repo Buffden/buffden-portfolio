@@ -26,7 +26,7 @@
 
   .number {
     margin-right: 10px;
-    color: $green;
+    color: var(--green);
     font-family: $font-mono;
     font-size: clamp(16px, 3vw, 20px);
     font-weight: 400;
@@ -78,7 +78,7 @@
   border: 1px solid transparent;
 
   &:hover {
-    border-color: $green;
+    border-color: var(--green);
     transform: translateY(-4px);
   }
 }
@@ -101,7 +101,7 @@
   font-family: $font-mono;
   font-size: $fz-xxs;
   color: $slate;
-  background: rgba($lightest-navy, 0.6);
+  background: var(--lightest-navy-60);
   padding: 2px 8px;
   border-radius: 3px;
 }
@@ -163,8 +163,8 @@
   align-items: center;
   gap: 6px;
   background: transparent;
-  border: 1px solid $green;
-  color: $green;
+  border: 1px solid var(--green);
+  color: var(--green);
   font-family: $font-mono;
   font-size: $fz-xs;
   padding: 8px 16px;
@@ -173,7 +173,7 @@
   transition: $transition;
 
   &:hover:not(:disabled) {
-    background: rgba($green, 0.08);
+    background: rgba(var(--green-rgb), 0.08);
   }
 
   &:disabled {
@@ -192,7 +192,7 @@
 }
 
 .page-current {
-  color: $green;
+  color: var(--green);
   font-weight: 600;
 }
 
@@ -208,7 +208,7 @@
   margin-top: 28px;
   font-family: $font-mono;
   font-size: $fz-sm;
-  color: $green;
+  color: var(--green);
   text-decoration: none;
   transition: $transition;
 

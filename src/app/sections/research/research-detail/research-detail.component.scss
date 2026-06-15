@@ -19,7 +19,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: $green;
+  color: var(--green);
   font-family: $font-mono;
   font-size: $fz-sm;
   text-decoration: none;
@@ -56,7 +56,7 @@
 .venue {
   font-family: $font-mono;
   font-size: $fz-sm;
-  color: $green;
+  color: var(--green);
 }
 
 .tags {
@@ -69,7 +69,7 @@
   font-family: $font-mono;
   font-size: $fz-xxs;
   color: $slate;
-  background: rgba($lightest-navy, 0.6);
+  background: var(--lightest-navy-60);
   padding: 2px 8px;
   border-radius: 3px;
 }
@@ -192,7 +192,7 @@
   }
 
   &:hover .nav-title {
-    color: $green;
+    color: var(--green);
   }
 
   @media (max-width: $mobile) {
@@ -209,7 +209,7 @@
 .nav-label {
   font-family: $font-mono;
   font-size: $fz-xs;
-  color: $green;
+  color: var(--green);
 }
 
 .nav-title {

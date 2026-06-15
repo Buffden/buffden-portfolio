@@ -8,6 +8,8 @@
       </a>
     </div>
 
+    <app-theme-toggle class="theme-toggle--mobile"></app-theme-toggle>
+
     <div class="nav-links">
       <ol>
         <li>
@@ -46,6 +48,7 @@
              [class.active]="activeSection === 'contact'">Contact</a>
         </li>
       </ol>
+      <app-theme-toggle class="theme-toggle--desktop"></app-theme-toggle>
       <button (click)="openPdfViewer()"
               class="resume-button">
         Resume

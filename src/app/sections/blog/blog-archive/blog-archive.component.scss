@@ -19,7 +19,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: $green;
+  color: var(--green);
   font-family: $font-mono;
   font-size: $fz-sm;
   text-decoration: none;
@@ -64,7 +64,7 @@
   th {
     font-family: $font-mono;
     font-size: $fz-xs;
-    color: $green;
+    color: var(--green);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     padding: 0 16px 16px 0;
@@ -78,14 +78,14 @@
 // ─── Row ──────────────────────────────────────────────────────────────────────
 
 .archive-row {
-  border-bottom: 1px solid rgba($lightest-navy, 0.4);
+  border-bottom: 1px solid var(--lightest-navy-40);
   transition: $transition;
 
   &:hover {
-    background: rgba($light-navy, 0.5);
+    background: var(--light-navy-50);
     transform: translateY(-2px);
 
-    .blog-title { color: $green; }
+    .blog-title { color: var(--green); }
   }
 
   td {
@@ -129,9 +129,9 @@
 .platform-badge {
   font-family: $font-mono;
   font-size: $fz-xs;
-  color: $green;
-  background: rgba($green, 0.08);
-  border: 1px solid rgba($green, 0.2);
+  color: var(--green);
+  background: rgba(var(--green-rgb), 0.08);
+  border: 1px solid rgba(var(--green-rgb), 0.2);
   padding: 3px 8px;
   border-radius: 3px;
   white-space: nowrap;
@@ -154,7 +154,7 @@
   font-family: $font-mono;
   font-size: $fz-xxs;
   color: $slate;
-  background: rgba($lightest-navy, 0.6);
+  background: var(--lightest-navy-60);
   padding: 2px 8px;
   border-radius: 3px;
   white-space: nowrap;
@@ -171,7 +171,7 @@
   transition: $transition;
   text-decoration: none;
 
-  &:hover { color: $green; }
+  &:hover { color: var(--green); }
 }
 
 // ─── Responsive ───────────────────────────────────────────────────────────────

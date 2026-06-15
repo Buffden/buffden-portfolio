@@ -1,0 +1,27 @@
+<div class="switch"
+     [class.dark]="themeService.isDark()"
+     (click)="toggle()"
+     role="button"
+     [attr.aria-label]="themeService.isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
+  <div class="sunmoon">
+    <div class="darkside"></div>
+  </div>
+  <div class="border"></div>
+  <div class="clouds">
+    <img src="assets/images/theme/cloud_1.svg"
+         alt=""
+         class="cloud cloud-1" />
+    <img src="assets/images/theme/cloud_2.svg"
+         alt=""
+         class="cloud cloud-2" />
+    <img src="assets/images/theme/cloud_3.svg"
+         alt=""
+         class="cloud cloud-3" />
+    <img src="assets/images/theme/cloud_4.svg"
+         alt=""
+         class="cloud cloud-4" />
+    <img src="assets/images/theme/stars.svg"
+         alt=""
+         class="stars" />
+  </div>
+</div>

@@ -1,0 +1,179 @@
+.switch {
+  --switch-width: 58px;
+  --switch-height: 26px;
+  --switch-round: 20px;
+  --switch-padding-x: 4px;
+  --switch-bg: linear-gradient(to bottom, #73bbff, #a2d1fd);
+  --switch-dark-bg: linear-gradient(to top, #2b3347, #181d27);
+  --border-width: 2px;
+  --border-gradient: linear-gradient(to bottom, #a2d1fd, #cde7ff);
+  --border-dark-gradient: linear-gradient(to bottom, #000000, #6c7384);
+  --sunmoon-size: 20px;
+  --switch-transition: all 0.5s ease;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  border-radius: var(--switch-round);
+  cursor: pointer;
+  transition: var(--switch-transition);
+  background: var(--switch-bg);
+  user-select: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--switch-round);
+    opacity: 0;
+    background: var(--switch-dark-bg);
+    transition: var(--switch-transition);
+  }
+
+  &.dark::before {
+    opacity: 1;
+  }
+
+  .border {
+    position: absolute;
+    top: calc(var(--border-width) * -1);
+    left: calc(var(--border-width) * -1);
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    border-radius: var(--switch-round);
+    background: var(--border-gradient);
+    z-index: -1;
+    transition: var(--switch-transition);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--switch-round);
+      background: var(--border-dark-gradient);
+      opacity: 0;
+      transition: var(--switch-transition);
+    }
+  }
+
+  &.dark .border::after {
+    opacity: 1;
+  }
+}
+
+.sunmoon {
+  position: absolute;
+  width: var(--sunmoon-size);
+  height: var(--sunmoon-size);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: var(--switch-transition);
+  left: var(--switch-padding-x);
+  z-index: 1;
+  background-color: #FFC187;
+  box-shadow: 0px 0px 11.7px 0px #FFC187, 0px 0px 20px 0px #ffc18768, -2px -2px 5px 0px #ffab5c inset;
+
+  .dark & {
+    left: calc(100% - var(--sunmoon-size) - var(--switch-padding-x));
+    background-color: #dee5f3;
+    box-shadow: 0px 0px 51.7px 0px #dee5f3;
+  }
+}
+
+.darkside {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #FFC187;
+  transition: var(--switch-transition);
+
+  .dark & {
+    top: -2px;
+    left: -4px;
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(to top, #2b3347, #181d27);
+  }
+}
+
+.clouds {
+  border-radius: var(--switch-round);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  width: 60%;
+  transition: var(--switch-transition);
+}
+
+.cloud-1 {
+  bottom: -30%;
+  left: 0;
+
+  .dark & {
+    bottom: -35%;
+    left: -110px;
+  }
+}
+
+.cloud-2 {
+  bottom: -20%;
+  left: 25px;
+
+  .dark & {
+    bottom: -15%;
+    left: -110px;
+    transition: all 0.7s ease;
+  }
+}
+
+.cloud-3 {
+  bottom: -15%;
+  right: 0px;
+
+  .dark & {
+    bottom: -15%;
+    right: -110px;
+  }
+}
+
+.cloud-4 {
+  bottom: 5%;
+  right: -25px;
+
+  .dark & {
+    bottom: -5%;
+    right: -110px;
+    transition: all 0.7s ease;
+  }
+}
+
+.stars {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: var(--switch-transition);
+
+  .dark & {
+    top: 50%;
+  }
+}

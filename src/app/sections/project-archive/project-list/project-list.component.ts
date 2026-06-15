@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { MiniProject, miniProjects } from '../../../data/constants/projects-archive';
 
 @Component({
@@ -12,8 +13,16 @@ import { MiniProject, miniProjects } from '../../../data/constants/projects-arch
 })
 export class ProjectListComponent implements OnInit {
   projects: MiniProject[] = miniProjects;
+  npmDownloads: Record<string, number> = {};
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {
+    this.projects
+      .filter(p => p.npmPackage)
+      .forEach(p => {
+        this.http.get<{ downloads: number }>(`https://api.npmjs.org/downloads/point/2020-01-01:2099-12-31/${p.npmPackage}`)
+          .subscribe({ next: res => { this.npmDownloads[p.npmPackage!] = res.downloads; } });
+      });
+  }
 
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'instant' });

@@ -17,15 +17,15 @@
       transition: color 0.2s;
   
       svg {
-        color: $green;
+        color: var(--green);
         transition: color 0.2s;
       }
   
       &:hover,
       &:focus {
-        color: $green;
+        color: var(--green);
         svg {
-          color: $green;
+          color: var(--green);
         }
       }
     }

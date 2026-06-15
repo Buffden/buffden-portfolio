@@ -60,6 +60,16 @@
                 </svg>
               </a>
             </div>
+            <a
+              *ngIf="project.npmPackage && npmDownloads[project.npmPackage]"
+              [href]="project.external"
+              target="_blank"
+              rel="noopener"
+              class="npm-downloads-link"
+              title="npm downloads">
+              <img src="https://unpkg.com/feather-icons/dist/icons/download.svg" alt="downloads" class="npm-icon" />
+              <span class="npm-download-count">{{ npmDownloads[project.npmPackage] | number }}</span>
+            </a>
           </td>
         </tr>
       </tbody>

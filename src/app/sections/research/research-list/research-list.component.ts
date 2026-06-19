@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Paper, papers } from '../../../data/constants/papers';
+import { AnalyticsService } from '../../../shared/analytics.service';
 
 @Component({
   selector: 'app-research-list',
@@ -15,6 +16,16 @@ export class ResearchListComponent {
   readonly pageSize = 3;
   currentPage = 0;
 
+  constructor(private analytics: AnalyticsService) {}
+
+  trackPaperClick(title: string, source: string): void {
+    this.analytics.trackEvent('research_paper_click', { paper: title, source });
+  }
+
+  trackArchiveClick(): void {
+    this.analytics.trackEvent('research_archive_click');
+  }
+
   get papers(): Paper[] {
     const start = this.currentPage * this.pageSize;
     return this.allPapers.slice(start, start + this.pageSize);
@@ -25,11 +36,17 @@ export class ResearchListComponent {
   }
 
   prevPage(): void {
-    if (this.currentPage > 0) this.currentPage--;
+    if (this.currentPage > 0) {
+      this.currentPage--;
+      this.analytics.trackEvent('research_pagination', { direction: 'prev', page: String(this.currentPage + 1) });
+    }
   }
 
   nextPage(): void {
-    if (this.currentPage < this.totalPages - 1) this.currentPage++;
+    if (this.currentPage < this.totalPages - 1) {
+      this.currentPage++;
+      this.analytics.trackEvent('research_pagination', { direction: 'next', page: String(this.currentPage + 1) });
+    }
   }
 
   formatYear(year: number): string {

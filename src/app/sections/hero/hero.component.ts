@@ -2,6 +2,7 @@ import { Component, HostBinding, Input, OnInit, OnDestroy } from '@angular/core'
 import { CommonModule } from '@angular/common';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { PdfViewerComponent } from '../../shared/pdf-viewer/pdf-viewer.component';
+import { AnalyticsService } from '../../shared/analytics.service';
 
 @Component({
   selector: 'app-hero',
@@ -21,7 +22,7 @@ export class HeroComponent implements OnInit, OnDestroy {
   private heroElement: HTMLElement | null = null;
   private scrollListener: (() => void) | null = null;
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private analytics: AnalyticsService) {}
 
   ngOnInit() {
     setTimeout(() => {
@@ -61,7 +62,12 @@ export class HeroComponent implements OnInit, OnDestroy {
     }
   }
 
+  trackClick(event: string, params: Record<string, string> = {}): void {
+    this.analytics.trackEvent(event, params);
+  }
+
   openPdfViewer(): void {
+    this.analytics.trackEvent('resume_view', { source: 'hero' });
     if (window.innerWidth <= 700) {
       window.open('https://buffden.github.io/resume/Harshwardhan-Patil-Resume.pdf', '_blank');
     } else {

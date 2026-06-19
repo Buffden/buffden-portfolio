@@ -1,4 +1,4 @@
-// Colors — point to CSS custom properties so theme switching works at runtime.
+// Colors: point to CSS custom properties so theme switching works at runtime.
 // $green stays hardcoded so SCSS rgba($green, …) calls compile successfully.
 $navy: var(--navy);
 $light-navy: var(--light-navy);

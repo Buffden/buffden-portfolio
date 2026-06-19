@@ -12,50 +12,10 @@
       >
         <div class="project-image">
           <a
-            *ngIf="project.title === 'TinyURL — URL Shortener'"
-            href="https://tinyurl.buffden.com/"
+            [href]="getProjectLink(project)"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            <img [src]="project.image" [alt]="project.title" />
-          </a>
-          <a
-            *ngIf="project.title === 'Employee Management System'"
-            href="https://ems.buffden.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img [src]="project.image" [alt]="project.title" />
-          </a>
-          <a
-            *ngIf="project.title === 'RingNet — Graph-Based Fraud Ring Detection'"
-            href="https://github.com/Buffden/ringnet"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img [src]="project.image" [alt]="project.title" />
-          </a>
-          <a
-            *ngIf="project.title === 'diagram-sync — Diagram-as-Code CLI'"
-            href="https://www.npmjs.com/package/diagram-sync"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img [src]="project.image" [alt]="project.title" />
-          </a>
-          <a
-            *ngIf="project.title === 'AI-Powered Personal Finance Manager'"
-            href="https://github.com/Buffden/AI-Powered-Personal-Finance-Manager"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img [src]="project.image" [alt]="project.title" />
-          </a>
-          <a
-            *ngIf="project.title === 'Event Management System'"
-            href="https://github.com/Buffden/Event-Management-System"
-            target="_blank"
-            rel="noopener noreferrer"
+            (click)="trackProjectClick(project.title, 'image', getProjectLink(project))"
           >
             <img [src]="project.image" [alt]="project.title" />
           </a>
@@ -64,50 +24,10 @@
           <p class="project-type">{{ project.type }}</p>
           <h3 class="project-title">
             <a
-              *ngIf="project.title === 'TinyURL — URL Shortener'"
-              href="https://tinyurl.buffden.com/"
+              [href]="getProjectLink(project)"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              {{ project.title }}
-            </a>
-            <a
-              *ngIf="project.title === 'Employee Management System'"
-              href="https://ems.buffden.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ project.title }}
-            </a>
-            <a
-              *ngIf="project.title === 'RingNet — Graph-Based Fraud Ring Detection'"
-              href="https://github.com/Buffden/ringnet"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ project.title }}
-            </a>
-            <a
-              *ngIf="project.title === 'diagram-sync — Diagram-as-Code CLI'"
-              href="https://www.npmjs.com/package/diagram-sync"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ project.title }}
-            </a>
-            <a
-              *ngIf="project.title === 'AI-Powered Personal Finance Manager'"
-              href="https://github.com/Buffden/AI-Powered-Personal-Finance-Manager"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ project.title }}
-            </a>
-            <a
-              *ngIf="project.title === 'Event Management System'"
-              href="https://github.com/Buffden/Event-Management-System"
-              target="_blank"
-              rel="noopener noreferrer"
+              (click)="trackProjectClick(project.title, 'title', getProjectLink(project))"
             >
               {{ project.title }}
             </a>
@@ -121,12 +41,13 @@
             <li *ngFor="let tech of project.tech">{{ tech }}</li>
           </ul>
           <div class="project-links">
-            <a 
-              *ngFor="let githubLink of project.github" 
-              [href]="githubLink" 
-              target="_blank" 
+            <a
+              *ngFor="let githubLink of project.github"
+              [href]="githubLink"
+              target="_blank"
               aria-label="GitHub Link"
               class="github-link"
+              (click)="trackProjectClick(project.title, 'github', githubLink)"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -142,11 +63,12 @@
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
             </a>
-            <a 
-              *ngIf="project.external" 
-              [href]="project.external" 
-              target="_blank" 
+            <a
+              *ngIf="project.external"
+              [href]="project.external"
+              target="_blank"
               aria-label="External Link"
+              (click)="trackProjectClick(project.title, 'external', project.external!)"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -170,8 +92,13 @@
               target="_blank"
               aria-label="npm Downloads"
               class="npm-downloads-link"
+              (click)="trackProjectClick(project.title, 'npm_downloads', project.external!)"
             >
-              <img src="https://unpkg.com/feather-icons/dist/icons/download.svg" alt="downloads" class="npm-icon" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="npm-icon">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
               <span class="npm-download-count">{{ npmDownloads[project.npmPackage!] | number }}</span>
             </a>
           </div>
@@ -180,6 +107,6 @@
     </div>
     <!-- Dummy grid below projects -->
     <h2 class="mini-section-heading">Other Noteworthy Projects</h2>
-    <a class="archive-link" [routerLink]="['/project/archive']">View all projects</a>
+    <a class="archive-link" [routerLink]="['/project/archive']" (click)="onArchiveClick()">View all projects</a>
   </div>
 </section>

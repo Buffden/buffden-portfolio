@@ -6,6 +6,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { PdfViewerComponent } from '../../shared/pdf-viewer/pdf-viewer.component';
 import { ThemeService } from '../../shared/theme.service';
 import { ThemeToggleComponent } from '../../shared/theme-toggle/theme-toggle.component';
+import { AnalyticsService } from '../../shared/analytics.service';
 
 @Component({
   selector: 'app-header',
@@ -27,10 +28,28 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   private sectionIds = ['about', 'skills', 'experience', 'projects', 'research', 'blog', 'contact'];
   private routerSub!: Subscription;
 
+  readonly navItems = [
+    { label: 'About',      section: 'about' },
+    { label: 'Skills',     section: 'skills' },
+    { label: 'Experience', section: 'experience' },
+    { label: 'Work',       section: 'projects' },
+    { label: 'Research',   section: 'research' },
+    { label: 'Blog',       section: 'blog' },
+    { label: 'Contact',    section: 'contact' },
+  ];
+
+  isNavItemActive(section: string): boolean {
+    if (this.activeSection === section) return true;
+    if (section === 'research') return this.isResearchRoute;
+    if (section === 'blog') return this.isBlogRoute;
+    return false;
+  }
+
   constructor(
     private dialog: MatDialog,
     private router: Router,
     public themeService: ThemeService,
+    private analytics: AnalyticsService,
   ) {}
 
   toggleTheme(): void {
@@ -65,6 +84,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   openPdfViewer(): void {
+    this.analytics.trackEvent('resume_view', { source: 'header' });
     this.dialog.open(PdfViewerComponent, {
       width: '90vw',
       height: '90vh',
@@ -105,13 +125,14 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   scrollToSection(event: Event, sectionId: string): void {
+    this.analytics.trackEvent('nav_click', { section: sectionId, source: 'header' });
     event.preventDefault();
     (event.target as HTMLElement).blur();
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
-      // On a routed page (e.g. detail view) — navigate home then scroll
+      // On a routed page (e.g. detail view): navigate home then scroll
       this.router.navigate(['/']).then(() => {
         requestAnimationFrame(() => {
           document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });

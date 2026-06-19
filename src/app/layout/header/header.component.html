@@ -12,40 +12,10 @@
 
     <div class="nav-links">
       <ol>
-        <li>
-          <a href="#about"
-             (click)="scrollToSection($event, 'about')"
-             [class.active]="activeSection === 'about'">About</a>
-        </li>
-        <li>
-          <a href="#skills"
-             (click)="scrollToSection($event, 'skills')"
-             [class.active]="activeSection === 'skills'">Skills</a>
-        </li>
-        <li>
-          <a href="#experience"
-             (click)="scrollToSection($event, 'experience')"
-             [class.active]="activeSection === 'experience'">Experience</a>
-        </li>
-        <li>
-          <a href="#projects"
-             (click)="scrollToSection($event, 'projects')"
-             [class.active]="activeSection === 'projects'">Work</a>
-        </li>
-        <li>
-          <a href="#research"
-             (click)="scrollToSection($event, 'research')"
-             [class.active]="activeSection === 'research' || isResearchRoute">Research</a>
-        </li>
-        <li>
-          <a href="#blog"
-             (click)="scrollToSection($event, 'blog')"
-             [class.active]="activeSection === 'blog' || isBlogRoute">Blog</a>
-        </li>
-        <li>
-          <a href="#contact"
-             (click)="scrollToSection($event, 'contact')"
-             [class.active]="activeSection === 'contact'">Contact</a>
+        <li *ngFor="let item of navItems">
+          <a [href]="'#' + item.section"
+             (click)="scrollToSection($event, item.section)"
+             [class.active]="isNavItemActive(item.section)">{{ item.label }}</a>
         </li>
       </ol>
       <app-theme-toggle class="theme-toggle--desktop"></app-theme-toggle>

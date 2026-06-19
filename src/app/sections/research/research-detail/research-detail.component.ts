@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
 import { marked } from 'marked';
 import { Paper, papers } from '../../../data/constants/papers';
 import { SafeUrlPipe } from '../../../shared/safe-url.pipe';
+import { AnalyticsService } from '../../../shared/analytics.service';
 
 @Component({
   selector: 'app-research-detail',
@@ -29,7 +30,8 @@ export class ResearchDetailComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     private http: HttpClient,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private analytics: AnalyticsService,
   ) {}
 
   ngOnInit(): void {
@@ -49,6 +51,7 @@ export class ResearchDetailComponent implements OnInit, OnDestroy {
       this.showPdfPreview = false;
       this.reviewHtml = null;
       this.paper = papers[index];
+      this.analytics.trackEvent('research_paper_view', { paper: this.paper.title, slug: slug! });
       this.prevPaper = index > 0 ? papers[index - 1] : null;
       this.nextPaper = index < papers.length - 1 ? papers[index + 1] : null;
 
@@ -67,6 +70,7 @@ export class ResearchDetailComponent implements OnInit, OnDestroy {
   }
 
   backToButtonClick() {
+    this.analytics.trackEvent('research_back_click', { paper: this.paper?.title ?? '' });
     this.router.navigate(['/']).then(() => {
       requestAnimationFrame(() => {
         document.getElementById('research')?.scrollIntoView({ behavior: 'smooth', block: 'start' });

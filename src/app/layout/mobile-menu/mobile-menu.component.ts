@@ -3,6 +3,7 @@ import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { PdfViewerComponent } from '../../shared/pdf-viewer/pdf-viewer.component';
+import { AnalyticsService } from '../../shared/analytics.service';
 
 @Component({
   selector: 'app-mobile-menu',
@@ -24,22 +25,24 @@ export class MobileMenuComponent {
     { name: 'Blog', link: '#blog' },
   ];
 
-  constructor(private dialog: MatDialog, private router: Router) {}
+  constructor(private dialog: MatDialog, private router: Router, private analytics: AnalyticsService) {}
 
   onNavClick(event: Event, link: string) {
     event.preventDefault();
+    this.analytics.trackEvent('nav_click', { section: link.replace('#', ''), source: 'mobile_menu' });
     const target = document.querySelector(link);
     if (target) {
-      // Section exists on current page — scroll to it
+      // Section exists on current page, scroll to it
       target.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Section not on current page (e.g. on detail route) — navigate home
+      // Section not on current page (e.g. on detail route), navigate home
       this.router.navigate(['/']);
     }
     this.closeMenu.emit();
   }
 
   openPdfViewer(): void {
+    this.analytics.trackEvent('resume_view', { source: 'mobile_menu' });
     this.dialog.open(PdfViewerComponent, {
       width: '90vw',
       height: '90vh',

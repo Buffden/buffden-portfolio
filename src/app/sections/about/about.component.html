@@ -13,7 +13,8 @@
                [href]="part.href"
                target="_blank"
                rel="noopener noreferrer"
-               class="highlight-link">
+               class="highlight-link"
+               (click)="trackAboutLink(part.content)">
               {{ part.content }}
             </a>
           </ng-container>

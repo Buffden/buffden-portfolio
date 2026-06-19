@@ -15,7 +15,7 @@ export const blogs: Blog[] = [
     date: 'May 2026',
     year: 2026,
     tags: ['CLI', 'TypeScript', 'npm', 'PlantUML', 'Mermaid', 'DevOps'],
-    summary: 'Engineering teams update code but forget to re-export architecture diagrams. This article walks through building and publishing diagram-sync — a zero-config npm CLI that recursively discovers PlantUML and Mermaid files and auto-exports SVGs with path mirroring, ready for CI/CD pipelines.',
+    summary: 'Engineering teams update code but forget to re-export architecture diagrams. This article walks through building and publishing diagram-sync, a zero-config npm CLI that recursively discovers PlantUML and Mermaid files and auto-exports SVGs with path mirroring, ready for CI/CD pipelines.',
     link: 'https://medium.com/@buffden/stop-manually-exporting-plantuml-diagrams-automate-it-with-diagram-sync-67d4f15ab268',
   },
   {
@@ -24,7 +24,7 @@ export const blogs: Blog[] = [
     date: 'May 2026',
     year: 2026,
     tags: ['Neo4j', 'Graph Databases', 'Fraud Detection', 'Cypher', 'Open Source'],
-    summary: 'Fraud detection requires examining relationships, not individual accounts in isolation. This post introduces RingNet — a Neo4j-powered system that models financial entities as interconnected nodes and uses graph traversal to detect fraud rings that SQL recursive CTEs struggle to express.',
+    summary: 'Fraud detection requires examining relationships, not individual accounts in isolation. This post introduces RingNet, a Neo4j-powered system that models financial entities as interconnected nodes and uses graph traversal to detect fraud rings that SQL recursive CTEs struggle to express.',
     link: 'https://www.linkedin.com/feed/update/urn:li:activity:7458220397839204353/',
   },
   {
@@ -51,7 +51,7 @@ export const blogs: Blog[] = [
     date: 'Mar 2026',
     year: 2026,
     tags: ['AWS', 'System Design', 'Spring Boot', 'Security', 'CloudFront', 'Nginx'],
-    summary: 'A deep dive into the TinyURL architecture — six protective layers (Cloudflare → CloudFront → ALB → Nginx → Spring Boot → PostgreSQL) before application code executes. Covers dependency verification, Docker image signing, secrets management, and a three-gate CI/CD pipeline.',
+    summary: 'A deep dive into the TinyURL architecture: six protective layers (Cloudflare → CloudFront → ALB → Nginx → Spring Boot → PostgreSQL) before application code executes. Covers dependency verification, Docker image signing, secrets management, and a three-gate CI/CD pipeline.',
     link: 'https://www.linkedin.com/feed/update/urn:li:activity:7447693051248046080/',
   },
 ];

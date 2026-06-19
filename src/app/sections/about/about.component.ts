@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ScrollRevealService } from '../../shared/scroll-reveal.service';
 import { srConfig } from '../../shared/scroll-reveal.config';
 import { LinkedinBadgeComponent } from '../../shared/linkedin-badge/linkedin-badge.component';
+import { AnalyticsService } from '../../shared/analytics.service';
 
 type ParagraphPart =
   | { type: 'text'; content: string }
@@ -47,7 +48,11 @@ export class AboutComponent implements AfterViewInit {
     ]
   ];
 
-  constructor(private scrollReveal: ScrollRevealService) { }
+  constructor(private scrollReveal: ScrollRevealService, private analytics: AnalyticsService) { }
+
+  trackAboutLink(label: string): void {
+    this.analytics.trackEvent('about_link_click', { label });
+  }
 
   ngAfterViewInit() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

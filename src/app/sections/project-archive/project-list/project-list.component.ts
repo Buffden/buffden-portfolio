@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { MiniProject, miniProjects } from '../../../data/constants/projects-archive';
+import { AnalyticsService } from '../../../shared/analytics.service';
 
 @Component({
   selector: 'app-project-list',
@@ -15,7 +16,7 @@ export class ProjectListComponent implements OnInit {
   projects: MiniProject[] = miniProjects;
   npmDownloads: Record<string, number> = {};
 
-  constructor(private router: Router, private http: HttpClient) {
+  constructor(private router: Router, private http: HttpClient, private analytics: AnalyticsService) {
     this.projects
       .filter(p => p.npmPackage)
       .forEach(p => {
@@ -28,7 +29,12 @@ export class ProjectListComponent implements OnInit {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }
 
+  trackArchiveLink(title: string, linkType: string, url: string = ''): void {
+    this.analytics.trackEvent('archive_link_click', { project: title, link_type: linkType, url });
+  }
+
   backToProjects(): void {
+    this.analytics.trackEvent('archive_back_click');
     this.router.navigate(['/']).then(() => {
       requestAnimationFrame(() => {
         document.getElementById('projects')?.scrollIntoView({ behavior: 'instant', block: 'start' });

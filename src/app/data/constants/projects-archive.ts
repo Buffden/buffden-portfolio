@@ -42,6 +42,13 @@ export const miniProjects: MiniProject[] = [
     github: ['https://github.com/Buffden/ringnet'],
   },
   {
+    title: 'RAG Document Engine',
+    period: 'Jun 2026 – Present',
+    tech: ['Python', 'ChromaDB', 'OpenAI', 'NumPy', 'Anthropic', 'Hugging Face', 'Pinecone'],
+    description: `RAG pipeline built from primitives: NumPy cosine similarity over JSON embeddings, then migrated to ChromaDB with per-chunk source metadata. Ingests PDF, DOCX, and Markdown via format-specific parsers with CLI-driven deduplication. Hybrid BM25 + vector search with reciprocal rank fusion and cross-encoder re-ranking; Claude/GPT-4o-mini generation with token budgeting and source attribution. Multi-turn chat with sliding-window history and role-based document access filtering at the vector query level.`,
+    github: ['https://github.com/Buffden/rag-document-engine'],
+  },
+  {
     title: 'AI Text Intelligence Dashboard',
     period: 'May 2026 – Jun 2026',
     tech: ['Angular', 'Spring Boot', 'Spring AI', 'OpenAI', 'Claude', 'Java', 'TypeScript'],

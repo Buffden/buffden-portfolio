@@ -116,9 +116,15 @@ export class SkillsComponent implements AfterViewInit {
         {
             title: 'AI & ML',
             items: [
-                { name: 'OpenAI', icon: this.iconPath('OpenAI.svg') },
-                { name: 'Spring AI', icon: this.iconPath('SpringAI.svg') },
                 { name: 'LLM', icon: this.iconPath('LLM.svg'), tooltip: 'Large Language Models' },
+                { name: 'RAG', icon: this.iconPath('RAG.svg'), tooltip: 'Retrieval-Augmented Generation' },
+                { name: 'OpenAI', icon: this.iconPath('OpenAI.svg') },
+                { name: 'Anthropic', icon: this.iconPath('anthropic.svg') },
+                { name: 'Hugging Face', icon: this.iconPath('huggingface.svg') },
+                { name: 'Spring AI', icon: this.iconPath('SpringAI.svg') },
+                { name: 'ChromaDB', icon: this.iconPath('chromadb.svg'), tooltip: 'Vector Database' },
+                { name: 'Pinecone', icon: this.iconPath('pinecone.svg'), tooltip: 'Managed Vector Database' },
+                { name: 'NumPy', icon: this.iconPath('numpy.svg') },
             ]
         },
         {

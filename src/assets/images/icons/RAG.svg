@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
+  <!-- Document body -->
+  <path d="M6 4 H64 L94 30 V116 Q94 120 90 120 H10 Q6 120 6 116 Z" fill="white" stroke="#111" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Fold crease -->
+  <path d="M64 4 L64 30 H94" fill="none" stroke="#111" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- Zipper center vertical line -->
+  <line x1="47" y1="8" x2="47" y2="84" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Zipper teeth: left, right alternating -->
+  <line x1="28" y1="16" x2="47" y2="16" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="47" y1="24" x2="66" y2="24" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="28" y1="32" x2="47" y2="32" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="47" y1="40" x2="66" y2="40" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="28" y1="48" x2="47" y2="48" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="47" y1="56" x2="66" y2="56" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="28" y1="64" x2="47" y2="64" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="47" y1="72" x2="66" y2="72" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="28" y1="80" x2="47" y2="80" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Bottom black banner (rounded bottom matching document) -->
+  <path d="M6 84 H94 V116 Q94 120 90 120 H10 Q6 120 6 116 Z" fill="#111"/>
+
+  <!-- RAG text -->
+  <text x="50" y="109" text-anchor="middle" fill="white" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="23" letter-spacing="1.5">RAG</text>
+</svg>

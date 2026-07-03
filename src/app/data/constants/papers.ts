@@ -13,6 +13,30 @@ export interface Paper {
 
 export const papers: Paper[] = [
   {
+    slug: "smart-self-aware-agent-tool-overuse",
+    title: "SMART: Self-Aware Agent for Tool Overuse Mitigation",
+    authors: "Shuofei Qiao, Zhisong Zhang, Baoxin Wang, Xiantao Cai, Zhiyuan Liu, Maosong Sun",
+    venue: "ACL Findings",
+    link: "https://arxiv.org/abs/2502.11435",
+    year: 2025,
+    tags: ["LLM agents", "tool use", "metacognition", "self-awareness", "efficiency"],
+    oneLiner: "Trains LLM agents to judge when external tools are necessary versus when parametric knowledge suffices, cutting tool calls 24% while improving accuracy by 37%.",
+    review: "",
+    reviewPath: "assets/reviews/smart-self-aware-agent-tool-overuse.md"
+  },
+  {
+    slug: "anytool-self-reflective-hierarchical-agents",
+    title: "AnyTool: Self-Reflective, Hierarchical Agents for Large-Scale API Calls",
+    authors: "Yu Du, Fangyun Wei, Hongyang Zhang",
+    venue: "ICML",
+    link: "https://arxiv.org/abs/2402.04253",
+    year: 2024,
+    tags: ["LLM agents", "tool use", "API", "hierarchical retrieval", "self-reflection"],
+    oneLiner: "Enables LLM agents to navigate 16,000+ APIs via hierarchical retrieval and self-reflection, achieving 73.8% pass rate versus 36.6% for the best prior baseline.",
+    review: "",
+    reviewPath: "assets/reviews/anytool-self-reflective-hierarchical-agents.md"
+  },
+  {
     slug: "extracting-training-data-from-large-language-models",
     title: "Extracting Training Data from Large Language Models",
     authors: "Nicholas Carlini, Florian Tramèr, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom Brown, Dawn Song, Úlfar Erlingsson, Alina Oprea, Colin Raffel",

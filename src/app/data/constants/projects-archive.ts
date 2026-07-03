@@ -6,6 +6,7 @@ export interface MiniProject {
   github?: string[];
   external?: string;
   npmPackage?: string;
+  links?: { label: string; url: string }[];
 }
 
 export const miniProjects: MiniProject[] = [
@@ -35,13 +36,6 @@ export const miniProjects: MiniProject[] = [
     external: 'https://ems.buffden.com/',
   },
   {
-    title: 'RingNet — Graph-Based Fraud Ring Detection',
-    period: 'Apr 2026 – Present',
-    tech: ['Neo4j', 'Java', 'Cypher', 'Graph Data Science', 'Docker', 'Maven'],
-    description: `Fraud ring detection as a graph problem: shared identifiers as first-class nodes enable up-to-6-hop Cypher traversals that stay constant-complexity where SQL recursive CTEs grow exponentially. 150-account synthetic dataset with 3 planted rings; all 25 fraud accounts detected with zero false positives. GDS composite risk scoring weighted by hop distance from fraud nodes, identifier overlap, and transaction velocity.`,
-    github: ['https://github.com/Buffden/ringnet'],
-  },
-  {
     title: 'RAG Document Engine',
     period: 'Jun 2026 – Present',
     tech: ['Python', 'ChromaDB', 'OpenAI', 'NumPy', 'Anthropic', 'Hugging Face', 'Pinecone'],
@@ -49,11 +43,29 @@ export const miniProjects: MiniProject[] = [
     github: ['https://github.com/Buffden/rag-document-engine'],
   },
   {
+    title: 'smart-anytool-agent — Research-Backed Tool-Calling Agent',
+    period: 'Jun 2026 – Present',
+    tech: ['Python', 'OpenAI', 'Pydantic', 'httpx', 'DuckDuckGo Search', 'Open-Meteo API'],
+    description: `Tool-calling agent implementing two peer-reviewed papers: SMART (ACL 2025) and AnyTool (ICML 2024). The SMART self-awareness layer determines whether the model can answer from existing knowledge before invoking tools—reducing tool calls by 24% while improving accuracy by 37%. The AnyTool layer applies hierarchical tool filtering, passing only relevant tool subsets to the LLM with a self-reflection loop for unsuccessful attempts. Built on OpenAI function calling (gpt-4o-mini) with Pydantic argument validation, safe expression evaluation, and parallel tool call handling.`,
+    github: ['https://github.com/Buffden/smart-anytool-agent'],
+    links: [
+      { label: 'SMART Paper (ACL 2025)', url: 'https://arxiv.org/abs/2502.11435' },
+      { label: 'AnyTool Paper (ICML 2024)', url: 'https://arxiv.org/abs/2402.04253' },
+    ],
+  },
+  {
     title: 'AI Text Intelligence Dashboard',
     period: 'May 2026 – Jun 2026',
     tech: ['Angular', 'Spring Boot', 'Spring AI', 'OpenAI', 'Claude', 'Java', 'TypeScript'],
     description: `Full-stack AI pipeline where every layer connects end-to-end: Angular frontend → Spring Boot intermediary → multi-provider LLM (OpenAI/Claude with automatic fallback) → validated structured response. Performs text summarization, sentiment analysis with confidence scores, category classification with chain-of-thought reasoning, and entity extraction. Production-ready patterns throughout: prompt injection hardening, exponential backoff with jitter, Retry-After support, configurable timeouts, and per-request token usage and cost estimation.`,
     github: ['https://github.com/Buffden/ai-text-intelligence-dashboard'],
+  },
+  {
+    title: 'RingNet — Graph-Based Fraud Ring Detection',
+    period: 'Apr 2026 – Present',
+    tech: ['Neo4j', 'Java', 'Cypher', 'Graph Data Science', 'Docker', 'Maven'],
+    description: `Fraud ring detection as a graph problem: shared identifiers as first-class nodes enable up-to-6-hop Cypher traversals that stay constant-complexity where SQL recursive CTEs grow exponentially. 150-account synthetic dataset with 3 planted rings; all 25 fraud accounts detected with zero false positives. GDS composite risk scoring weighted by hop distance from fraud nodes, identifier overlap, and transaction velocity.`,
+    github: ['https://github.com/Buffden/ringnet'],
   },
   {
     title: 'Battle Arena – Real-Time Multiplayer Platform',

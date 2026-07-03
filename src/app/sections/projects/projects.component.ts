@@ -77,22 +77,19 @@ export class ProjectsComponent implements AfterViewInit {
       tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'Redis', 'JWT', 'Nginx', 'Docker', 'AWS EC2', 'GitHub Actions'],
     },
     {
-      title: 'RingNet — Graph-Based Fraud Ring Detection',
+      title: 'smart-anytool-agent — Research-Backed Tool-Calling Agent',
       type: 'Featured Project',
       descriptionPoints: [
-        'Fraud ring detection as a graph traversal problem: shared identifiers as first-class nodes enable up-to-6-hop Cypher traversals that stay constant-complexity where SQL recursive CTEs grow exponentially.',
-        '150-account synthetic dataset, 3 planted rings; all 25 fraud accounts detected with zero false positives. GDS composite risk scoring weighted by hop distance, identifier overlap, and transaction velocity.',
-        'Includes ADR, fraud theory primer, and SQL vs. Cypher comparison docs; fully containerized with Docker Compose.',
+        'Implemented SMART (ACL 2025): a self-awareness layer that determines whether the model can answer from existing knowledge before invoking tools—reducing tool calls by 24% while improving accuracy by 37%.',
+        'Implemented AnyTool (ICML 2024): hierarchical tool filtering that categorizes tools and passes only relevant subsets to the LLM, with a self-reflection loop that retries unsuccessful tool invocations.',
+        'Built on OpenAI function calling (gpt-4o-mini) with Pydantic argument validation, safe expression evaluation, parallel tool call handling, and real-world integrations (web search, weather).',
       ],
-      image: 'assets/images/ringnet-graph.svg',
-      github: ['https://github.com/Buffden/ringnet'],
-      tech: [
-        'Neo4j',
-        'Java',
-        'Cypher',
-        'Graph Data Science',
-        'Docker',
-        'Maven',
+      image: 'https://raw.githubusercontent.com/Buffden/smart-anytool-agent/main/diagrams/docs/architecture.svg',
+      github: ['https://github.com/Buffden/smart-anytool-agent'],
+      tech: ['Python', 'OpenAI', 'Pydantic', 'httpx', 'DuckDuckGo Search', 'Open-Meteo API'],
+      links: [
+        { label: 'SMART Paper (ACL 2025)', url: 'https://arxiv.org/abs/2502.11435' },
+        { label: 'AnyTool Paper (ICML 2024)', url: 'https://arxiv.org/abs/2402.04253' },
       ],
     },
   ];

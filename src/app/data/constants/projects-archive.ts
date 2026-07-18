@@ -15,7 +15,7 @@ export const miniProjects: MiniProject[] = [
     period: 'Feb 2026 – Mar 2026',
     tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'ALB', 'CloudFront', 'S3', 'Lambda', 'EventBridge', 'SNS', 'SQS', 'Docker', 'Cloudflare', 'GitHub Actions'],
     description: `Production-grade URL shortener with Base62 short codes, server-enforced expiry (301/302/410), QR code export, and a serverless Lambda + EventBridge expiry scheduler that cut monthly EC2/RDS costs by ~40%. Six-layer security (Cloudflare WAF → Nginx rate limiting → Bucket4j cap → split DB users); zero-credential CI/CD via GitHub Actions OIDC automating S3 sync and CloudFront cache invalidation on every push to main.`,
-    github: ['https://github.com/Buffden/tinyurl-api'],
+    github: ['https://github.com/Buffden/tinyurl-api', 'https://github.com/Buffden/tinyurl-gui'],
     external: 'https://tinyurl.buffden.com/',
   },
   {

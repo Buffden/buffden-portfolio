@@ -14,10 +14,8 @@
       <thead>
         <tr>
           <th class="col-title">Title</th>
-          <th class="col-venue">Venue</th>
           <th class="col-tags">Tags</th>
           <th class="col-desc">Summary</th>
-          <th class="col-links">Links</th>
         </tr>
       </thead>
       <tbody>
@@ -26,20 +24,8 @@
             <span class="paper-title">{{ paper.title }}</span>
             <br>
             <span class="year-text">'{{ paper.year % 100 | number:'2.0-0' }}</span>
-          </td>
-          <td class="col-venue">
-            <span class="venue-badge">{{ paper.venue }}</span>
-          </td>
-          <td class="col-tags">
-            <ul class="tags-list">
-              <li *ngFor="let tag of paper.tags" class="tag-item">{{ tag }}</li>
-            </ul>
-          </td>
-          <td class="col-desc">
-            <p class="paper-desc">{{ paper.oneLiner }}</p>
-          </td>
-          <td class="col-links">
             <div class="links-group">
+              <span class="venue-badge">{{ paper.venue }}</span>
               <a
                 [href]="paper.link"
                 target="_blank"
@@ -67,6 +53,14 @@
                 </svg>
               </a>
             </div>
+          </td>
+          <td class="col-tags">
+            <ul class="tags-list">
+              <li *ngFor="let tag of paper.tags" class="tag-item">{{ tag }}</li>
+            </ul>
+          </td>
+          <td class="col-desc">
+            <p class="paper-desc">{{ paper.oneLiner }}</p>
           </td>
         </tr>
       </tbody>

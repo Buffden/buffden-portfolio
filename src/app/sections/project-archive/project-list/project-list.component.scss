@@ -166,15 +166,11 @@
   margin: 0;
 }
 
-.col-links {
-  width: 70px;
-}
-
 .links-group {
   display: flex;
   gap: 10px;
   align-items: center;
-  padding-top: 2px;
+  margin-top: 8px;
 }
 
 .link-icon {
@@ -193,7 +189,6 @@
   align-items: center;
   gap: 5px;
   text-decoration: none;
-  margin-top: 8px;
   transition: $transition;
 
   .npm-icon {

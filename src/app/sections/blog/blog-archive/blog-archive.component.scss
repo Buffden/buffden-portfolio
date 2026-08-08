@@ -98,9 +98,8 @@
 
 // ─── Columns ──────────────────────────────────────────────────────────────────
 
-.col-year {
-  width: 60px;
-  white-space: nowrap;
+.col-title {
+  min-width: 200px;
 }
 
 .year-text {
@@ -109,8 +108,11 @@
   color: $slate;
 }
 
-.col-title {
-  min-width: 200px;
+.links-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
 }
 
 .blog-title {
@@ -158,10 +160,6 @@
   padding: 2px 8px;
   border-radius: 3px;
   white-space: nowrap;
-}
-
-.col-link {
-  width: 60px;
 }
 
 .link-icon {

@@ -200,20 +200,17 @@
   color: $lightest-navy;
 }
 
-// ─── Archive Link ─────────────────────────────────────────────────────────────
+// ─── View All Button ──────────────────────────────────────────────────────────
 
-.archive-link {
-  display: block;
-  text-align: center;
-  margin-top: 28px;
-  font-family: $font-mono;
+.view-all-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.view-all-btn {
+  @include button-styles;
   font-size: $fz-sm;
-  color: var(--green);
+  padding: 14px 28px;
   text-decoration: none;
-  transition: $transition;
-
-  &:hover {
-    opacity: 0.75;
-    letter-spacing: 0.04em;
-  }
 }

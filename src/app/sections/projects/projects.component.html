@@ -122,6 +122,8 @@
     </div>
     <!-- Dummy grid below projects -->
     <h2 class="mini-section-heading">Other Noteworthy Projects</h2>
-    <a class="archive-link" [routerLink]="['/project/archive']" (click)="onArchiveClick()">View all projects</a>
+    <div class="view-all-wrapper">
+      <a class="view-all-btn" [routerLink]="['/project/archive']" (click)="onArchiveClick()">View all projects</a>
+    </div>
   </div>
 </section>

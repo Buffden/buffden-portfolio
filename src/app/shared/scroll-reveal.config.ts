@@ -2,8 +2,10 @@
 
 export function srConfig(
   delay: number = 200,
-  viewFactor: number = 0.25
+  viewFactor?: number
 ) {
+  const mobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches;
+  const resolvedViewFactor = viewFactor ?? (mobile ? 0.15 : 0.20);
   return {
     origin: 'bottom',
     distance: '20px',
@@ -15,7 +17,7 @@ export function srConfig(
     mobile: true,
     reset: false,
     useDelay: 'always',
-    viewFactor,
+    viewFactor: resolvedViewFactor,
     viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
   };
 } 

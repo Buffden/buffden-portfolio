@@ -16,24 +16,14 @@
           <th class="col-title">Title</th>
           <th class="col-tech">Built With</th>
           <th class="col-desc">Description</th>
-          <th class="col-links">Links</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let project of projects" class="archive-row">
           <td class="col-title">
-            <span class="project-title">{{ project.title }}</span> <br>
+            <span class="project-title">{{ project.title }}</span>
+            <br>
             <span class="year-text">{{ project.period || '—' }}</span>
-          </td>
-          <td class="col-tech">
-            <ul class="tech-list">
-              <li *ngFor="let t of project.tech" class="tech-item">{{ t }}</li>
-            </ul>
-          </td>
-          <td class="col-desc">
-            <p class="project-desc">{{ project.description }}</p>
-          </td>
-          <td class="col-links">
             <div class="links-group">
               <a
                 *ngFor="let gh of project.github"
@@ -75,22 +65,30 @@
                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
                 </svg>
               </a>
+              <a
+                *ngIf="project.npmPackage && npmDownloads[project.npmPackage]"
+                [href]="project.external"
+                target="_blank"
+                rel="noopener"
+                class="npm-downloads-link"
+                title="npm downloads"
+                (click)="trackArchiveLink(project.title, 'npm_downloads', project.external || '')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="npm-icon">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span class="npm-download-count">{{ npmDownloads[project.npmPackage] | number }}</span>
+              </a>
             </div>
-            <a
-              *ngIf="project.npmPackage && npmDownloads[project.npmPackage]"
-              [href]="project.external"
-              target="_blank"
-              rel="noopener"
-              class="npm-downloads-link"
-              title="npm downloads"
-              (click)="trackArchiveLink(project.title, 'npm_downloads', project.external || '')">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="npm-icon">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-              <span class="npm-download-count">{{ npmDownloads[project.npmPackage] | number }}</span>
-            </a>
+          </td>
+          <td class="col-tech">
+            <ul class="tech-list">
+              <li *ngFor="let t of project.tech" class="tech-item">{{ t }}</li>
+            </ul>
+          </td>
+          <td class="col-desc">
+            <p class="project-desc">{{ project.description }}</p>
           </td>
         </tr>
       </tbody>

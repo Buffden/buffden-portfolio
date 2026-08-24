@@ -62,21 +62,6 @@ export class ProjectsComponent implements AfterViewInit {
       npmPackage: 'diagram-sync',
     },
     {
-      title: 'Employee Management System',
-      type: 'Featured Project',
-      descriptionPoints: [
-        'Spring Boot REST APIs across 5 entity types with pagination, filtering, and search; Angular 19 frontend with reusable table components, reactive forms, and route guards.',
-        'Three-tier RBAC (SYSTEM_ADMIN / HR_MANAGER / EMPLOYEE): JWT in HTTP-Only cookies, BCrypt hashing, secrets via AWS Secrets Manager, multi-layer rate limiting via Nginx and Redis.',
-        'Blue-green zero-downtime deployment via GitHub Actions; Docker Hub images, AWS RDS PostgreSQL with automated backups.',
-      ],
-      image: 'assets/images/ems-landing-page.png',
-      github: [
-        'https://github.com/Buffden/employee-management-system'
-      ],
-      external: 'https://ems.buffden.com/',
-      tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'Redis', 'JWT', 'Nginx', 'Docker', 'AWS EC2', 'GitHub Actions'],
-    },
-    {
       title: 'smart-anytool-agent — Research-Backed Tool-Calling Agent',
       type: 'Featured Project',
       descriptionPoints: [

@@ -33,7 +33,6 @@ export const miniProjects: MiniProject[] = [
     tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'Redis', 'JWT', 'Nginx', 'Docker', 'AWS EC2', 'GitHub Actions'],
     description: `Multi-tenant HR platform across 5 entity types (employees, departments, projects, tasks, locations) with Spring Boot REST APIs featuring pagination, filtering, and search. Three-tier RBAC (SYSTEM_ADMIN / HR_MANAGER / EMPLOYEE), JWT in HTTP-Only cookies, BCrypt hashing, secrets via AWS Secrets Manager, Nginx + Redis rate limiting, and blue-green zero-downtime deployment to EC2 via GitHub Actions.`,
     github: ['https://github.com/Buffden/employee-management-system'],
-    external: 'https://ems.buffden.com/',
   },
   {
     title: 'RAG Document Engine',

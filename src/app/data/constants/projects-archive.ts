@@ -28,6 +28,13 @@ export const miniProjects: MiniProject[] = [
     npmPackage: 'diagram-sync',
   },
   {
+    title: 'Sentinel — Real-Time Geospatial Anomaly Detection Platform',
+    period: 'Aug 2026 – Present',
+    tech: ['TypeScript', 'Node.js', 'Express', 'Next.js', 'Kafka/Redpanda', 'TimescaleDB', 'Neo4j', 'Redis', 'PostgreSQL', 'MapLibre GL', 'deck.gl', 'Docker'],
+    description: `Real-time system tracking geospatial entities from streaming ADS-B (OpenSky) and AIS (AISHub) telemetry, maintaining live entity state and detecting rule-based anomalies (signal loss, route deviation, unscheduled proximity, composite alerts). Distributed pipeline on Redpanda with TimescaleDB, Neo4j, and Redis; H3 hex-grid spatial indexing for candidate filtering; idempotent, replay-safe processing with Redis-based leader election for the alert evaluator. Next.js/Blueprint.js operator dashboard with a dockable widget workspace and WebGL map rendering (MapLibre GL + deck.gl); documented across 15 ADRs.`,
+    github: ['https://github.com/Buffden/sentinel'],
+  },
+  {
     title: 'Employee Management System',
     period: 'Dec 2024 – May 2025',
     tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'Redis', 'JWT', 'Nginx', 'Docker', 'AWS EC2', 'GitHub Actions'],

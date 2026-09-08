@@ -62,6 +62,18 @@ export class ProjectsComponent implements AfterViewInit {
       npmPackage: 'diagram-sync',
     },
     {
+      title: 'Sentinel — Real-Time Geospatial Anomaly Detection Platform',
+      type: 'Featured Project',
+      descriptionPoints: [
+        'Real-time system tracking geospatial entities from streaming ADS-B (OpenSky) and AIS (AISHub) telemetry, maintaining live entity state and surfacing rule-based anomalies through an operator dashboard.',
+        'Distributed pipeline on Redpanda (Kafka-compatible) with TimescaleDB for time-series state, Neo4j for entity relationships, and Redis for live state and leader-election across the alert evaluator.',
+        'Detects signal loss, route deviation, and unscheduled proximity via H3 hex-grid spatial indexing with idempotent, replay-safe processing; documented across 15 ADRs.',
+      ],
+      image: 'https://raw.githubusercontent.com/Buffden/sentinel/main/diagrams/docs/architecture.svg',
+      github: ['https://github.com/Buffden/sentinel'],
+      tech: ['TypeScript', 'Node.js', 'Express', 'Next.js', 'Kafka/Redpanda', 'TimescaleDB', 'Neo4j', 'Redis', 'PostgreSQL', 'MapLibre GL', 'deck.gl', 'Docker'],
+    },
+    {
       title: 'smart-anytool-agent — Research-Backed Tool-Calling Agent',
       type: 'Featured Project',
       descriptionPoints: [

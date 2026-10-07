@@ -7,6 +7,7 @@ interface SkillItem {
     name: string;
     icon: string;
     tooltip?: string;
+    invertOnDark?: boolean;
 }
 
 interface SkillCategory {
@@ -52,6 +53,7 @@ export class SkillsComponent implements AfterViewInit {
             items: [
                 { name: 'Angular', icon: this.iconPath('Angular.svg') },
                 { name: 'TypeScript', icon: this.iconPath('TypeScript.svg') },
+                { name: 'Next.js', icon: this.iconPath('Next.js.svg') },
                 { name: 'JavaScript', icon: this.iconPath('JavaScript.svg') },
                 { name: 'HTML5', icon: this.iconPath('HTML5.svg') },
                 { name: 'CSS3', icon: this.iconPath('CSS3.svg') },
@@ -64,6 +66,8 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Spring', icon: this.iconPath('Spring.svg') },
                 { name: 'Java', icon: this.iconPath('Java.svg') },
                 { name: 'Node.js', icon: this.iconPath('Node.js.svg') },
+                { name: 'Express.js', icon: this.iconPath('Express.svg'), invertOnDark: true },
+                { name: 'WebSocket', icon: this.iconPath('WebSocket.svg') },
                 { name: 'GraphQL', icon: this.iconPath('GraphQL.svg') },
                 { name: 'FastAPI', icon: this.iconPath('FastAPI.svg') },
                 { name: 'Python', icon: this.iconPath('Python.svg') },
@@ -86,11 +90,12 @@ export class SkillsComponent implements AfterViewInit {
             title: 'Data & Messaging',
             items: [
                 { name: 'PostgreSQL', icon: this.iconPath('PostgreSQL.svg') },
+                { name: 'TimescaleDB', icon: this.iconPath('TimescaleDB.svg') },
                 { name: 'MySQL', icon: this.iconPath('MySQL.svg') },
                 { name: 'Redis', icon: this.iconPath('Redis.svg') },
                 { name: 'Neo4j', icon: this.iconPath('Neo4j.svg') },
                 { name: 'Elasticsearch', icon: this.iconPath('Elasticsearch.svg') },
-                { name: 'Apache Kafka', icon: this.iconPath('Apache Kafka.svg') }
+                { name: 'Apache Kafka', icon: this.iconPath('Apache Kafka.svg'), invertOnDark: true }
             ]
         },
         {
@@ -124,6 +129,8 @@ export class SkillsComponent implements AfterViewInit {
                 { name: 'Spring AI', icon: this.iconPath('SpringAI.svg') },
                 { name: 'ChromaDB', icon: this.iconPath('chromadb.svg'), tooltip: 'Vector Database' },
                 { name: 'Pinecone', icon: this.iconPath('pinecone.svg'), tooltip: 'Managed Vector Database' },
+                { name: 'pgvector', icon: this.iconPath('PostgreSQL.svg'), tooltip: 'Vector Search in PostgreSQL' },
+                { name: 'Pydantic', icon: this.iconPath('Pydantic.svg') },
                 { name: 'NumPy', icon: this.iconPath('numpy.svg') },
             ]
         },

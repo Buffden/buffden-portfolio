@@ -24,26 +24,33 @@ export class AboutComponent implements AfterViewInit {
       {
         type: 'text',
         content:
-          'My journey into software engineering started with automating a simple math problem and grew into building scalable, real-world systems. At '
+          'My journey into software engineering started with automating a simple math problem and grew into building production systems. At '
       },
       { type: 'link', content: 'Clarivate Analytics', href: 'https://clarivate.com' },
       {
         type: 'text',
         content:
-          ', I spent three years shipping production-grade features, owning CI/CD, and contributing to reliable architectures, learning to balance speed with quality along the way.'
+          ', I spent 3+ years across full-stack development, production releases, and data-heavy applications, primarily with Java, Spring Boot, Angular, PostgreSQL, AWS, and Docker, learning to balance speed with quality along the way.'
       }
     ],
     [
       {
         type: 'text',
         content:
-          'I deepened my expertise in system design, design patterns, distributed systems, and web and software security, earning my MS in Software Engineering from the '
+          'I completed my MS in Software Engineering at the '
       },
       { type: 'link', content: 'University of Texas at Arlington', href: 'https://www.uta.edu' },
       {
         type: 'text',
         content:
-          '. Outside work, I recharge with video games, football, and occasionally touch grass.'
+          ' in Spring 2026. These days, I\'m going deeper into backend systems, distributed architecture, and AI/LLM applications.'
+      }
+    ],
+    [
+      {
+        type: 'text',
+        content:
+          'Outside of work, I enjoy playing football and video games.'
       }
     ]
   ];

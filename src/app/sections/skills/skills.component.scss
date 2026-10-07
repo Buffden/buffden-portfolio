@@ -244,3 +244,8 @@
         }
     }
 }
+
+// Black monochrome logos are invisible on the dark theme
+:host-context(html:not([data-theme='light'])) img.invert-on-dark {
+    filter: invert(1);
+}

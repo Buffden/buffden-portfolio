@@ -16,7 +16,7 @@ A modern, responsive portfolio website built with Angular, showcasing my work an
 
 ## Tech Stack
 
-- **Framework:** Angular 17
+- **Framework:** Angular 19
 - **Styling:** SCSS
 - **Deployment:** GitHub Pages (via `ng deploy`)
 - **Version Control:** Git

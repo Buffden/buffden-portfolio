@@ -37,6 +37,7 @@
                          [title]="cat.compact ? (item.tooltip || item.name) : ''">
                         <img [src]="item.icon"
                              [alt]="item.name"
+                             [class.invert-on-dark]="item.invertOnDark"
                              loading="lazy" />
                         <span *ngIf="!cat.compact">{{ item.name }}</span>
                     </div>

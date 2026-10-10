@@ -50,8 +50,7 @@ export class ExperienceComponent implements AfterViewInit {
         'Integrated Elasticsearch into Spring Boot, enabling advanced full-text queries across millions of drug records and reducing search latency by 30%.',
         'Migrated 5+ core business flows from Angular 8 to Angular 13, rebuilding components with a modular architecture and improved state management.',
         'Built secure request-handling across backend services using Spring Security, CORS/CSRF, and input validation to guard against unauthorized access.',
-        'Improved responsiveness of data-heavy chart and table views by 20–25% through lazy loading, RxJS streams, and Angular lifecycle optimizations.',
-        'Reduced page load times by 20% by applying component-level OnPush change detection and optimizing data-fetching patterns across data-heavy views.',
+        'Boosted Angular performance by 20–25% via lazy loading, RxJS streams, OnPush change detection, memoization, and optimized data-fetching patterns.',
         'Built D3.js chart components with grouping and filtering aggregations for Angular, powering 15+ analytics views across drug intelligence dashboards.',
         'Architected a configurable Angular table framework with sorting, pagination, and filters; adopted across 3 internal teams, cutting duplication by 50%.'
       ]

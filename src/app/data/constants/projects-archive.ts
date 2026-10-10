@@ -14,7 +14,7 @@ export const miniProjects: MiniProject[] = [
     title: 'TinyURL — URL Shortener',
     period: 'Feb 2026 – Mar 2026',
     tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'ALB', 'CloudFront', 'S3', 'Lambda', 'EventBridge', 'SNS', 'SQS', 'Docker', 'Cloudflare', 'GitHub Actions'],
-    description: `Production-grade URL shortener with Base62 short codes, server-enforced expiry (301/302/410), QR code export, and a serverless Lambda + EventBridge expiry scheduler that cut monthly EC2/RDS costs by ~40%. Six-layer security (Cloudflare WAF → Nginx rate limiting → Bucket4j cap → split DB users); zero-credential CI/CD via GitHub Actions OIDC automating S3 sync and CloudFront cache invalidation on every push to main.`,
+    description: `Production-grade URL shortener with Base62 short codes, server-enforced expiry (301/302/410), QR code export, and a serverless Lambda + EventBridge expiry scheduler that cut monthly EC2/RDS costs by ~36%. Six-layer security (Cloudflare WAF → Nginx rate limiting → Bucket4j cap → split DB users); zero-credential CI/CD via GitHub Actions OIDC automating S3 sync and CloudFront cache invalidation on every push to main.`,
     github: ['https://github.com/Buffden/tinyurl-api', 'https://github.com/Buffden/tinyurl-gui'],
     external: 'https://tinyurl.buffden.com/',
   },
@@ -52,7 +52,7 @@ export const miniProjects: MiniProject[] = [
     title: 'smart-anytool-agent — Research-Backed Tool-Calling Agent',
     period: 'Jun 2026 – Present',
     tech: ['Python', 'OpenAI', 'Pydantic', 'httpx', 'DuckDuckGo Search', 'Open-Meteo API'],
-    description: `Tool-calling agent implementing two peer-reviewed papers: SMART (ACL 2025) and AnyTool (ICML 2024). The SMART self-awareness layer determines whether the model can answer from existing knowledge before invoking tools—reducing tool calls by 24% while improving accuracy by 37%. The AnyTool layer applies hierarchical tool filtering, passing only relevant tool subsets to the LLM with a self-reflection loop for unsuccessful attempts. Built on OpenAI function calling (gpt-4o-mini) with Pydantic argument validation, safe expression evaluation, and parallel tool call handling.`,
+    description: `Tool-calling agent implementing two peer-reviewed papers: SMART (ACL 2025) and AnyTool (ICML 2024). The SMART self-awareness layer is an LLM pre-check gate that decides whether the model can answer from existing knowledge before invoking tools; an in-house A/B eval showed 98% routing accuracy and 49% lower latency and tokens on knowledge queries. The AnyTool layer applies hierarchical tool filtering, passing only relevant tool subsets to the LLM with a self-reflection loop for unsuccessful attempts. Built on OpenAI function calling (gpt-4o-mini) with Pydantic argument validation, safe expression evaluation, and parallel tool call handling.`,
     github: ['https://github.com/Buffden/smart-anytool-agent'],
     links: [
       { label: 'SMART Paper (ACL 2025)', url: 'https://arxiv.org/abs/2502.11435' },

@@ -38,7 +38,7 @@ export class ProjectsComponent implements AfterViewInit {
       descriptionPoints: [
         'Angular 19 SPA on AWS (S3 + CloudFront + ALB + EC2 + RDS) backed by a Spring Boot API with Base62 short codes, server-enforced expiry with correct redirect semantics (301/302/410), and QR code export.',
         'Defense-in-depth security: Cloudflare WAF → Nginx rate zones → Bucket4j cap → split DB users; secrets in AWS SSM (KMS-encrypted); zero-credential CI/CD via GitHub Actions OIDC.',
-        'Serverless expiry scheduler (Lambda + EventBridge + SNS/SQS DLQ) cut monthly EC2/RDS costs by ~40%; Flyway migrations, Testcontainers, Prometheus, and CloudWatch.',
+        'Serverless expiry scheduler (Lambda + EventBridge + SNS/SQS DLQ) cut monthly EC2/RDS costs by ~36%; Flyway migrations, Testcontainers, Prometheus, and CloudWatch.',
       ],
       image: 'assets/images/tinyurl-landing-page.png',
       github: [
@@ -77,7 +77,7 @@ export class ProjectsComponent implements AfterViewInit {
       title: 'smart-anytool-agent — Research-Backed Tool-Calling Agent',
       type: 'Featured Project',
       descriptionPoints: [
-        'Implemented SMART (ACL 2025): a self-awareness layer that determines whether the model can answer from existing knowledge before invoking tools—reducing tool calls by 24% while improving accuracy by 37%.',
+        'Implemented SMART (ACL 2025): an LLM self-awareness pre-check gate that decides whether the model can answer from existing knowledge before invoking tools; in-house A/B eval showed 98% routing accuracy and 49% lower latency and tokens on knowledge queries.',
         'Implemented AnyTool (ICML 2024): hierarchical tool filtering that categorizes tools and passes only relevant subsets to the LLM, with a self-reflection loop that retries unsuccessful tool invocations.',
         'Built on OpenAI function calling (gpt-4o-mini) with Pydantic argument validation, safe expression evaluation, parallel tool call handling, and real-world integrations (web search, weather).',
       ],

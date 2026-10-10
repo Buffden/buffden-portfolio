@@ -30,7 +30,7 @@ export class AboutComponent implements AfterViewInit {
       {
         type: 'text',
         content:
-          ', I spent 3+ years across full-stack development, production releases, and data-heavy applications, primarily with Java, Spring Boot, Angular, PostgreSQL, AWS, and Docker, learning to balance speed with quality along the way.'
+          ', I spent 3 years across full-stack development, production releases, and data-heavy applications, primarily with Java, Spring Boot, Angular, PostgreSQL, AWS, and Docker, learning to balance speed with quality along the way.'
       }
     ],
     [

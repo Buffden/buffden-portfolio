@@ -31,7 +31,7 @@ export const miniProjects: MiniProject[] = [
     title: 'Sentinel — Real-Time Geospatial Anomaly Detection Platform',
     period: 'Aug 2026 – Present',
     tech: ['TypeScript', 'Node.js', 'Express', 'Next.js', 'Kafka/Redpanda', 'TimescaleDB', 'Neo4j', 'Redis', 'PostgreSQL', 'MapLibre GL', 'deck.gl', 'Docker'],
-    description: `Real-time system tracking geospatial entities from streaming ADS-B (OpenSky) and AIS (AISHub) telemetry, maintaining live entity state and detecting rule-based anomalies (signal loss, route deviation, unscheduled proximity, composite alerts). Distributed pipeline on Redpanda with TimescaleDB, Neo4j, and Redis; H3 hex-grid spatial indexing for candidate filtering; idempotent, replay-safe processing with Redis-based leader election for the alert evaluator. Next.js/Blueprint.js operator dashboard with a dockable widget workspace and WebGL map rendering (MapLibre GL + deck.gl); documented across 15 ADRs.`,
+    description: `Real-time system tracking geospatial entities from streaming ADS-B (OpenSky) and AIS (AISHub) telemetry, maintaining live entity state and detecting rule-based anomalies (signal loss, route deviation, unscheduled proximity, composite alerts). Distributed pipeline on Redpanda with TimescaleDB, Neo4j, and Redis; H3 hex-grid spatial indexing for candidate filtering; idempotent, replay-safe processing with Redis-based leader election for the alert evaluator. Next.js/Blueprint.js operator dashboard with a dockable widget workspace and WebGL map rendering (MapLibre GL + deck.gl); documented across 22 ADRs.`,
     github: ['https://github.com/Buffden/sentinel'],
   },
   {
@@ -44,8 +44,8 @@ export const miniProjects: MiniProject[] = [
   {
     title: 'RAG Document Engine',
     period: 'Jun 2026 – Present',
-    tech: ['Python', 'ChromaDB', 'OpenAI', 'NumPy', 'Anthropic', 'Hugging Face', 'Pinecone'],
-    description: `RAG pipeline built from primitives: NumPy cosine similarity over JSON embeddings, then migrated to ChromaDB with per-chunk source metadata. Ingests PDF, DOCX, and Markdown via format-specific parsers with CLI-driven deduplication. Hybrid BM25 + vector search with reciprocal rank fusion and cross-encoder re-ranking; Claude/GPT-4o-mini generation with token budgeting and source attribution. Multi-turn chat with sliding-window history and role-based document access filtering at the vector query level.`,
+    tech: ['Python', 'ChromaDB', 'OpenAI', 'NumPy', 'Hugging Face'],
+    description: `RAG pipeline built from primitives: NumPy cosine similarity over JSON embeddings, then migrated to ChromaDB with per-chunk source metadata. Ingests PDF, DOCX, and Markdown via format-specific parsers with CLI-driven deduplication. Hybrid BM25 + vector search with reciprocal rank fusion and cross-encoder re-ranking; GPT-4o-mini generation with token budgeting and source attribution. Multi-turn chat with sliding-window history and role-based document access filtering at the vector query level.`,
     github: ['https://github.com/Buffden/rag-document-engine'],
   },
   {
@@ -62,8 +62,8 @@ export const miniProjects: MiniProject[] = [
   {
     title: 'AI Text Intelligence Dashboard',
     period: 'May 2026 – Jun 2026',
-    tech: ['Angular', 'Spring Boot', 'Spring AI', 'OpenAI', 'Claude', 'Java', 'TypeScript'],
-    description: `Full-stack AI pipeline where every layer connects end-to-end: Angular frontend → Spring Boot intermediary → multi-provider LLM (OpenAI/Claude with automatic fallback) → validated structured response. Performs text summarization, sentiment analysis with confidence scores, category classification with chain-of-thought reasoning, and entity extraction. Production-ready patterns throughout: prompt injection hardening, exponential backoff with jitter, Retry-After support, configurable timeouts, and per-request token usage and cost estimation.`,
+    tech: ['Angular', 'Spring Boot', 'Spring AI', 'OpenAI', 'Java', 'TypeScript'],
+    description: `Full-stack AI pipeline where every layer connects end-to-end: Angular frontend → Spring Boot intermediary → multi-model LLM (GPT-4o with automatic fallback to GPT-4o-mini) → validated structured response. Performs text summarization, sentiment analysis with confidence scores, category classification with chain-of-thought reasoning, and entity extraction. Production-ready patterns throughout: prompt injection hardening, exponential backoff with jitter, Retry-After support, configurable timeouts, and per-request token usage and cost estimation.`,
     github: ['https://github.com/Buffden/ai-text-intelligence-dashboard'],
   },
   {

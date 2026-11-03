@@ -4,6 +4,7 @@ import { ScrollRevealService } from '../../shared/scroll-reveal.service';
 import { srConfig } from '../../shared/scroll-reveal.config';
 
 interface Experience {
+  tabLabel: string;
   company: string;
   companyUrl: string;
   position: string;
@@ -25,6 +26,21 @@ export class ExperienceComponent implements AfterViewInit {
 
   experiences: Experience[] = [
     {
+      tabLabel: 'Varsity Brands',
+      company: 'Varsity Brands',
+      companyUrl: 'https://www.varsitybrands.com',
+      position: 'Software Engineer',
+      duration: 'Oct 2026 – Present',
+      responsibilities: [
+        'Designed a standalone order-processing Java microservice architecture, emphasizing transactional consistency, idempotency, and fault recovery.',
+        'Drafted and validated JSON REST API contracts across interconnected backend microservices, improving integration compatibility and API security.',
+        'Migrated Spring Boot payment integrations from custom HTTP clients to the official Stripe SDK, improving error handling, timeout management, and automated test coverage.',
+        'Configured Helm-based Kubernetes deployments for backend microservices, including environment-specific settings, resource allocation, and troubleshooting pod startup failures on AWS EKS.',
+        'Improved deployment readiness through Docker-based testing, GitHub Actions CI/CD workflows, and environment configuration validation.'
+      ]
+    },
+    {
+      tabLabel: 'Clarivate (SE)',
       company: 'Clarivate Analytics',
       companyUrl: 'https://clarivate.com',
       position: 'Software Engineer',
@@ -42,6 +58,7 @@ export class ExperienceComponent implements AfterViewInit {
       ]
     },
     {
+      tabLabel: 'Clarivate (ASE)',
       company: 'Clarivate Analytics',
       companyUrl: 'https://clarivate.com',
       position: 'Associate Software Engineer',

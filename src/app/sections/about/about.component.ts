@@ -37,19 +37,19 @@ export class AboutComponent implements AfterViewInit {
       {
         type: 'text',
         content:
-          'I completed my MS in Software Engineering at the '
-      },
-      { type: 'link', content: 'University of Texas at Arlington', href: 'https://www.uta.edu' },
-      {
-        type: 'text',
-        content:
-          ' in Spring 2026. I\'m now a Software Engineer at '
+          'I\'m currently a Software Engineer at '
       },
       { type: 'link', content: 'Varsity Brands', href: 'https://www.varsitybrands.com' },
       {
         type: 'text',
         content:
-          ', working on payment integrations and backend microservices with Java, Spring Boot, Kubernetes, and AWS EKS. Outside of that, I\'m going deeper into distributed architecture and AI/LLM applications.'
+          ', where I help shape design and architecture decisions for backend services, from service boundaries to API contracts. I bring a strong focus on reliability and clean, maintainable code, and I enjoy collaborating with a talented team in an Agile environment. Before that, I completed my MS in Software Engineering at the '
+      },
+      { type: 'link', content: 'University of Texas at Arlington', href: 'https://www.uta.edu' },
+      {
+        type: 'text',
+        content:
+          ' in Spring 2026. On the side, I keep exploring distributed systems and AI/LLM applications.'
       }
     ],
     [

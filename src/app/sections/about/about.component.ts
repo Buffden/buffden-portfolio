@@ -24,39 +24,39 @@ export class AboutComponent implements AfterViewInit {
       {
         type: 'text',
         content:
-          'My journey into software engineering started with automating a simple math problem and grew into building production systems. At '
+          'My journey into software engineering started with automating a simple math problem. At '
       },
       { type: 'link', content: 'Clarivate Analytics', href: 'https://clarivate.com' },
       {
         type: 'text',
         content:
-          ', I spent 3 years across full-stack development, production releases, and data-heavy applications, primarily with Java, Spring Boot, Angular, PostgreSQL, AWS, and Docker, learning to balance speed with quality along the way.'
+          ', I spent 3 years building full-stack, data-heavy applications with Java, Spring Boot, Angular, and AWS.'
       }
     ],
     [
       {
         type: 'text',
         content:
-          'I\'m currently a Software Engineer at '
+          'Today I\'m a Software Engineer at '
       },
       { type: 'link', content: 'Varsity Brands', href: 'https://www.varsitybrands.com' },
       {
         type: 'text',
         content:
-          ', where I help shape design and architecture decisions for backend services, from service boundaries to API contracts. I bring a strong focus on reliability and clean, maintainable code, and I enjoy collaborating with a talented team in an Agile environment. Before that, I completed my MS in Software Engineering at the '
+          ', shaping design and architecture decisions for backend services with a focus on reliability and clean code. I hold an MS in Software Engineering from the '
       },
       { type: 'link', content: 'University of Texas at Arlington', href: 'https://www.uta.edu' },
       {
         type: 'text',
         content:
-          ' in Spring 2026. On the side, I keep exploring distributed systems and AI/LLM applications.'
+          '.'
       }
     ],
     [
       {
         type: 'text',
         content:
-          'Outside of work, I enjoy playing football and video games.'
+          'Outside of work, I explore distributed systems and AI/LLM applications, and enjoy football and video games.'
       }
     ]
   ];

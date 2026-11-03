@@ -4,6 +4,7 @@ import { ScrollRevealService } from '../../shared/scroll-reveal.service';
 import { srConfig } from '../../shared/scroll-reveal.config';
 
 interface Experience {
+  tabLabel: string;
   company: string;
   companyUrl: string;
   position: string;
@@ -25,6 +26,7 @@ export class ExperienceComponent implements AfterViewInit {
 
   experiences: Experience[] = [
     {
+      tabLabel: 'Varsity Brands',
       company: 'Varsity Brands',
       companyUrl: 'https://www.varsitybrands.com',
       position: 'Software Engineer',
@@ -38,6 +40,7 @@ export class ExperienceComponent implements AfterViewInit {
       ]
     },
     {
+      tabLabel: 'Clarivate (SE)',
       company: 'Clarivate Analytics',
       companyUrl: 'https://clarivate.com',
       position: 'Software Engineer',
@@ -55,6 +58,7 @@ export class ExperienceComponent implements AfterViewInit {
       ]
     },
     {
+      tabLabel: 'Clarivate (ASE)',
       company: 'Clarivate Analytics',
       companyUrl: 'https://clarivate.com',
       position: 'Associate Software Engineer',

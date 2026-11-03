@@ -43,7 +43,13 @@ export class AboutComponent implements AfterViewInit {
       {
         type: 'text',
         content:
-          ' in Spring 2026. These days, I\'m going deeper into backend systems, distributed architecture, and AI/LLM applications.'
+          ' in Spring 2026. I\'m now a Software Engineer at '
+      },
+      { type: 'link', content: 'Varsity Brands', href: 'https://www.varsitybrands.com' },
+      {
+        type: 'text',
+        content:
+          ', working on payment integrations and backend microservices with Java, Spring Boot, Kubernetes, and AWS EKS. Outside of that, I\'m going deeper into distributed architecture and AI/LLM applications.'
       }
     ],
     [
